@@ -138,21 +138,21 @@ export default function BestDentalClinicBhubaneswarPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {topTreatments.map((treatment) => (
-              <Link key={treatment.id} href={`/treatments/${treatment.id}`} className="group block">
-                <div className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-brand-primary/50 transition-colors">
-                  <div className="h-48 relative overflow-hidden bg-slate-200">
-                    <Image 
-                      src={treatment.imageUrl}
-                      alt={treatment.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold font-heading text-slate-900 mb-2 group-hover:text-brand-primary transition-colors">
+              <Link key={treatment.id} href={`/treatments/${treatment.slug}`} className="group block">
+                <div className="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-brand-primary/50 hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                      <ShieldCheck className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold font-heading text-slate-900 mb-1 group-hover:text-brand-primary transition-colors">
                       {treatment.title}
                     </h3>
-                    <p className="text-slate-600 text-sm line-clamp-2">{treatment.shortDescription}</p>
+                    <p className="text-xs font-bold text-brand-primary mb-3">{treatment.subtitle}</p>
+                    <p className="text-slate-600 text-sm line-clamp-3">{treatment.shortDescription}</p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-brand-primary font-bold text-sm">
+                    <span>Learn More</span>
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                   </div>
                 </div>
               </Link>
@@ -228,10 +228,10 @@ export default function BestDentalClinicBhubaneswarPage() {
                   <Star className="w-5 h-5 fill-current" />
                 </div>
                 <p className="text-slate-700 italic mb-6 leading-relaxed relative z-10">
-                  "{review.quote}"
+                  "{review.review}"
                 </p>
                 <div className="flex flex-col">
-                  <span className="font-bold text-slate-900">{review.author}</span>
+                  <span className="font-bold text-slate-900">{review.name}</span>
                   <span className="text-xs text-slate-500">{review.treatment}</span>
                 </div>
               </div>

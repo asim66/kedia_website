@@ -4,14 +4,42 @@ import AppointmentForm from "@/components/AppointmentForm";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Contact Us | Kedia Dental Care Bhubaneswar",
+  title: "Contact & Clinic Location in Forest Park",
   description: "Contact Kedia Dental Care in Forest Park, Bhubaneswar. Phone: +91 78730 87575 | Email: shivdayalkedia11@gmail.com | 2nd Floor, Shuvam Towers.",
 };
 
 export default function ContactPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+          { "@type": "ListItem", "position": 2, "name": "Contact & Location", "item": "https://kediadentalcare.com/contact" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqsList.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       
       {/* Header */}
       <section className="pt-16 pb-12 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">

@@ -19,6 +19,7 @@ export interface Doctor {
   title: string;
   role: "founder" | "in-house" | "visiting";
   qualifications: string;
+  registrationNumber?: string;
   experienceYears?: number;
   specialty: string;
   bio: string;
@@ -34,6 +35,9 @@ export interface ClinicInfo {
   phone: string;
   phoneRaw: string;
   email: string;
+  dciRegistration: string;
+  sameAs: string[];
+  medicalDisclaimer: string;
   address: {
     street: string;
     landmark: string;
@@ -85,6 +89,14 @@ export const clinicInfo: ClinicInfo = {
   phone: "+91 78730 87575",
   phoneRaw: "+917873087575",
   email: "shivdayalkedia11@gmail.com",
+  dciRegistration: "Reg. No. 2504 (Odisha State Dental Council / DCI Registered)",
+  sameAs: [
+    "https://www.facebook.com/kediadentalcare",
+    "https://www.instagram.com/kediadentalcare",
+    "https://www.google.com/maps?cid=7714856428789524251",
+    "https://www.practo.com/bhubaneswar/clinic/kedia-dental-care-forest-park"
+  ],
+  medicalDisclaimer: "Medical Disclaimer: The clinical information provided on this website is for educational and informational purposes only. It does not constitute medical advice or formal dental diagnosis. Always consult a licensed dental surgeon for individual oral health advice.",
   address: {
     street: "2nd Floor, Shuvam Towers",
     landmark: "Near Sishu Bhawan Road",
@@ -210,6 +222,7 @@ export const teamMembers: Doctor[] = [
     title: "Founder & Chief Dental Surgeon",
     role: "founder",
     qualifications: "BDS, MDS (Specialist Dental Surgeon)",
+    registrationNumber: "Reg. No. 2504 / DCI & Odisha State Dental Council",
     experienceYears: 22,
     specialty: "Endodontics, Implants & Laser Dentistry",
     bio: "Dr. Shiv Dayal Kedia established Kedia Dental Care in 2004 with a vision to bring world-class, ethical, and painless dental care to Bhubaneswar. With over two decades of clinical expertise, Dr. Kedia is renowned across Odisha for his mastery in complex Root Canal Therapy, Dental Implants, and Digital Smile Designing.",

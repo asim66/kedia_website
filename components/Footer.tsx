@@ -115,11 +115,19 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
-          <p>
-            &copy; {currentYear} {clinicInfo.name}. All rights reserved. Shuvam Towers, Forest Park, Bhubaneswar.
-          </p>
-          <div className="flex gap-4">
-            <span className="flex items-center gap-1 text-slate-600 font-medium">
+          <div className="space-y-1 text-center sm:text-left">
+            <p>
+              &copy; {currentYear} {clinicInfo.name}. All rights reserved. Shuvam Towers, Forest Park, Bhubaneswar.
+            </p>
+            <p className="text-xs text-slate-400">
+              {clinicInfo.dciRegistration}
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors text-xs font-semibold">
+              Privacy Policy
+            </Link>
+            <span className="flex items-center gap-1 text-slate-600 font-medium text-xs">
               <ShieldCheck className="w-4 h-4 text-brand-primary" /> Hospital-Grade Sterilization
             </span>
           </div>

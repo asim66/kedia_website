@@ -14,6 +14,7 @@ export default function JsonLd() {
         "telephone": clinicInfo.phone,
         "email": clinicInfo.email,
         "priceRange": "₹₹",
+        "sameAs": clinicInfo.sameAs,
         "description": `${clinicInfo.tagline}. ${clinicInfo.brandMessage}. Established in ${clinicInfo.establishedYear} by ${teamMembers[0].name} with 22+ years of clinical experience. Located in Forest Park, Bhubaneswar.`,
         "address": {
           "@type": "PostalAddress",
@@ -25,20 +26,25 @@ export default function JsonLd() {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "20.2727144",
-          "longitude": "85.8239003",
+          "latitude": 20.2727144,
+          "longitude": 85.8239003,
         },
         "founder": {
           "@type": "Person",
           "name": teamMembers[0].name,
           "jobTitle": teamMembers[0].title,
-          "alumniOf": "BDS, MDS",
+          "identifier": teamMembers[0].registrationNumber,
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Dental Council of India / BDS & MDS"
+          }
         },
         "employee": teamMembers.map(member => ({
           "@type": "Person",
           "name": member.name,
           "jobTitle": member.title,
           "knowsAbout": member.specialty,
+          ...(member.registrationNumber ? { "identifier": member.registrationNumber } : {})
         })),
         "openingHoursSpecification": [
           {
@@ -69,6 +75,7 @@ export default function JsonLd() {
               "@type": "MedicalProcedure",
               "name": treatment.title,
               "description": treatment.shortDescription,
+              "url": `https://kediadentalcare.com/treatments/${treatment.slug}`,
             },
             "position": index + 1,
           })),
@@ -84,6 +91,15 @@ export default function JsonLd() {
           },
         ],
       },
+      {
+        "@type": "WebSite",
+        "@id": "https://kediadentalcare.com/#website",
+        "url": "https://kediadentalcare.com",
+        "name": clinicInfo.name,
+        "publisher": {
+          "@id": "https://kediadentalcare.com/#clinic"
+        }
+      }
     ],
   };
 

@@ -4,7 +4,7 @@ import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Specialized Dental Treatments | Kedia Dental Care",
+  title: "Specialized Dental Treatments in Bhubaneswar",
   description: "Explore our 10 core specialized dental treatments including Laser Dentistry, Single-Visit RCT, Dental Implants, Braces, and Smile Designing in Bhubaneswar.",
 };
 

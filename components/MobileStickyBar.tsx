@@ -8,7 +8,7 @@ import AppointmentModal from "./AppointmentModal";
 export default function MobileStickyBar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const whatsappUrl = `https://wa.me/91${clinicInfo.phoneRaw.replace(/\D/g, "")}?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${clinicInfo.phoneRaw.replace(/\D/g, "")}?text=${encodeURIComponent(
     "Hello Kedia Dental Care, I would like to inquire about a dental appointment."
   )}`;
 

@@ -5,7 +5,7 @@ import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarD
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Best Dental Clinic in Bhubaneswar | Top Dentist & Dental Care",
+  title: "Best Dental Clinic in Bhubaneswar | Top Rated Dentist",
   description: "Looking for the best dental clinic in Bhubaneswar? Kedia Dental Care offers painless micro-dentistry, implants, root canals, and cosmetic dentistry. Book your appointment today!",
   keywords: "best dental clinic in bhubaneswar, best dentist in bhubaneswar, top dental clinic bhubaneswar, dental hospital in bhubaneswar",
 };
@@ -14,9 +14,37 @@ export default function BestDentalClinicBhubaneswarPage() {
   const founder = teamMembers[0];
   const topTreatments = treatmentsData.slice(0, 6);
 
+  const hubSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+          { "@type": "ListItem", "position": 2, "name": "Best Dental Clinic in Bhubaneswar", "item": "https://kediadentalcare.com/best-dental-clinic-in-bhubaneswar" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqsList.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }
+    ]
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hubSchema) }}
+      />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-b from-purple-50/80 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">

@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!treatment) return { title: "Treatment Not Found" };
   
   return {
-    title: `${treatment.title} | ${clinicInfo.name}`,
-    description: treatment.shortDescription,
+    title: `${treatment.title} in Bhubaneswar`,
+    description: `${treatment.shortDescription} Available at Kedia Dental Care, Forest Park, Bhubaneswar.`,
   };
 }
 
@@ -27,9 +27,45 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
     notFound();
   }
 
+  const detailSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+          { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://kediadentalcare.com/treatments" },
+          { "@type": "ListItem", "position": 3, "name": treatment.title, "item": `https://kediadentalcare.com/treatments/${treatment.slug}` }
+        ]
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": `${treatment.title} in Bhubaneswar`,
+        "description": treatment.shortDescription,
+        "procedureType": "http://schema.org/SurgicalProcedure",
+        "howPerformed": treatment.fullDescription
+      },
+      ...(treatment.faq && treatment.faq.length > 0 ? [{
+        "@type": "FAQPage",
+        "mainEntity": treatment.faq.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }] : [])
+    ]
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(detailSchema) }}
+      />
 
       {/* Breadcrumb Navigation */}
       <div className="bg-slate-50 border-b border-slate-200">
@@ -190,11 +226,14 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                   </div>
                 </div>
 
-                {/* Practical Help Box */}
-                <div className="p-6 rounded-2xl bg-purple-50/80 border border-purple-100 text-slate-800 space-y-2">
-                  <h4 className="font-bold text-sm text-slate-900">First Time at Kedia Dental Care?</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    We offer full digital X-ray evaluation and transparent written treatment estimates prior to starting any procedure.
+                {/* Medical Disclaimer Box */}
+                <div className="p-5 rounded-2xl bg-slate-100 border border-slate-200 text-slate-600 space-y-1 text-xs">
+                  <p className="font-bold text-slate-800 flex items-center gap-1.5">
+                    <AlertCircle className="w-4 h-4 text-brand-primary shrink-0" />
+                    Medical Disclaimer
+                  </p>
+                  <p className="leading-relaxed">
+                    {clinicInfo.medicalDisclaimer}
                   </p>
                 </div>
 

@@ -12,16 +12,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kediadentalcare.com"),
   title: {
-    default: `${clinicInfo.name} | Advanced Dental Care in Bhubaneswar`,
+    default: `${clinicInfo.name} | Best Dental Clinic in Bhubaneswar`,
     template: `%s | ${clinicInfo.name}`,
   },
   description: clinicInfo.tagline,
   keywords: ["Dentist in Bhubaneswar", "Dental Clinic Bhubaneswar", "Root Canal Bhubaneswar", "Dental Implants Bhubaneswar", "Orthodontist Forest Park"],
-  metadataBase: new URL("https://kediadentalcare.com"), // Placeholder URL, update appropriately
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: clinicInfo.name,
     description: clinicInfo.tagline,

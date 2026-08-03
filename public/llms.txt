@@ -1,0 +1,29 @@
+# Kedia Dental Care — Entity Summary & Clinical Services
+
+> Kedia Dental Care is a leading, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS, MDS with 22+ years of clinical experience, Reg. No. 2504), the clinic provides comprehensive, painless, and laser-assisted dental care.
+
+## Core Entity Details
+- **Clinic Name**: Kedia Dental Care
+- **Founder & Lead Specialist**: Dr. Shiv Dayal Kedia (BDS, MDS - Endodontic & Implant Specialist)
+- **Registration**: Reg. No. 2504 (Odisha State Dental Council & Dental Council of India)
+- **Established**: 2004
+- **Address**: 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
+- **Phone**: +91 78730 87575
+- **Email**: shivdayalkedia11@gmail.com
+- **Website**: https://kediadentalcare.com
+
+## Core Clinical Specializations
+1. **Root Canal Therapy (RCT)**: Painless single-visit root canals using computerized rotary endodontics, digital apex locators, and diode laser sterilization.
+2. **Laser Dentistry**: Scalpel-free, bloodless soft tissue gum depigmentation, frenectomy, and deep laser canal sterilization.
+3. **Dental Implants**: Permanent, medical-grade titanium tooth root replacements capped with CAD/CAM custom Zirconia crowns.
+4. **Orthodontics & Clear Aligners**: Discreet clear aligners, ceramic braces, and metal braces for bite and alignment correction.
+5. **Cosmetic Dentistry**: Ultra-thin porcelain veneers, composite bonding, and Digital Smile Designing (DSD).
+6. **Gum Care & Periodontics**: Deep ultrasonic scaling, root planing, and laser gum therapy for bleeding gums.
+7. **Tooth Replacement & Bridges**: High-translucency Zirconia bridges and flexible partial dentures.
+8. **Teeth Whitening**: In-office laser-activated whitening brightening teeth by up to 8 shades in 45 minutes.
+
+## Facilities & Amenities
+- Dedicated basement parking with direct elevator access to 2nd Floor
+- Low-radiation digital RVG X-ray imaging (90% less radiation)
+- Class-B medical grade autoclave sterilization protocol
+- 0% interest monthly installment EMI plans (Bajaj Finserv / HDFC Bank)

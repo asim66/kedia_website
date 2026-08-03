@@ -62,8 +62,9 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-brand-primary transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-brand-primary transition-colors">About Dr. Kedia & Team</Link></li>
               <li><Link href="/treatments" className="hover:text-brand-primary transition-colors">All 10 Core Services</Link></li>
+              <li><Link href="/best-dental-clinic-in-bhubaneswar" className="hover:text-brand-primary transition-colors">Best Dental Clinic in Bhubaneswar</Link></li>
+              <li><Link href="/best-rootcanal-treatment-in-bhubaneswar" className="hover:text-brand-primary transition-colors">Root Canal Treatment in Bhubaneswar</Link></li>
               <li><Link href="/contact" className="hover:text-brand-primary transition-colors">Contact & Location</Link></li>
-              <li><Link href="?booking=true" className="hover:text-brand-primary transition-colors">Make an Appointment</Link></li>
             </ul>
           </div>
 

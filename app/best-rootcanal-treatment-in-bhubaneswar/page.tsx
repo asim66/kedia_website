@@ -18,7 +18,8 @@ import {
   Sparkles, 
   AlertTriangle, 
   CreditCard, 
-  Stethoscope 
+  Stethoscope,
+  ExternalLink
 } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 
@@ -608,6 +609,18 @@ export default function RootCanalTreatmentBhubaneswarPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={clinicInfo.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-full text-sm font-semibold hover:bg-brand-secondary transition shadow-sm"
+            >
+              <span>Read All Reviews on Google</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>

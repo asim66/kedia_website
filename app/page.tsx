@@ -3,10 +3,33 @@ import Image from "next/image";
 import {
   ArrowRight, Star, ShieldCheck, Clock, Award, Phone, CheckCircle2,
   HeartPulse, Car, Accessibility, CreditCard, Coffee, Sparkles, UserCheck, AlertCircle, FileText,
-  Scan, Zap, Monitor, Armchair, Heart, Layers, Smile, Sun, Stethoscope
+  Scan, Zap, Monitor, Armchair, Heart, Layers, Smile, Sun, Stethoscope, ExternalLink
 } from "lucide-react";
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
+
+function GoogleGIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24">
+      <path
+        fill="#4285F4"
+        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.62z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
+      />
+    </svg>
+  );
+}
 
 export default function Home() {
   const popularTreatments = treatmentsData.slice(0, 6);
@@ -329,22 +352,26 @@ export default function Home() {
       </section>
 
       {/* Patient Reviews Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="reviews">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="flex items-center justify-center gap-1 text-amber-400 mb-3">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800">
+              <GoogleGIcon className="w-4 h-4" />
+              <span>Google Business Verified Reviews</span>
+              <span className="text-amber-500 font-bold ml-1">★ {clinicInfo.googleRating} / 5</span>
             </div>
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-3">What Our Patients Say</h2>
-            <p className="text-slate-600">Real experiences from patients treated at Shuvam Towers, Forest Park.</p>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900">What Our Patients Say</h2>
+            <p className="text-slate-600 text-sm md:text-base">
+              Real experiences from patients treated at Shuvam Towers, Forest Park.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between relative">
+              <div key={idx} className="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between relative hover:shadow-md transition">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex gap-1 text-amber-400">
+                    <div className="flex items-center gap-1 text-amber-400">
                       {[...Array(t.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                     </div>
                     <span className="text-xs font-semibold px-3 py-1 bg-purple-100 text-brand-primary rounded-full">
@@ -358,13 +385,57 @@ export default function Home() {
 
                 <div className="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between text-xs">
                   <div>
-                    <p className="font-bold text-slate-900">{t.name}</p>
-                    <p className="text-slate-500">{t.location}</p>
+                    <div className="flex items-center gap-1.5">
+                      <p className="font-bold text-slate-900">{t.name}</p>
+                      <span className="inline-flex items-center gap-1 text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-medium">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        Verified
+                      </span>
+                    </div>
+                    <p className="text-slate-500 text-[11px] mt-0.5">{t.location}</p>
                   </div>
-                  <span className="text-slate-400">{t.date}</span>
+                  <div className="flex flex-col items-end gap-1 text-right">
+                    <span className="text-slate-400 text-[11px]">{t.date}</span>
+                    <span className="inline-flex items-center gap-1 text-[11px] text-slate-600 font-medium">
+                      <GoogleGIcon className="w-3 h-3" /> Google Review
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Direct Google Reviews Call To Action */}
+          <div className="mt-14 bg-gradient-to-r from-purple-50 via-slate-50 to-purple-50 p-8 rounded-3xl border border-purple-100 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4 text-center sm:text-left">
+              <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-sm shrink-0">
+                <GoogleGIcon className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="font-bold text-slate-900 text-lg">Rated {clinicInfo.googleRating} Stars on Google Maps</h3>
+                <p className="text-slate-600 text-xs sm:text-sm">Explore all verified reviews or share your experience with Dr. Shiv Dayal Kedia & Team.</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <a
+                href={clinicInfo.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-primary text-white rounded-full text-xs sm:text-sm font-semibold hover:bg-brand-secondary transition shadow-sm"
+              >
+                <span>Read All Google Reviews</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <a
+                href={clinicInfo.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-300 rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-50 transition"
+              >
+                <span>Write a Review</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>

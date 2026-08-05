@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { clinicInfo, teamMembers, treatmentsData, testimonials, faqsList } from "@/data/clinicData";
-import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarDays } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarDays, ExternalLink } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
@@ -247,23 +247,40 @@ export default function BestDentalClinicBhubaneswarPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.slice(0, 3).map((review, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
-                <div className="flex items-center gap-1 mb-4 text-yellow-400">
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
-                  <Star className="w-5 h-5 fill-current" />
+              <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-1 mb-4 text-yellow-400">
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                    <Star className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-slate-700 italic mb-6 leading-relaxed relative z-10">
+                    "{review.review}"
+                  </p>
                 </div>
-                <p className="text-slate-700 italic mb-6 leading-relaxed relative z-10">
-                  "{review.review}"
-                </p>
-                <div className="flex flex-col">
-                  <span className="font-bold text-slate-900">{review.name}</span>
-                  <span className="text-xs text-slate-500">{review.treatment}</span>
+                <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                  <div className="flex flex-col">
+                    <span className="font-bold text-slate-900">{review.name}</span>
+                    <span className="text-xs text-slate-500">{review.treatment}</span>
+                  </div>
+                  <span className="text-[11px] font-medium text-slate-500 px-2 py-0.5 bg-slate-100 rounded-md">Google Review</span>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href={clinicInfo.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-full text-sm font-semibold hover:bg-brand-secondary transition shadow-sm"
+            >
+              <span>See All 500+ Reviews on Google</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>

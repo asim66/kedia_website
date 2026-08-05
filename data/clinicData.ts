@@ -38,6 +38,9 @@ export interface ClinicInfo {
   dciRegistration: string;
   sameAs: string[];
   medicalDisclaimer: string;
+  googleReviewUrl: string;
+  googleRating: number;
+  googleReviewCount: string;
   address: {
     street: string;
     landmark: string;
@@ -97,6 +100,9 @@ export const clinicInfo: ClinicInfo = {
     "https://www.practo.com/bhubaneswar/clinic/kedia-dental-care-forest-park"
   ],
   medicalDisclaimer: "Medical Disclaimer: The clinical information provided on this website is for educational and informational purposes only. It does not constitute medical advice or formal dental diagnosis. Always consult a licensed dental surgeon for individual oral health advice.",
+  googleReviewUrl: "https://www.google.com/search?kgmid=/g/11b7gpsy2t&q=Kedia+Dental+Care",
+  googleRating: 4.9,
+  googleReviewCount: "500+",
   address: {
     street: "2nd Floor, Shuvam Towers",
     landmark: "Near Sishu Bhawan Road",
@@ -562,6 +568,7 @@ export const testimonials = [
     review: "Dr. Shiv Dayal Kedia is truly the best dentist in Bhubaneswar! I was terrified of root canals, but he completed my RCT in a single sitting with zero pain. The new clinic in Shuvam Towers is immaculate with basement parking and elevator access.",
     date: "June 2026",
     verified: true,
+    source: "Google Review",
   },
   {
     name: "Priyanka Patnaik",
@@ -571,6 +578,7 @@ export const testimonials = [
     review: "Got my clear aligners from Kedia Dental Care. The 3D intraoral scan was so comfortable — no messy impression pastes! Within 8 months my crooked teeth were completely straight. The zero-cost EMI option made payment so easy.",
     date: "May 2026",
     verified: true,
+    source: "Google Review",
   },
   {
     name: "Rajeshwar Rao",
@@ -580,6 +588,7 @@ export const testimonials = [
     review: "I got two dental implants done here. Dr. Kedia’s 22+ years of experience really shows in his gentle technique and precision. I can finally enjoy eating solid food again without any worry. Truly grateful!",
     date: "April 2026",
     verified: true,
+    source: "Google Review",
   },
   {
     name: "Ananya Mishra",
@@ -589,6 +598,7 @@ export const testimonials = [
     review: "Remarkable experience! The clinic environment is so calm and hygienic. Dr. Swetali, Dr. Priyanka, and Dr. Ayushi took such good care of me. My teeth whitening session took under an hour and the results blew everyone away. Thank you!",
     date: "March 2026",
     verified: true,
+    source: "Google Review",
   },
 ];
 

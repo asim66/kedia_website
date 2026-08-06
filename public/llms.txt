@@ -1,11 +1,10 @@
 # Kedia Dental Care — Entity Summary & Clinical Services
 
-> Kedia Dental Care is a leading, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS, MDS with 22+ years of clinical experience, Reg. No. 2504), the clinic provides comprehensive, painless, and laser-assisted dental care.
+> Kedia Dental Care is a leading, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS, MDS with 22+ years of clinical experience), the clinic provides comprehensive, painless, and laser-assisted dental care.
 
 ## Core Entity Details
 - **Clinic Name**: Kedia Dental Care
 - **Founder & Lead Specialist**: Dr. Shiv Dayal Kedia (BDS, MDS - Endodontic & Implant Specialist)
-- **Registration**: Reg. No. 2504 (Odisha State Dental Council & Dental Council of India)
 - **Established**: 2004
 - **Address**: 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
 - **Phone**: +91 78730 87575

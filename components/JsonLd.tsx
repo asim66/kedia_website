@@ -11,6 +11,7 @@ export default function JsonLd() {
         "name": clinicInfo.name,
         "alternateName": "Kedia Dental Care Bhubaneswar",
         "url": "https://kediadentalcare.com",
+        "hasMap": "https://www.google.com/maps?cid=7714856428789524251",
         "telephone": clinicInfo.phone,
         "email": clinicInfo.email,
         "priceRange": "₹₹",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MapPin, Mail, Clock, Heart, ShieldCheck } from "lucide-react";
+import { Phone, MapPin, Mail, Clock, Heart, ShieldCheck, ExternalLink } from "lucide-react";
 import { clinicInfo, treatmentsData } from "@/data/clinicData";
 
 export default function Footer() {
@@ -88,7 +88,15 @@ export default function Footer() {
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
-                <span className="text-slate-700">{clinicInfo.address.full}</span>
+                <a
+                  href="https://www.google.com/maps?cid=7714856428789524251"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-primary transition-colors text-slate-700 font-medium flex items-center gap-1 group"
+                >
+                  <span>{clinicInfo.address.full}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-brand-primary shrink-0 opacity-80 group-hover:opacity-100" />
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-primary shrink-0" />
@@ -135,9 +143,6 @@ export default function Footer() {
           <div className="space-y-1 text-center sm:text-left">
             <p>
               &copy; {currentYear} {clinicInfo.name}. All rights reserved. Shuvam Towers, Forest Park, Bhubaneswar.
-            </p>
-            <p className="text-xs text-slate-400">
-              {clinicInfo.dciRegistration}
             </p>
           </div>
           <div className="flex items-center gap-4">

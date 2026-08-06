@@ -35,7 +35,7 @@ export interface ClinicInfo {
   phone: string;
   phoneRaw: string;
   email: string;
-  dciRegistration: string;
+  dciRegistration?: string;
   sameAs: string[];
   medicalDisclaimer: string;
   googleReviewUrl: string;
@@ -94,7 +94,6 @@ export const clinicInfo: ClinicInfo = {
   phone: "+91 78730 87575",
   phoneRaw: "+917873087575",
   email: "shivdayalkedia11@gmail.com",
-  dciRegistration: "Reg. No. 2504 (Odisha State Dental Council / DCI Registered)",
   sameAs: [
     "https://www.facebook.com/kediadentalcare",
     "https://www.instagram.com/kediadentalcare",
@@ -246,7 +245,6 @@ export const teamMembers: Doctor[] = [
     title: "Founder & Chief Dental Surgeon",
     role: "founder",
     qualifications: "BDS, MDS (Specialist Dental Surgeon)",
-    registrationNumber: "Reg. No. 2504 / DCI & Odisha State Dental Council",
     experienceYears: 22,
     specialty: "Endodontics, Implants & Laser Dentistry",
     bio: "Dr. Shiv Dayal Kedia established Kedia Dental Care in 2004 with a vision to bring world-class, ethical, and painless dental care to Bhubaneswar. With over two decades of clinical expertise, Dr. Kedia is renowned across Odisha for his mastery in complex Root Canal Therapy, Dental Implants, and Digital Smile Designing.",

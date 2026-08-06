@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck, Compass, Navigation } from "lucide-react";
 import { clinicInfo, faqsList } from "@/data/clinicData";
 import AppointmentForm from "@/components/AppointmentForm";
 import JsonLd from "@/components/JsonLd";
@@ -166,6 +166,59 @@ export default function ContactPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Nearby Landmarks & Directions (Local Entity SEO) */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-12">
+          
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-100 text-brand-primary rounded-full text-xs font-bold uppercase tracking-wider">
+              <Navigation className="w-3.5 h-3.5" /> Easy Access & Directions
+            </span>
+            <h2 className="text-3xl font-heading font-bold text-slate-900">Nearby Landmarks in Bhubaneswar</h2>
+            <p className="text-slate-600 text-sm sm:text-base">
+              Conveniently located at <strong>Shuvam Towers, Forest Park</strong>, our clinic is easily reachable from key transit hubs and medical centers across Bhubaneswar.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clinicInfo.nearbyLandmarks.map((item, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-purple-50/50 border border-purple-100 space-y-2 hover:border-brand-primary/40 transition-colors">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-bold text-slate-900 text-base flex items-center gap-2">
+                    <Compass className="w-4 h-4 text-brand-primary shrink-0" />
+                    {item.name}
+                  </h3>
+                  <span className="text-xs font-bold px-2.5 py-1 bg-brand-primary text-white rounded-full shrink-0">
+                    {item.distance}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Localities Served Badges */}
+          <div className="bg-slate-900 text-white p-8 rounded-3xl space-y-6">
+            <div className="text-center space-y-2">
+              <h3 className="text-xl font-heading font-bold text-white flex items-center justify-center gap-2">
+                <MapPin className="w-5 h-5 text-brand-primary" /> Key Areas Served in Bhubaneswar
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400">
+                Patients regularly visit Kedia Dental Care from major commercial, educational, and residential localities across Bhubaneswar:
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {clinicInfo.servedLocalities.map((loc, i) => (
+                <span key={i} className="px-4 py-2 bg-slate-800 text-purple-200 border border-slate-700 rounded-full text-xs font-semibold hover:border-brand-primary transition-colors">
+                  📍 {loc}
+                </span>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 

@@ -41,6 +41,8 @@ export interface ClinicInfo {
   googleReviewUrl: string;
   googleRating: number;
   googleReviewCount: string;
+  servedLocalities: string[];
+  nearbyLandmarks: { name: string; distance: string; desc: string }[];
   address: {
     street: string;
     landmark: string;
@@ -103,6 +105,23 @@ export const clinicInfo: ClinicInfo = {
   googleReviewUrl: "https://www.google.com/search?kgmid=/g/11b7gpsy2t&q=Kedia+Dental+Care",
   googleRating: 4.9,
   googleReviewCount: "500+",
+  servedLocalities: [
+    "Forest Park & Sishu Bhawan Road",
+    "Unit-1 & Capital Hospital Area",
+    "Bapuji Nagar & Rajmahal Square",
+    "Master Canteen & Railway Station",
+    "Saheed Nagar & Janpath",
+    "Jaydev Vihar & Nayapalli",
+    "Khandagiri & Baramunda",
+    "Patia & KIIT University Area"
+  ],
+  nearbyLandmarks: [
+    { name: "Sishu Bhawan Square", distance: "100 meters away", desc: "Located directly opposite Sishu Bhawan Square on Forest Park Road." },
+    { name: "Forest Park Public Garden", distance: "200 meters away", desc: "Short walk from the main Forest Park entrance gate." },
+    { name: "Capital Hospital (Unit-6)", distance: "1.0 km (3 mins)", desc: "Quick drive via Capital Hospital Road and Rajmahal Road." },
+    { name: "Bhubaneswar Railway Station", distance: "2.5 km (8 mins)", desc: "Direct route through Rajmahal Square and Master Canteen." },
+    { name: "Biju Patnaik Airport (BBI)", distance: "3.0 km (10 mins)", desc: "Easily accessible via Airport Road." }
+  ],
   address: {
     street: "2nd Floor, Shuvam Towers",
     landmark: "Near Sishu Bhawan Road",

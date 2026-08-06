@@ -18,7 +18,18 @@ export const metadata: Metadata = {
     template: `%s | ${clinicInfo.name}`,
   },
   description: clinicInfo.tagline,
-  keywords: ["Dentist in Bhubaneswar", "Dental Clinic Bhubaneswar", "Root Canal Bhubaneswar", "Dental Implants Bhubaneswar", "Orthodontist Forest Park"],
+  keywords: [
+    "Dentist in Bhubaneswar",
+    "Best Dental Clinic Bhubaneswar",
+    "Root Canal Specialist Bhubaneswar",
+    "Dental Implants Bhubaneswar",
+    "Orthodontist Forest Park Bhubaneswar",
+    "Dentist near Sishu Bhawan",
+    "Laser Dentistry Bhubaneswar"
+  ],
+  alternates: {
+    canonical: "https://kediadentalcare.com",
+  },
   openGraph: {
     title: clinicInfo.name,
     description: clinicInfo.tagline,
@@ -26,6 +37,26 @@ export const metadata: Metadata = {
     siteName: clinicInfo.name,
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://kediadentalcare.com/images/clinic_hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Kedia Dental Care - Best Dental Clinic in Bhubaneswar',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: clinicInfo.name,
+    description: clinicInfo.tagline,
+    images: ['https://kediadentalcare.com/images/clinic_hero.webp'],
+  },
+  other: {
+    "geo.region": "IN-OR",
+    "geo.placename": "Bhubaneswar",
+    "geo.position": "20.2727144;85.8239003",
+    "ICBM": "20.2727144, 85.8239003",
   },
 };
 

@@ -80,15 +80,28 @@ export default function JsonLd() {
             "position": index + 1,
           })),
         },
+        "image": "https://kediadentalcare.com/images/clinic_hero.webp",
+        "medicalSpecialty": ["Dentistry", "Endodontics", "Orthodontics", "PediatricDentistry", "Periodontics", "Implantology"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": clinicInfo.googleRating,
+          "reviewCount": "500",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
         "areaServed": [
-          {
-            "@type": "City",
-            "name": "Bhubaneswar",
-          },
-          {
-            "@type": "State",
-            "name": "Odisha",
-          },
+          { "@type": "AdministrativeArea", "name": "Forest Park, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Sishu Bhawan Road, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Unit 1, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Bapuji Nagar, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Rajmahal Square, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Saheed Nagar, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Jaydev Vihar, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Khandagiri, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Patia, Bhubaneswar" },
+          { "@type": "AdministrativeArea", "name": "Nayapalli, Bhubaneswar" },
+          { "@type": "City", "name": "Bhubaneswar" },
+          { "@type": "State", "name": "Odisha" }
         ],
       },
       {

@@ -114,7 +114,24 @@ export default function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
+        {/* Areas Served Footer Bar */}
+        <div className="py-6 border-t border-slate-200/80 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center max-w-5xl mx-auto">
+            <span className="font-bold text-slate-800">Serving Patients Across Bhubaneswar:</span>
+            <span>Forest Park</span> • 
+            <span>Sishu Bhawan Road</span> • 
+            <span>Unit-1</span> • 
+            <span>Capital Hospital Area</span> • 
+            <span>Bapuji Nagar</span> • 
+            <span>Rajmahal Square</span> • 
+            <span>Saheed Nagar</span> • 
+            <span>Jaydev Vihar</span> • 
+            <span>Khandagiri</span> • 
+            <span>Patia</span>
+          </div>
+        </div>
+
+        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
           <div className="space-y-1 text-center sm:text-left">
             <p>
               &copy; {currentYear} {clinicInfo.name}. All rights reserved. Shuvam Towers, Forest Park, Bhubaneswar.

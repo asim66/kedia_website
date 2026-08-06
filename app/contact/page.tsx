@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck } from "lucide-react";
 import { clinicInfo, faqsList } from "@/data/clinicData";
 import AppointmentForm from "@/components/AppointmentForm";
 import JsonLd from "@/components/JsonLd";
@@ -121,7 +121,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-brand-primary pt-1">
                   <span className="flex items-center gap-1"><Accessibility className="w-4 h-4 text-brand-primary" /> Wheelchair Friendly</span>
-                  <span className="flex items-center gap-1"><CreditCard className="w-4 h-4 text-brand-primary" /> 0% Interest EMI</span>
+                  <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-brand-primary" /> Transparent Pricing</span>
                 </div>
               </div>
 
@@ -140,12 +140,12 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Appointment Request Form */}
+            {/* Contact Form */}
             <div className="lg:col-span-6">
               <div className="bg-slate-50 p-5 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl">
-                <h2 className="text-2xl font-bold font-heading text-slate-900 mb-2">Make an Appointment</h2>
+                <h2 className="text-2xl font-bold font-heading text-slate-900 mb-2">Get in Touch with Us</h2>
                 <p className="text-slate-600 text-xs md:text-sm mb-6">
-                  Fill out the form below. Our reception team will call you back within 30 minutes during operating hours.
+                  Fill out the form below to send us a message. Our team will get back to you promptly during operating hours.
                 </p>
                 <AppointmentForm />
               </div>

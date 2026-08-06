@@ -203,7 +203,7 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 font-medium">Financial Options</p>
-                        <p className="font-semibold text-sm text-brand-primary">0% Interest EMI Available</p>
+                        <p className="font-semibold text-sm text-brand-primary">Transparent & Direct Billing</p>
                       </div>
                     </div>
                   </div>
@@ -212,10 +212,10 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                   
                   <div className="space-y-3">
                     <Link 
-                      href="?booking=true"
+                      href="/contact"
                       className="w-full bg-brand-primary hover:bg-brand-primaryDark text-white py-3.5 rounded-xl font-bold transition-all shadow-md shadow-brand-primary/20 flex items-center justify-center gap-2 text-center"
                     >
-                      Book Consultation
+                      Contact Reception
                     </Link>
                     <a 
                       href={`tel:${clinicInfo.phoneRaw}`}

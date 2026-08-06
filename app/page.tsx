@@ -73,11 +73,10 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
               <Link
-                href="?booking=true"
+                href="/contact"
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold transition-all shadow-xl shadow-brand-primary/25 flex items-center justify-center gap-2 text-base md:text-lg hover:scale-[1.02] touch-manipulation min-h-[48px]"
               >
-                <CalendarIcon className="w-5 h-5 shrink-0" />
-                <span>Make an Appointment</span>
+                <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5 shrink-0" />
               </Link>
               <a
@@ -104,8 +103,8 @@ export default function Home() {
                 <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Implants Completed</p>
               </div>
               <div className="bg-white/60 p-3 sm:p-0 rounded-xl sm:bg-transparent">
-                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">0% EMI</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Flexible Payment Plans</p>
+                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">100%</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Sterilized & Hygienic</p>
               </div>
             </div>
           </div>
@@ -447,14 +446,14 @@ export default function Home() {
             Ready for a Healthy, Confident Smile?
           </h2>
           <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">
-            Book your appointment online or call us directly. Visit our new location at 2nd Floor, Shuvam Towers, Forest Park, Bhubaneswar.
+            Call us directly or send a message. Visit our new location at 2nd Floor, Shuvam Towers, Forest Park, Bhubaneswar.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <Link
-              href="?booking=true"
+              href="/contact"
               className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 py-4 rounded-xl font-bold transition-all text-base md:text-lg shadow-xl shadow-brand-primary/25"
             >
-              Make an Appointment Now
+              Contact Us Today
             </Link>
             <a
               href={`tel:${clinicInfo.phoneRaw}`}

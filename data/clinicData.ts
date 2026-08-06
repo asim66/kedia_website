@@ -164,9 +164,9 @@ export const clinicInfo: ClinicInfo = {
       icon: "Car",
     },
     {
-      title: "0% Interest Flexible EMI",
-      description: "Easy monthly installment plans for major dental procedures like Implants, Braces & Aligners.",
-      icon: "CreditCard",
+      title: "Transparent & Honest Pricing",
+      description: "Clear written cost estimates provided upfront before starting any dental procedure with no hidden charges.",
+      icon: "ShieldCheck",
     },
     {
       title: "Quiet & Anxiety-Free Lounge",
@@ -217,7 +217,6 @@ export const clinicInfo: ClinicInfo = {
   paymentOptions: [
     "Cash & All Bank UPI (GPay, PhonePe, Paytm)",
     "Credit & Debit Cards (Visa, MasterCard, RuPay)",
-    "0% Cost Monthly EMIs via Bajaj Finserv / HDFC Bank",
     "Reimbursement Assistance for Corporate & Private Dental Insurance Claims",
   ],
 };
@@ -575,7 +574,7 @@ export const testimonials = [
     location: "Saheed Nagar, Bhubaneswar",
     rating: 5,
     treatment: "Clear Aligners",
-    review: "Got my clear aligners from Kedia Dental Care. The 3D intraoral scan was so comfortable — no messy impression pastes! Within 8 months my crooked teeth were completely straight. The zero-cost EMI option made payment so easy.",
+    review: "Got my clear aligners from Kedia Dental Care. The 3D intraoral scan was so comfortable — no messy impression pastes! Within 8 months my crooked teeth were completely straight. The transparent pricing made the whole process smooth.",
     date: "May 2026",
     verified: true,
     source: "Google Review",
@@ -612,12 +611,12 @@ export const faqsList = [
     answer: "Our clinic is open Monday to Saturday from 9:30 AM to 2:00 PM and 4:00 PM to 8:30 PM. On Sundays, we are open from 9:30 AM to 2:00 PM (By Appointment Only).",
   },
   {
-    question: "How do I book an appointment with Dr. Shiv Dayal Kedia & Team?",
-    answer: "You can book an appointment by calling us directly at +91 78730 87575, emailing shivdayalkedia11@gmail.com, or using our online instant appointment booking form on this website.",
+    question: "How do I get in touch with Dr. Shiv Dayal Kedia & Team?",
+    answer: "You can reach us directly by calling +91 78730 87575, emailing shivdayalkedia11@gmail.com, or sending us a message on WhatsApp.",
   },
   {
-    question: "Do you offer zero-cost EMI options for expensive treatments?",
-    answer: "Yes, we offer easy 0% interest monthly installment plans (EMIs) via Bajaj Finserv and major credit cards for treatments like Dental Implants, Clear Aligners, and Full Mouth Rehabilitation.",
+    question: "What payment options do you accept?",
+    answer: "We accept Cash, all Bank UPI options (GPay, PhonePe, Paytm), and Credit/Debit cards (Visa, MasterCard, RuPay). We also provide reimbursement assistance for dental insurance claims.",
   },
   {
     question: "What should I bring for my first visit?",

@@ -62,10 +62,10 @@ export default function BestDentalClinicBhubaneswarPage() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <Link 
-                href="?booking=true"
+                href="/contact"
                 className="bg-brand-primary hover:bg-brand-primaryLight text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-brand-primary/30 flex items-center gap-2 text-lg w-full sm:w-auto justify-center"
               >
-                <CalendarDays className="w-5 h-5" /> Book Appointment
+                Contact Us Today
               </Link>
               <a 
                 href={`tel:${clinicInfo.phoneRaw}`}

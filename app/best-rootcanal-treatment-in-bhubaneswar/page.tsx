@@ -43,7 +43,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
     },
     {
       question: "How much does Root Canal Treatment cost in Bhubaneswar?",
-      answer: "Root canal treatment cost in Bhubaneswar generally ranges depending on whether it is a front tooth or a multi-rooted molar, whether laser disinfection is required, and the type of protective crown selected (e.g. PFM or Zirconia). We provide complete written transparent cost estimates before treatment and offer 0% interest EMI options."
+      answer: "Root canal treatment cost in Bhubaneswar generally ranges depending on whether it is a front tooth or a multi-rooted molar, whether laser disinfection is required, and the type of protective crown selected (e.g. PFM or Zirconia). We provide complete written transparent cost estimates before starting treatment."
     },
     {
       question: "Is a crown (cap) necessary after a root canal treatment?",
@@ -135,16 +135,16 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               </div>
               <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 bg-white p-2.5 rounded-xl border border-slate-200 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>0% Interest EMI</span>
+                <span>Transparent Pricing</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <Link 
-                href="?booking=true"
+                href="/contact"
                 className="bg-brand-primary hover:bg-brand-primaryLight text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-brand-primary/30 flex items-center gap-2 text-lg w-full sm:w-auto justify-center"
               >
-                <CalendarDays className="w-5 h-5" /> Book RCT Consultation
+                Contact Us Today
               </Link>
               <a 
                 href={`tel:${clinicInfo.phoneRaw}`}
@@ -342,11 +342,11 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <CreditCard className="w-7 h-7" />
+                <ShieldCheck className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold font-heading text-slate-900">0% Cost EMI Options</h3>
+              <h3 className="text-xl font-bold font-heading text-slate-900">Transparent Billing</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Easy monthly installments via Bajaj Finserv and major credit cards with zero hidden costs or transparent pricing breakdowns.
+                Upfront written cost breakdowns provided before treatment begins with zero hidden charges or surprise fees.
               </p>
             </div>
           </div>
@@ -514,13 +514,13 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="pt-4 border-t border-purple-800/60 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-xs text-purple-200">
-                💡 Flexible 0% Interest EMI options available via Bajaj Finserv & credit cards.
+                💡 Full transparent cost breakdown provided prior to treatment.
               </div>
               <Link 
-                href="?booking=true"
+                href="/contact"
                 className="bg-brand-primary hover:bg-brand-primaryLight text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg inline-flex items-center gap-2"
               >
-                <CalendarDays className="w-4 h-4" /> Get Exact Cost Estimate
+                Get Cost Estimate
               </Link>
             </div>
           </div>
@@ -700,10 +700,10 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
                 <div>
                   <Link 
-                    href="?booking=true"
+                    href="/contact"
                     className="bg-brand-primary hover:bg-brand-primaryLight text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg inline-flex items-center gap-2 text-base w-full sm:w-auto justify-center"
                   >
-                    <CalendarDays className="w-5 h-5" /> Book Appointment Now
+                    Contact Us Today
                   </Link>
                 </div>
               </div>

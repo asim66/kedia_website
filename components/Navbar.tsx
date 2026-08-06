@@ -7,14 +7,12 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Calendar, Mail, Megaphone, ChevronDown, ArrowRight, Sparkles } from "lucide-react";
 import { clinicInfo, treatmentsData } from "@/data/clinicData";
-import AppointmentModal from "./AppointmentModal";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileTreatmentsOpen, setMobileTreatmentsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
@@ -186,13 +184,13 @@ export default function Navbar() {
               </li>
             </ul>
 
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <a
+              href={`tel:${clinicInfo.phoneRaw}`}
               className="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-md shadow-brand-primary/25 flex items-center gap-2 hover:scale-[1.02]"
             >
-              <Calendar className="w-4 h-4" />
-              Make an Appointment
-            </button>
+              <Phone className="w-4 h-4" />
+              Call Clinic
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -300,22 +298,10 @@ export default function Navbar() {
                 <Mail className="w-4 h-4 text-brand-primary shrink-0" />
                 {clinicInfo.email}
               </a>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setIsModalOpen(true);
-                }}
-                className="bg-brand-primary text-white w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md"
-              >
-                <Calendar className="w-4 h-4" />
-                Make an Appointment
-              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }

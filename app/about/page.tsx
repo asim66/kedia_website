@@ -207,10 +207,10 @@ export default function AboutPage() {
               <Phone className="w-4 h-4" /> {clinicInfo.phone}
             </a>
             <Link 
-              href="?booking=true"
+              href="/contact"
               className="bg-white text-slate-900 hover:bg-slate-100 px-6 py-3 rounded-xl font-bold transition-colors text-sm"
             >
-              Make an Appointment
+              Contact Us
             </Link>
           </div>
         </div>

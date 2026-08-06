@@ -72,14 +72,14 @@ export default function TreatmentsPage() {
         <div className="max-w-5xl mx-auto px-4 text-center space-y-4">
           <h2 className="text-3xl font-heading font-bold text-slate-900">Unsure Which Treatment You Need?</h2>
           <p className="text-slate-600 text-sm md:text-base">
-            Book a comprehensive digital consultation with Dr. Shiv Dayal Kedia & Team. We conduct full 3D scans and explain every option clearly.
+            Consult with Dr. Shiv Dayal Kedia & Team. We conduct full digital scans and explain every option clearly.
           </p>
           <div className="pt-2">
             <Link 
-              href="?booking=true"
+              href="/contact"
               className="bg-brand-primary hover:bg-brand-primaryDark text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-primary/20 inline-flex items-center gap-2"
             >
-              Make an Appointment Now
+              Contact Us Today
             </Link>
           </div>
         </div>

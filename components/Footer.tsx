@@ -22,12 +22,12 @@ export default function Footer() {
             </p>
           </div>
           <div className="lg:col-span-4 flex justify-start lg:justify-end">
-            <Link 
-              href="?booking=true"
+            <a 
+              href={`tel:${clinicInfo.phoneRaw}`}
               className="w-full sm:w-auto justify-center bg-brand-primary hover:bg-brand-primaryDark text-white px-6 py-3.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-brand-primary/20 inline-flex items-center gap-2"
             >
-              <Heart className="w-4 h-4 text-amber-300 fill-amber-300" /> Make an Appointment
-            </Link>
+              <Phone className="w-4 h-4 text-white" /> Call Clinic Now
+            </a>
           </div>
         </div>
 

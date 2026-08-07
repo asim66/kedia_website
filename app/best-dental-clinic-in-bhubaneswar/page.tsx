@@ -325,10 +325,10 @@ export default function BestDentalClinicBhubaneswarPage() {
                 </div>
                 
                 <Link 
-                  href="?booking=true"
+                  href="/contact"
                   className="bg-brand-primary hover:bg-brand-primaryLight text-white px-8 py-4 rounded-xl font-bold transition-all text-center inline-block w-full sm:w-auto"
                 >
-                  Book Your Visit
+                  Contact & Location Info
                 </Link>
               </div>
               

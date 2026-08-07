@@ -1,6 +1,5 @@
-import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck, Compass, Navigation } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck, Compass, Navigation, MessageCircle, ExternalLink } from "lucide-react";
 import { clinicInfo, faqsList } from "@/data/clinicData";
-import AppointmentForm from "@/components/AppointmentForm";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
@@ -140,14 +139,111 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-6">
-              <div className="bg-slate-50 p-5 sm:p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl">
-                <h2 className="text-2xl font-bold font-heading text-slate-900 mb-2">Get in Touch with Us</h2>
-                <p className="text-slate-600 text-xs md:text-sm mb-6">
-                  Fill out the form below to send us a message. Our team will get back to you promptly during operating hours.
-                </p>
-                <AppointmentForm />
+            {/* Direct Connect & Action Cards (Form replaced with direct channels) */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="bg-gradient-to-br from-slate-900 via-purple-950 to-slate-950 p-6 sm:p-8 md:p-10 rounded-3xl border border-slate-800 shadow-2xl text-white space-y-6">
+                <div className="space-y-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-900/80 text-purple-200 border border-purple-700/60 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Direct Patient Assistance
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl font-bold font-heading text-white">Connect Directly with Our Clinic</h2>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    For instant appointments, clinical inquiries, or dental emergencies, please reach out to our reception team directly via phone, WhatsApp, or email.
+                  </p>
+                </div>
+
+                <div className="space-y-4 pt-2">
+                  {/* Phone Call Card */}
+                  <a 
+                    href={`tel:${clinicInfo.phoneRaw}`}
+                    className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-brand-primary hover:bg-brand-primaryDark text-white transition-all shadow-lg shadow-brand-primary/30 group"
+                  >
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                        <Phone className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-purple-100 font-medium">Call Reception Directly</p>
+                        <p className="font-bold text-base sm:text-lg">{clinicInfo.phone}</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold bg-white text-slate-900 px-3.5 py-2 rounded-xl group-hover:scale-105 transition-transform shrink-0">
+                      Call Now
+                    </span>
+                  </a>
+
+                  {/* WhatsApp Chat Card */}
+                  <a 
+                    href={`https://wa.me/917873087575?text=Hello%20Kedia%20Dental%20Care%2C%20I%20would%20like%20to%20inquire%20about%20dental%20care%20services.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-lg shadow-emerald-600/30 group"
+                  >
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                        <MessageCircle className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-emerald-100 font-medium">Instant WhatsApp Message</p>
+                        <p className="font-bold text-base sm:text-lg">+91 78730 87575</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold bg-white text-emerald-950 px-3.5 py-2 rounded-xl group-hover:scale-105 transition-transform shrink-0 flex items-center gap-1">
+                      Chat Now <ExternalLink className="w-3 h-3 inline" />
+                    </span>
+                  </a>
+
+                  {/* Email Card */}
+                  <a 
+                    href={`mailto:${clinicInfo.email}`}
+                    className="flex items-center justify-between p-4 rounded-2xl bg-slate-800/90 hover:bg-slate-800 text-white transition-all border border-slate-700 group"
+                  >
+                    <div className="flex items-center gap-3.5 min-w-0">
+                      <div className="w-10 h-10 rounded-xl bg-slate-700 flex items-center justify-center shrink-0">
+                        <Mail className="w-5 h-5 text-purple-300" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-xs text-slate-400 font-medium">Email Inquiries</p>
+                        <p className="font-semibold text-xs sm:text-sm text-slate-200 truncate">{clinicInfo.email}</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold text-purple-300 group-hover:text-white transition-colors shrink-0">
+                      Send Email &rarr;
+                    </span>
+                  </a>
+
+                  {/* Google Maps Directions Button */}
+                  <a 
+                    href="https://www.google.com/maps?cid=7714856428789524251"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 rounded-2xl bg-purple-900/50 hover:bg-purple-900/80 text-white transition-all border border-purple-700/50 group"
+                  >
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-10 h-10 rounded-xl bg-purple-800/80 flex items-center justify-center shrink-0">
+                        <MapPin className="w-5 h-5 text-amber-300" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-purple-200 font-medium">Get Turn-by-Turn Directions</p>
+                        <p className="font-semibold text-xs sm:text-sm text-white">Shuvam Towers, Forest Park</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-bold text-amber-300 group-hover:text-white transition-colors shrink-0 flex items-center gap-1">
+                      Open Maps <ExternalLink className="w-3 h-3 inline" />
+                    </span>
+                  </a>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-xs text-slate-300 space-y-1">
+                  <p className="font-bold text-white flex items-center gap-1.5">
+                    <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+                    Same-Day Walk-Ins & Emergency Care
+                  </p>
+                  <p className="text-slate-300 leading-relaxed">
+                    Experiencing severe tooth pain or dental trauma? Walk-in priority slots are reserved daily during clinic hours. Call us before heading over for immediate assistance.
+                  </p>
+                </div>
+
               </div>
             </div>
 

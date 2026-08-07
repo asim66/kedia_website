@@ -28,7 +28,7 @@ export const metadata = {
   description: "Consult MDS Endodontic Specialist Dr. Shiv Dayal Kedia for painless laser root canal therapy, rotary endodontics, and single-visit RCT in Forest Park, Bhubaneswar.",
   keywords: "root canal specialist bhubaneswar, endodontic specialist bhubaneswar, laser rct bhubaneswar, dr kedia root canal, micro endodontics bhubaneswar",
   alternates: {
-    canonical: "/best-rootcanal-treatment-in-bhubaneswar",
+    canonical: "/best-root-canal-treatment-in-bhubaneswar",
   },
 };
 

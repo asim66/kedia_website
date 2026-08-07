@@ -5,7 +5,6 @@
 ## Core Entity Details
 - **Clinic Name**: Kedia Dental Care
 - **Founder & Lead Specialist**: Dr. Shiv Dayal Kedia (BDS, MDS - Endodontic & Implant Specialist)
-- **Medical License / Registration**: Reg. No. 1824-A (Odisha State Dental Council / Dental Council of India)
 - **Established**: 2004
 - **Address**: 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
 - **Phone**: +91 78730 87575

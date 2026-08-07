@@ -67,11 +67,6 @@ export default function AboutPage() {
               
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900">{founder.name}</h2>
               <p className="text-sm font-bold text-brand-primary uppercase tracking-wider">{founder.title} • {founder.qualifications}</p>
-              {founder.registrationNumber && (
-                <p className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200 inline-flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" /> {founder.registrationNumber}
-                </p>
-              )}
               <p className="text-slate-600 text-base md:text-lg leading-relaxed pt-2">
                 {founder.bio}
               </p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { clinicInfo, teamMembers, treatmentsData } from "@/data/clinicData";
+import { clinicInfo, teamMembers, treatmentsData, faqsList } from "@/data/clinicData";
 
 export default function JsonLd() {
   const schemaData = {
@@ -11,6 +11,8 @@ export default function JsonLd() {
         "name": clinicInfo.name,
         "alternateName": "Kedia Dental Care Bhubaneswar",
         "url": "https://kediadentalcare.com",
+        "logo": "https://kediadentalcare.com/images/clinic_hero.webp",
+        "image": "https://kediadentalcare.com/images/clinic_hero.webp",
         "hasMap": "https://www.google.com/maps?cid=7714856428789524251",
         "telephone": clinicInfo.phone,
         "email": clinicInfo.email,
@@ -35,6 +37,11 @@ export default function JsonLd() {
           "name": teamMembers[0].name,
           "jobTitle": teamMembers[0].title,
           "identifier": teamMembers[0].registrationNumber,
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Medical License / Registration",
+            "name": teamMembers[0].registrationNumber || "Odisha State Dental Council / DCI Registered Dental Surgeon",
+          },
           "alumniOf": {
             "@type": "EducationalOrganization",
             "name": "Dental Council of India / BDS & MDS"
@@ -45,7 +52,14 @@ export default function JsonLd() {
           "name": member.name,
           "jobTitle": member.title,
           "knowsAbout": member.specialty,
-          ...(member.registrationNumber ? { "identifier": member.registrationNumber } : {})
+          ...(member.registrationNumber ? {
+            "identifier": member.registrationNumber,
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Medical License / Registration",
+              "name": member.registrationNumber,
+            }
+          } : {})
         })),
         "openingHoursSpecification": [
           {
@@ -81,7 +95,6 @@ export default function JsonLd() {
             "position": index + 1,
           })),
         },
-        "image": "https://kediadentalcare.com/images/clinic_hero.webp",
         "medicalSpecialty": ["Dentistry", "Endodontics", "Orthodontics", "PediatricDentistry", "Periodontics", "Implantology"],
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -104,6 +117,30 @@ export default function JsonLd() {
           { "@type": "City", "name": "Bhubaneswar" },
           { "@type": "State", "name": "Odisha" }
         ],
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://kediadentalcare.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kediadentalcare.com"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kediadentalcare.com/#faq",
+        "mainEntity": faqsList.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+          },
+        })),
       },
       {
         "@type": "WebSite",

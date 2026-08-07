@@ -5,9 +5,12 @@ import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarD
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Best Dental Clinic in Bhubaneswar | Top Rated Dentist",
-  description: "Looking for the best dental clinic in Bhubaneswar? Kedia Dental Care offers painless micro-dentistry, implants, root canals, and cosmetic dentistry. Book your appointment today!",
-  keywords: "best dental clinic in bhubaneswar, best dentist in bhubaneswar, top dental clinic bhubaneswar, dental hospital in bhubaneswar",
+  title: "Top-Rated Dental Clinic in Bhubaneswar | Patient Reviews & Clinic Ratings",
+  description: "Discover why patients rank Kedia Dental Care as a top-rated dental clinic in Bhubaneswar. 22+ years of clinical excellence, 500+ 5-star Google reviews, and advanced laser dentistry in Forest Park.",
+  keywords: "top rated dental clinic bhubaneswar, dental clinic reviews bhubaneswar, best dental care forest park, kedia dental care ratings",
+  alternates: {
+    canonical: "/best-dental-clinic-in-bhubaneswar",
+  },
 };
 
 export default function BestDentalClinicBhubaneswarPage() {

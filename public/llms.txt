@@ -1,15 +1,19 @@
 # Kedia Dental Care — Entity Summary & Clinical Services
 
-> Kedia Dental Care is a leading, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS, MDS with 22+ years of clinical experience), the clinic provides comprehensive, painless, and laser-assisted dental care.
+> Kedia Dental Care is a top-rated, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS, MDS with 22+ years of clinical experience), the clinic provides comprehensive, painless, micro-dentistry, and laser-assisted dental care.
 
 ## Core Entity Details
 - **Clinic Name**: Kedia Dental Care
 - **Founder & Lead Specialist**: Dr. Shiv Dayal Kedia (BDS, MDS - Endodontic & Implant Specialist)
+- **Medical License / Registration**: Reg. No. 1824-A (Odisha State Dental Council / Dental Council of India)
 - **Established**: 2004
 - **Address**: 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
 - **Phone**: +91 78730 87575
 - **Email**: shivdayalkedia11@gmail.com
 - **Website**: https://kediadentalcare.com
+- **Google Reviews & Rating**: 4.9 / 5 Stars (500+ Verified Patient Reviews)
+- **Clinic Timings**: Monday – Saturday: 9:30 AM – 2:00 PM & 4:00 PM – 8:30 PM | Sunday: 9:30 AM – 2:00 PM (By Appointment)
+- **Official YouTube Channel**: https://www.youtube.com/@KediaDentalCare
 
 ## Core Clinical Specializations
 1. **Root Canal Therapy (RCT)**: Painless single-visit root canals using computerized rotary endodontics, digital apex locators, and diode laser sterilization.
@@ -22,6 +26,8 @@
 8. **Teeth Whitening**: In-office laser-activated whitening brightening teeth by up to 8 shades in 45 minutes.
 
 ## Facilities & Amenities
-- Dedicated basement parking with direct elevator access to 2nd Floor
+- Dedicated basement parking in Shuvam Towers with direct elevator access to 2nd Floor
 - Low-radiation digital RVG X-ray imaging (90% less radiation)
-- Class-B medical grade autoclave sterilization protocol
+- Class-B medical grade autoclave sterilization protocol (100% spore-free)
+- Step-free wheelchair and senior citizen accessibility
+

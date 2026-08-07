@@ -67,7 +67,12 @@ export default function AboutPage() {
               
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900">{founder.name}</h2>
               <p className="text-sm font-bold text-brand-primary uppercase tracking-wider">{founder.title} • {founder.qualifications}</p>
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+              {founder.registrationNumber && (
+                <p className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200 inline-flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" /> {founder.registrationNumber}
+                </p>
+              )}
+              <p className="text-slate-600 text-base md:text-lg leading-relaxed pt-2">
                 {founder.bio}
               </p>
               
@@ -125,6 +130,11 @@ export default function AboutPage() {
                   <div className="p-6 space-y-2">
                     <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">{member.title}</p>
                     <p className="text-xs font-semibold text-slate-800">{member.specialty} • {member.qualifications}</p>
+                    {member.registrationNumber && (
+                      <p className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100 inline-flex items-center gap-1">
+                        <ShieldCheck className="w-3 h-3 text-emerald-600" /> {member.registrationNumber}
+                      </p>
+                    )}
                     <p className="text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">{member.bio}</p>
                   </div>
                 </div>

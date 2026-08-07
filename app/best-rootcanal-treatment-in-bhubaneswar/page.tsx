@@ -24,9 +24,12 @@ import {
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
-  title: "Root Canal Treatment in Bhubaneswar | Single-Visit Painless RCT",
-  description: "Looking for the best root canal treatment in Bhubaneswar? Kedia Dental Care offers 100% painless, single-visit RCT by MDS Endodontist Dr. Shiv Dayal Kedia with laser sterilization.",
-  keywords: "root canal treatment in bhubaneswar, painless rct bhubaneswar, single visit root canal bhubaneswar, best endodontist bhubaneswar, root canal cost bhubaneswar, rct cost bhubaneswar",
+  title: "Root Canal Specialist in Bhubaneswar | Micro-Endodontics & Laser RCT",
+  description: "Consult MDS Endodontic Specialist Dr. Shiv Dayal Kedia for painless laser root canal therapy, rotary endodontics, and single-visit RCT in Forest Park, Bhubaneswar.",
+  keywords: "root canal specialist bhubaneswar, endodontic specialist bhubaneswar, laser rct bhubaneswar, dr kedia root canal, micro endodontics bhubaneswar",
+  alternates: {
+    canonical: "/best-rootcanal-treatment-in-bhubaneswar",
+  },
 };
 
 export default function RootCanalTreatmentBhubaneswarPage() {

@@ -40,13 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/best-dental-clinic-in-bhubaneswar`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.95,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/best-rootcanal-treatment-in-bhubaneswar`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.95,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy-policy`,

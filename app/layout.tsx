@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Laser Dentistry Bhubaneswar"
   ],
   alternates: {
-    canonical: "https://kediadentalcare.com",
+    canonical: "./",
   },
   openGraph: {
     title: clinicInfo.name,

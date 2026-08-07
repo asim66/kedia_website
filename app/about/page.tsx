@@ -3,6 +3,7 @@ import Link from "next/link";
 import { teamMembers, visitingConsultants, clinicInfo } from "@/data/clinicData";
 import { Award, CheckCircle2, HeartPulse, ShieldCheck, Sparkles, UserCheck, Phone, Stethoscope } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
+import ClinicGallery from "@/components/ClinicGallery";
 
 export const metadata = {
   title: "About Us | Dr. Shiv Dayal Kedia & Team",
@@ -45,22 +46,23 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="lg:col-span-5 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 relative">
+            <div className="lg:col-span-6 relative">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 relative bg-slate-900">
                 <Image 
-                  src={founder.image || "/images/dr_kedia.webp"}
+                  src="/images/dr_kedia_office.jpg"
                   alt={founder.name}
-                  width={500}
-                  height={550}
-                  className="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover object-top"
+                  width={1024}
+                  height={678}
+                  unoptimized
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent text-white">
-                  <h3 className="text-2xl font-bold font-heading">{founder.name}</h3>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading">{founder.name}</h3>
                 </div>
               </div>
             </div>
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-50 text-brand-primary text-sm font-bold uppercase tracking-wider">
                 <Award className="w-4 h-4" /> Chief Dental Surgeon & Founder
               </div>
@@ -157,6 +159,9 @@ export default function AboutPage() {
 
         </div>
       </section>
+
+      {/* Authentic Clinic Gallery & Premises Tour */}
+      <ClinicGallery />
 
       {/* Sterilization & Infection Control */}
       <section className="py-20 bg-white">

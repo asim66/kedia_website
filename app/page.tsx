@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
+import ClinicGallery from "@/components/ClinicGallery";
 
 function GoogleGIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -179,19 +180,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Authentic Clinic Gallery & Virtual Tour */}
+      <ClinicGallery />
+
       {/* Meet Founder & Specialists Feature */}
       <section className="py-20 bg-slate-50 border-t border-b border-slate-200/70">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+            <div className="lg:col-span-6">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
                 <Image
-                  src={founder.image || "/images/dr_kedia.png"}
+                  src="/images/dr_kedia_office.jpg"
                   alt="Dr. Shiv Dayal Kedia - Chief Dental Surgeon & Founder"
-                  width={500}
-                  height={500}
-                  className="w-full h-[480px] object-cover object-top"
+                  width={1024}
+                  height={678}
+                  unoptimized
+                  className="w-full h-auto object-cover"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-800 text-white">
                   <h3 className="font-bold text-lg font-heading">{founder.name}</h3>
@@ -199,7 +204,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
                 <UserCheck className="w-4 h-4" /> Compassionate Dental Team
               </div>

@@ -172,11 +172,11 @@ export default function RootCanalTreatmentBhubaneswarPage() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image 
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" 
-                alt="Painless Root Canal Treatment in Bhubaneswar at Kedia Dental Care"
-                unoptimized
+                src="/images/clinic_treatment.webp" 
+                alt="Dr. Shiv Dayal Kedia performing painless Root Canal Treatment in Bhubaneswar at Kedia Dental Care"
                 width={800}
                 height={600}
+                priority
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>

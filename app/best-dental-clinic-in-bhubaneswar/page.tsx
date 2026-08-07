@@ -93,11 +93,11 @@ export default function BestDentalClinicBhubaneswarPage() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image 
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" 
-                alt="Kedia Dental Care - Best Dental Clinic in Bhubaneswar"
-                unoptimized
+                src="/images/clinic_reception.webp" 
+                alt="Kedia Dental Care Reception & Welcome Area in Forest Park, Bhubaneswar"
                 width={800}
                 height={600}
+                priority
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>

@@ -124,8 +124,23 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Reception Visual Preview */}
+              <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative group">
+                <img 
+                  src="/images/clinic_reception.webp" 
+                  alt="Kedia Dental Care Reception Counter at Shuvam Towers, Forest Park" 
+                  className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4 text-white">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-950/80 px-2 py-0.5 rounded border border-purple-800">Clinic Front Desk</span>
+                    <h4 className="font-bold text-sm text-white mt-1">Visit us on 2nd Floor, Shuvam Towers</h4>
+                  </div>
+                </div>
+              </div>
+
               {/* Google Maps Embed */}
-              <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-[280px]">
+              <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-[240px]">
                 <iframe 
                   src={clinicInfo.address.googleMapsEmbedUrl} 
                   width="100%" 

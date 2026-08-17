@@ -1,16 +1,24 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, ChevronRight, Clock, HelpCircle, Activity, ShieldCheck, CreditCard, AlertCircle, Phone } from "lucide-react";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const treatment = treatmentsData.find((t) => t.slug === params.slug);
   if (!treatment) return { title: "Treatment Not Found" };
   
   return {
     title: `${treatment.title} in Bhubaneswar`,
     description: `${treatment.shortDescription} Available at Kedia Dental Care, Forest Park, Bhubaneswar.`,
+    alternates: {
+      canonical: `https://kediadentalcare.com/treatments/${treatment.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

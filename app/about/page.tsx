@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { teamMembers, visitingConsultants, clinicInfo } from "@/data/clinicData";
@@ -5,9 +6,16 @@ import { Award, CheckCircle2, HeartPulse, ShieldCheck, Sparkles, UserCheck, Phon
 import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About Us | Dr. Shiv Dayal Kedia & Team",
   description: "Learn about Kedia Dental Care's 22+ years of clinical excellence, Founder Dr. Shiv Dayal Kedia, in-house specialists, and visiting consultants in Bhubaneswar.",
+  alternates: {
+    canonical: "https://kediadentalcare.com/about",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AboutPage() {

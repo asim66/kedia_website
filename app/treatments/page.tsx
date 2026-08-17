@@ -1,11 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Zap, Activity, Smile, Sparkles, Camera, Layers, HeartPulse, Stethoscope, Sun } from "lucide-react";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Specialized Dental Treatments in Bhubaneswar",
   description: "Explore our 10 core specialized dental treatments including Laser Dentistry, Single-Visit RCT, Dental Implants, Braces, and Smile Designing in Bhubaneswar.",
+  alternates: {
+    canonical: "https://kediadentalcare.com/treatments",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TreatmentsPage() {

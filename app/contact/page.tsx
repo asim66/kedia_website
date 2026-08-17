@@ -1,10 +1,18 @@
+import type { Metadata } from "next";
 import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck, Compass, Navigation, MessageCircle, ExternalLink } from "lucide-react";
 import { clinicInfo, faqsList } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact & Clinic Location in Forest Park",
   description: "Contact Kedia Dental Care in Forest Park, Bhubaneswar. Phone: +91 78730 87575 | Email: shivdayalkedia11@gmail.com | 2nd Floor, Shuvam Towers.",
+  alternates: {
+    canonical: "https://kediadentalcare.com/contact",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ContactPage() {

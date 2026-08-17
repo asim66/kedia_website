@@ -1,10 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Privacy Policy | Kedia Dental Care",
   description: "Privacy Policy for Kedia Dental Care. Read how we protect patient personal and health data in compliance with relevant data protection guidelines.",
+  alternates: {
+    canonical: "https://kediadentalcare.com/privacy-policy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyPolicyPage() {

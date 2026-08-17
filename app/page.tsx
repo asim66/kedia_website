@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,6 +9,18 @@ import {
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
+
+export const metadata: Metadata = {
+  title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
+  description: "22+ Years of Clinical Excellence in Forest Park, Bhubaneswar. Comprehensive dental treatments including Single-Visit RCT, Dental Implants, Braces, and Laser Dentistry.",
+  alternates: {
+    canonical: "https://kediadentalcare.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 function GoogleGIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (

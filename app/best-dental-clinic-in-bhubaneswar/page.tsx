@@ -1,15 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { clinicInfo, teamMembers, treatmentsData, testimonials, faqsList } from "@/data/clinicData";
 import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarDays, ExternalLink } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Top-Rated Dental Clinic in Bhubaneswar | Patient Reviews & Clinic Ratings",
   description: "Discover why patients rank Kedia Dental Care as a top-rated dental clinic in Bhubaneswar. 22+ years of clinical excellence, 500+ 5-star Google reviews, and advanced laser dentistry in Forest Park.",
   keywords: "top rated dental clinic bhubaneswar, dental clinic reviews bhubaneswar, best dental care forest park, kedia dental care ratings",
   alternates: {
-    canonical: "/best-dental-clinic-in-bhubaneswar",
+    canonical: "https://kediadentalcare.com/best-dental-clinic-in-bhubaneswar",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

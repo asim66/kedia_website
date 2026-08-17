@@ -30,6 +30,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: clinicInfo.name,
     description: clinicInfo.tagline,

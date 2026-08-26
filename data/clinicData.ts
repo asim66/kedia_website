@@ -247,7 +247,7 @@ export const teamMembers: Doctor[] = [
     qualifications: "BDS, MDS (Specialist Dental Surgeon)",
     experienceYears: 22,
     specialty: "Endodontics, Implants & Laser Dentistry",
-    bio: "Dr. Shiv Dayal Kedia established Kedia Dental Care in 2004 with a vision to bring world-class, ethical, and painless dental care to Bhubaneswar. With over two decades of clinical expertise, Dr. Kedia is renowned across Odisha for his mastery in complex Root Canal Therapy, Dental Implants, and Digital Smile Designing.",
+    bio: "Back in 2004, Dr. Shiv Dayal Kedia founded Kedia Dental Care on a simple, radical philosophy—dentistry should be ethical, incredibly gentle, and fundamentally human. Over the past two decades, Dr. Kedia has built a reputation across Odisha not just for his steady hands, but for the immense time he takes to actually listen to his patients. Whether he is carefully saving a tooth with a root canal, placing a permanent dental implant to help you eat your favorite food again, or completely redesigning a smile from scratch using digital mapping, he brings over twenty years of master-level clinical expertise to the chair. But more importantly, he treats every person sitting in that chair like family.",
     image: "/images/dr_kedia.webp",
   },
   {
@@ -336,11 +336,11 @@ export const treatmentsData: Treatment[] = [
     id: "root-canal-therapy",
     slug: "root-canal-therapy",
     title: "Root Canal Therapy (RCT)",
-    subtitle: "Pain-Free Single Visit Natural Tooth Preservation",
+    subtitle: "Preserve What’s Naturally Yours. | Advanced Root Canal Therapy designed around precision, comfort & natural tooth preservation.",
     iconName: "Activity",
     isPopular: true,
     shortDescription: "Save severely decayed or infected teeth painlessly using computerized rotary instruments and apex locators in single-visit RCT.",
-    fullDescription: "Forget the old myths about root canals. At Kedia Dental Care, Root Canal Therapy is completely pain-free, fast, and highly reliable. We use computerized rotary endodontics, digital apex locators, and laser disinfection to clean infected pulp while preserving your natural tooth structure.",
+    fullDescription: "Root Canal Treatment doesn’t have to be stressful. We combine advanced technology with expert care to make your treatment comfortable, precise, and efficient. From rotary endodontics and digital apex locators to laser disinfection, every step is focused on removing infection while protecting your natural tooth.",
     benefits: [
       "Relieves severe toothache and sensitivity immediately",
       "Painless single-visit treatment option available",
@@ -358,7 +358,7 @@ export const treatmentsData: Treatment[] = [
     recovery: "Same Day",
     faq: [
       { question: "Is a root canal painful?", answer: "Not at all. Modern local anesthesia and rotary tools make RCT as comfortable as a routine filling." },
-      { question: "Can a root canal be done in one sitting?", answer: "Yes! At Kedia Dental Care, most uncomplicated root canals are successfully completed in a single visit." },
+      { question: "Can a root canal be done in one sitting?", answer: "Yes, in many cases. With advanced technology and careful case selection, Root Canal Treatment can often be completed in a single visit. However, every tooth is different. The number of visits depends on factors such as infection, tooth anatomy, and overall clinical condition."},
     ],
   },
   {
@@ -369,7 +369,7 @@ export const treatmentsData: Treatment[] = [
     iconName: "Smile",
     isPopular: true,
     shortDescription: "Correct crooked teeth, gaps, and overbites using discreet clear aligners or ceramic/metal braces for children, teens, and adults.",
-    fullDescription: "Achieve a straight, beautifully aligned smile with modern orthodontic solutions. Whether you prefer invisible clear aligners or ceramic/metal braces, our orthodontic specialists create customized alignment plans tailored to your lifestyle and facial aesthetics.",
+    fullDescription: "Transform your smile with modern orthodontic care designed around precision, comfort, and aesthetics. From clear aligners to ceramic and metal braces, every treatment is thoughtfully customized to complement your smile, facial harmony, and lifestyle.",
     benefits: [
       "Virtually invisible clear aligners for complete discretion",
       "Removable aligners make eating and brushing hassle-free",
@@ -393,11 +393,11 @@ export const treatmentsData: Treatment[] = [
     id: "dental-implants",
     slug: "dental-implants",
     title: "Dental Implants",
-    subtitle: "Permanent, Lifelike Replacement for Missing Teeth",
+    subtitle: "Designed to Look, Feel & Function Naturally.",
     iconName: "ShieldCheck",
     isPopular: true,
     shortDescription: "Medical-grade titanium tooth roots capped with custom Zirconia crowns to restore full chewing function and natural facial aesthetics.",
-    fullDescription: "Dental implants are the gold standard for replacing missing teeth. Acting as artificial roots anchored firmly in the jawbone, implants prevent bone loss and hold natural-looking crowns that look, feel, and function exactly like real teeth.",
+    fullDescription: "Replace missing teeth with a strong, stable, and lifelike solution. Dental implants act as artificial tooth roots, supporting natural looking crowns while helping maintain the health and structure of the jawbone. We offer dental implant solutions from reputed, globally recognized implant brands, like Osstem, Adin, Straumann, Neodent and many more. Each implant system is selected according to your clinical needs, bone quality, functional requirements, and treatment goals.",
     benefits: [
       "Permanent solution that can last a lifetime with proper care",
       "Prevents facial sagging and jawbone deterioration",

@@ -52,13 +52,13 @@ export const clinicGalleryData: GalleryItem[] = [
     location: "Patient Lounge",
   },
   {
-    id: "office",
-    title: "Founder's Consultation Office",
+    id: "team",
+    title: "Clinical Specialists & Dental Team",
     category: "consultation",
-    description: "Private consultation desk where Dr. Shiv Dayal Kedia provides transparent treatment planning and digital examination.",
-    image: "/images/dr_kedia_office.jpg",
-    badge: "Expert Consultation",
-    location: "Doctor Office",
+    description: "Dr. Shiv Dayal Kedia with in-house dental surgeons and compassionate clinical team at Kedia Dental Care.",
+    image: "/images/clinic_team.webp",
+    badge: "Expert Team",
+    location: "Clinical Suite",
   },
 ];
 

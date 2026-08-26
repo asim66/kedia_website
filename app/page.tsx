@@ -202,17 +202,17 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
                 <Image
-                  src="/images/dr_kedia_office.jpg"
-                  alt="Dr. Shiv Dayal Kedia - Chief Dental Surgeon & Founder"
+                  src="/images/clinic_team.webp"
+                  alt="Dr. Shiv Dayal Kedia & In-House Dental Specialists at Kedia Dental Care Bhubaneswar"
                   width={1024}
-                  height={678}
-                  unoptimized
-                  className="w-full h-auto object-cover"
+                  height={688}
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-800 text-white">
-                  <h3 className="font-bold text-lg font-heading">{founder.name}</h3>
+                  <h3 className="font-bold text-lg font-heading">{founder.name} & Clinical Team</h3>
+                  <p className="text-xs text-purple-200 mt-0.5">Specialists in Endodontics, Implants, Orthodontics & Restorative Care</p>
                 </div>
               </div>
             </div>
@@ -223,30 +223,39 @@ export default function Home() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 leading-tight">
-                Empathetic Experts Who Listen & Care For Your Smile
+                The Heart Behind the Clinic: An expert Who Actually Listens
               </h2>
 
               <p className="text-slate-600 text-base md:text-lg leading-relaxed">
                 {founder.bio}
               </p>
 
-              <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-sm space-y-3">
-                <h4 className="font-bold text-slate-900 flex items-center gap-2 text-sm">
+              <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-sm space-y-4">
+                <h4 className="font-bold text-slate-900 flex items-center gap-2 text-sm md:text-base">
                   <Sparkles className="w-4 h-4 text-brand-primary" />
                   Our Commitment to Every Patient:
                 </h4>
-                <ul className="space-y-2 text-xs md:text-sm text-slate-700">
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0" />
-                    <span><strong>Zero Guesswork:</strong> We show you full 3D scans before touching anything.</span>
+                <ul className="space-y-3.5 text-xs sm:text-sm text-slate-700">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-slate-900 block sm:inline font-semibold">Zero Guesswork — You See Exactly What We See:</strong>{" "}
+                      <span>We don’t expect you to just take our word for it. Before picking up an instrument, we pull up your crystal-clear X-rays and scans on a large screen, explaining everything so you stay fully in control of your health.</span>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0" />
-                    <span><strong>Transparent Costs:</strong> Written quotes with zero hidden fees.</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-slate-900 block sm:inline font-semibold">The End of Financial Surprises (Transparent Costs):</strong>{" "}
+                      <span>You receive a clear, written, easy-to-understand estimate before any treatment begins. No sudden upgrades, no hidden fees—just honest and upfront pricing.</span>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0" />
-                    <span><strong>Painless Guarantee:</strong> Advanced numbing & micro-laser technology.</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-slate-900 block sm:inline font-semibold">Redefining Comfort (Our Painless Guarantee):</strong>{" "}
+                      <span>Fear of pain shouldn’t stand between you and a healthy life. Combining advanced techniques with modern micro-laser technology, we ensure your visit is remarkably gentle and comfortable from start to finish.</span>
+                    </div>
                   </li>
                 </ul>
               </div>

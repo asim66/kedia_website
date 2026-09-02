@@ -56,7 +56,7 @@ export default function ContactPage() {
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900">Contact & Location</h1>
           <p className="text-sm sm:text-base md:text-lg text-slate-600">
-            Visit our new modern clinic location at Shuvam Towers with dedicated basement parking and elevator access.
+            Visit our modern clinic location at Shuvam Towers with direct elevator access and patient amenities.
           </p>
         </div>
       </section>

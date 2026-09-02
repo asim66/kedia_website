@@ -63,7 +63,7 @@ const slides: Slide[] = [
     alt: "Kedia Dental Care at Shuvam Towers, 1294 Forest Park, Bhubaneswar",
     tag: "Forest Park · Landmark Facility",
     headline: "Best Dental Clinic in Bhubaneswar",
-    subline: "Plot 1294, Shuvam Towers, Forest Park — with dedicated parking.",
+    subline: "Plot 1294, Shuvam Towers, Forest Park — elevator access & central location.",
     objectPosition: "center 38%",
     accentColor: "from-slate-950/70",
   },

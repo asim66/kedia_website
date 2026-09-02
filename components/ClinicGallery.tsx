@@ -46,7 +46,7 @@ export const clinicGalleryData: GalleryItem[] = [
     id: "building",
     title: "Clinic Exterior at Shuvam Towers",
     category: "reception",
-    description: "State-of-the-art facility situated at Plot 1294, Forest Park, Bhubaneswar with dedicated patient parking.",
+    description: "State-of-the-art facility situated at Plot 1294, Forest Park, Bhubaneswar with elevator access and patient amenities.",
     image: "/images/clinic_building.webp",
     badge: "Forest Park Landmark",
     location: "Shuvam Towers",

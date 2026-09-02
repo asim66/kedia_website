@@ -260,7 +260,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "Pediatric Dentistry & Orthodontics",
     bio: "With over nine years of distinguished clinical experience, Dr. Swetali Deo serves as the Senior Dental Surgeon at our practice. Renowned for her gentle approach to pediatric dentistry and advanced orthodontic treatments, she ensures patients of all ages achieve optimal alignment and lasting oral wellness.",
-    image: "/images/dr_swetali_hd.jpg",
+    image: "/images/dr_swetali_hd.webp",
     objectPosition: "top",
   },
   {
@@ -272,7 +272,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Restorative Dentistry",
     bio: "Dr. Ayushi brings a refined approach to contemporary dental care, combining clinical precision with a deep commitment to preserving the natural beauty and function of every smile. With a special interest in restorative dentistry, her focus is on preserving what is natural, restoring what is lost, and creating dentistry that feels beautifully effortless.",
-    image: "/images/dr_ayushi_hd.jpg",
+    image: "/images/dr_ayushi_hd.webp",
     objectPosition: "top",
   },
   {
@@ -284,7 +284,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Endodontic Care",
     bio: "Dr. Anwesha approaches dentistry with a blend of clinical insight, precision, and a gentle understanding of patient needs. With a particular affinity for endodontic treatment, she focuses on the delicate balance between preserving natural tooth structure and restoring lasting oral function — guided by careful planning and an uncompromising eye for detail.",
-    image: "/images/dr_anwesha_hd.jpg",
+    image: "/images/dr_anwesha_hd.webp",
     objectPosition: "top",
   },
   {
@@ -295,7 +295,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Preventive Dentistry",
     bio: "Bringing fresh expertise, compassionate care, and a commitment to continuous learning, Dr. Vandana Jaiswal is dedicated to delivering comfortable, thoughtful, and patient-centred dental care. With a strong focus on clinical excellence, she is committed to creating a reassuring and positive dental experience for every patient.",
-    image: "/images/dr_vandana_hd.jpg",
+    image: "/images/dr_vandana_hd.webp",
     objectPosition: "top",
   },
   {
@@ -306,7 +306,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Restorative Care",
     bio: "Dr. Shibani Mishra combines modern clinical knowledge with genuine empathy and a gentle chairside manner. Committed to continuous learning and high-standard patient care, she focuses on delivering comfortable, thoughtful dental solutions tailored to the individual needs of every patient.",
-    image: "/images/dr_shibani_hd.jpg",
+    image: "/images/dr_shibani_hd.webp",
     objectPosition: "top",
   },
 ];

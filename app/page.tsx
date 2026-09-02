@@ -108,7 +108,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
                 <Image
-                  src="/images/clinic_team_seated.jpg"
+                  src="/images/clinic_team_seated.webp"
                   alt="Dr. Shiv Dayal Kedia & In-House Dental Specialists at Kedia Dental Care Bhubaneswar"
                   width={1024}
                   height={688}
@@ -173,7 +173,7 @@ export default function Home() {
               
               <div className="lg:col-span-7 relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden shadow-lg border border-white/50 bg-slate-950">
                 <Image
-                  src="/images/clinic_team_standing.jpg"
+                  src="/images/clinic_team_standing.webp"
                   alt="Kedia Dental Care Clinical Specialists & Surgical Staff at Shuvam Towers"
                   fill
                   unoptimized

@@ -56,7 +56,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 relative bg-slate-900">
                 <Image 
-                  src="/images/dr_kedia_office.jpg"
+                  src="/images/dr_kedia_office.webp"
                   alt={founder.name}
                   width={1024}
                   height={678}
@@ -118,7 +118,7 @@ export default function AboutPage() {
               
               <div className="lg:col-span-7 relative h-[340px] sm:h-[420px] lg:h-[480px] w-full bg-slate-950 overflow-hidden">
                 <Image
-                  src="/images/clinic_team_seated.jpg"
+                  src="/images/clinic_team_seated.webp"
                   alt="Kedia Dental Care Full Clinical Team & Specialists at Shuvam Towers"
                   fill
                   unoptimized

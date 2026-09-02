@@ -19,7 +19,7 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: "team",
-    image: "/images/clinic_team_seated.jpg",
+    image: "/images/clinic_team_seated.webp",
     alt: "Dr. Shiv Dayal Kedia and expert dental team specialists at Kedia Dental Care",
     tag: "Meet Our Specialists",
     headline: "Expert Team. Gentle Hands.",
@@ -29,7 +29,7 @@ const slides: Slide[] = [
   },
   {
     id: "reception",
-    image: "/images/clinic_reception.jpg",
+    image: "/images/clinic_reception.webp",
     alt: "Kedia Dental Care Modern Reception and Lounge at Shuvam Towers Forest Park",
     tag: "Shuvam Towers · Forest Park",
     headline: "A Warm Welcome, Every Visit",
@@ -39,7 +39,7 @@ const slides: Slide[] = [
   },
   {
     id: "treatment",
-    image: "/images/clinic_treatment.jpg",
+    image: "/images/clinic_treatment.webp",
     alt: "Dr. Shiv Dayal Kedia performing painless micro-precision dental treatment",
     tag: "Micro-Precision Dentistry",
     headline: "Painless. Precise. Personal.",
@@ -49,7 +49,7 @@ const slides: Slide[] = [
   },
   {
     id: "corridor",
-    image: "/images/clinic_corridor.jpg",
+    image: "/images/clinic_corridor.webp",
     alt: "Sterile glass dental operatories and modern chairs at Kedia Dental Care",
     tag: "Hospital-Grade Sterility",
     headline: "100% Sterile. Fully Transparent.",
@@ -59,7 +59,7 @@ const slides: Slide[] = [
   },
   {
     id: "building",
-    image: "/images/clinic_building.jpg",
+    image: "/images/clinic_building.webp",
     alt: "Kedia Dental Care at Shuvam Towers, 1294 Forest Park, Bhubaneswar",
     tag: "Forest Park · Landmark Facility",
     headline: "Best Dental Clinic in Bhubaneswar",

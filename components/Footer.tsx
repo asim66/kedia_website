@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MapPin, Mail, Clock, Heart, ShieldCheck, ExternalLink } from "lucide-react";
+import { Phone, MapPin, Mail, Clock, Heart, ExternalLink } from "lucide-react";
 import { clinicInfo, treatmentsData } from "@/data/clinicData";
 
 export default function Footer() {
@@ -139,19 +139,33 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
-          <div className="space-y-1 text-center sm:text-left">
-            <p>
-              &copy; {currentYear} {clinicInfo.name}. All rights reserved. Shuvam Towers, Forest Park, Bhubaneswar.
-            </p>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors text-xs font-semibold">
+        {/* Copyright, Attribution & Links Row */}
+        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+          <p className="text-center sm:text-left">
+            &copy; {currentYear} {clinicInfo.name}. All rights reserved.
+          </p>
+          <div className="flex items-center gap-3 sm:gap-5">
+            <a
+              href="https://sociodigit.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-slate-500 hover:text-brand-primary transition-colors group"
+              title="Sociodigit - Build, Scale & Grow Your Digital Products"
+            >
+              <span>Developed by</span>
+              <Image
+                src="/images/sociodigit_logo.png"
+                alt="Sociodigit Logo"
+                width={18}
+                height={18}
+                className="w-4.5 h-4.5 object-contain rounded-full group-hover:scale-110 transition-transform duration-300"
+              />
+              <span className="font-bold text-slate-700 group-hover:text-brand-primary transition-colors duration-300 tracking-tight">Sociodigit</span>
+            </a>
+            <span className="hidden sm:inline text-slate-300">|</span>
+            <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors font-semibold">
               Privacy Policy
             </Link>
-            <span className="flex items-center gap-1 text-slate-600 font-medium text-xs">
-              <ShieldCheck className="w-4 h-4 text-brand-primary" /> Hospital-Grade Sterilization
-            </span>
           </div>
         </div>
 

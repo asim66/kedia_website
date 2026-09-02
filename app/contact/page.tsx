@@ -287,19 +287,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Payment Options Banner */}
-      <section className="py-12 bg-slate-100 border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center space-y-4">
-          <h3 className="font-bold text-base text-slate-900">Accepted Payment Methods & Financing</h3>
-          <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-slate-700">
-            {clinicInfo.paymentOptions.map((opt, i) => (
-              <span key={i} className="px-4 py-2 bg-white rounded-full border border-slate-200 shadow-sm">
-                {opt}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Nearby Landmarks & Directions (Local Entity SEO) */}
       <section className="py-16 bg-white border-t border-slate-200">

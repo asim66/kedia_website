@@ -192,14 +192,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
               {teamMembers.slice(1).map((doc, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-brand-primary/30 transition-all duration-300 overflow-hidden flex flex-col"
+                  className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Portrait */}
-                  <div className="relative h-80 w-full overflow-hidden bg-slate-100">
+                  <div className="relative h-56 w-full overflow-hidden bg-slate-100">
                     <Image
                       src={doc.image}
                       alt={doc.name}
@@ -208,35 +208,35 @@ export default function AboutPage() {
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
                       style={{ objectPosition: doc.objectPosition ?? "top" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                     {/* Experience / Clinician badge */}
                     {doc.experienceYears ? (
-                      <div className="absolute top-3 right-3">
-                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-brand-primary text-xs font-bold border border-purple-100">
-                          {doc.experienceYears} Yrs Experience
+                      <div className="absolute top-2.5 right-2.5">
+                        <span className="px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-primary text-[10px] font-bold border border-purple-100 shadow-xs">
+                          {doc.experienceYears} Yrs Exp
                         </span>
                       </div>
                     ) : (
-                      <div className="absolute top-3 right-3">
-                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-brand-primary text-xs font-bold border border-purple-100">
+                      <div className="absolute top-2.5 right-2.5">
+                        <span className="px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-primary text-[10px] font-bold border border-purple-100 shadow-xs">
                           BDS Clinician
                         </span>
                       </div>
                     )}
                     {/* Name overlay */}
-                    <div className="absolute bottom-4 left-5 right-5 text-white">
-                      <h4 className="font-bold text-xl font-heading leading-tight">{doc.name}</h4>
-                      <p className="text-purple-300 text-xs font-semibold mt-0.5">{doc.qualifications}</p>
+                    <div className="absolute bottom-3 left-3.5 right-3.5 text-white">
+                      <h4 className="font-bold text-base font-heading leading-snug">{doc.name}</h4>
+                      <p className="text-purple-300 text-[11px] font-semibold">{doc.qualifications}</p>
                     </div>
                   </div>
 
                   {/* Info */}
-                  <div className="p-6 flex flex-col gap-4 flex-1">
+                  <div className="p-4 flex flex-col gap-2.5 flex-1">
                     <div>
-                      <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">{doc.title}</p>
-                      <p className="text-xs font-semibold text-slate-500 mt-0.5">{doc.specialty}</p>
+                      <p className="text-[11px] font-bold text-brand-primary uppercase tracking-wider">{doc.title}</p>
+                      <p className="text-xs font-semibold text-slate-700 mt-0.5">{doc.specialty}</p>
                     </div>
-                    <p className="text-slate-600 text-sm leading-relaxed flex-1">{doc.bio}</p>
+                    <p className="text-slate-600 text-xs leading-relaxed flex-1">{doc.bio}</p>
                   </div>
                 </div>
               ))}

@@ -398,7 +398,15 @@ export default function Home() {
             Ready for a Healthy, Confident Smile?
           </h2>
           <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">
-            Call us directly or send a message. Visit our new location at 2nd Floor, Shuvam Towers, Forest Park, Bhubaneswar.
+            Call us directly or send a message. Visit our new location at{" "}
+            <a
+              href={clinicInfo.address.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-primary font-medium underline hover:text-brand-primaryDark transition-colors"
+            >
+              2nd Floor, Shuvam Towers, Forest Park, Bhubaneswar
+            </a>.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <Link

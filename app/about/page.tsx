@@ -419,7 +419,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-2xl font-bold font-heading">Have Questions for Our Specialists?</h3>
-            <p className="text-slate-400 text-sm">Call our reception at Shuvam Towers, Forest Park, Bhubaneswar.</p>
+            <p className="text-slate-400 text-sm">
+              Call our reception at{" "}
+              <a
+                href={clinicInfo.address.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-300 hover:text-white underline transition-colors"
+              >
+                Shuvam Towers, Forest Park, Bhubaneswar
+              </a>.
+            </p>
           </div>
           <div className="flex gap-4">
             <a 

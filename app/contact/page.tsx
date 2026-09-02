@@ -70,15 +70,28 @@ export default function ContactPage() {
             <div className="lg:col-span-6 space-y-8">
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 text-brand-primary flex items-center justify-center">
+                <a
+                  href={clinicInfo.address.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block p-6 rounded-2xl bg-slate-50 hover:bg-purple-50/50 border border-slate-200/80 hover:border-brand-primary/30 space-y-3 transition-all cursor-pointer"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-purple-100 text-brand-primary flex items-center justify-center group-hover:scale-105 transition-transform">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base text-slate-900">Clinic Address</h3>
-                    <p className="text-slate-600 text-xs md:text-sm leading-relaxed mt-1">{clinicInfo.address.full}</p>
+                    <h3 className="font-bold text-base text-slate-900 flex items-center gap-1.5">
+                      Clinic Address
+                      <ExternalLink className="w-3.5 h-3.5 text-brand-primary opacity-70 group-hover:opacity-100 transition-opacity" />
+                    </h3>
+                    <p className="text-slate-600 group-hover:text-brand-primary text-xs md:text-sm leading-relaxed mt-1 transition-colors">
+                      {clinicInfo.address.full}
+                    </p>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-primary mt-2 group-hover:underline">
+                      View on Google Maps &rarr;
+                    </span>
                   </div>
-                </div>
+                </a>
                 
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
                   <div className="w-10 h-10 rounded-xl bg-purple-100 text-brand-primary flex items-center justify-center">
@@ -237,7 +250,7 @@ export default function ContactPage() {
 
                   {/* Google Maps Directions Button */}
                   <a 
-                    href="https://www.google.com/maps?cid=7714856428789524251"
+                    href={clinicInfo.address.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 rounded-2xl bg-purple-900/50 hover:bg-purple-900/80 text-white transition-all border border-purple-700/50 group"

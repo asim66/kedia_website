@@ -54,6 +54,7 @@ export interface ClinicInfo {
     full: string;
     parkingInfo: string;
     googleMapsEmbedUrl: string;
+    googleMapsUrl: string;
   };
   hours: {
     weekdays: string;
@@ -99,10 +100,10 @@ export const clinicInfo: ClinicInfo = {
     "https://www.facebook.com/kediadentalcare",
     "https://www.instagram.com/kediadentalcare",
     "https://www.youtube.com/@KediaDentalCare",
-    "https://www.google.com/maps?cid=7714856428789524251"
+    "https://share.google/C0tHVh549BwsrdBnI"
   ],
   medicalDisclaimer: "Medical Disclaimer: The clinical information provided on this website is for educational and informational purposes only. It does not constitute medical advice or formal dental diagnosis. Always consult a licensed dental surgeon for individual oral health advice.",
-  googleReviewUrl: "https://www.google.com/search?kgmid=/g/11b7gpsy2t&q=Kedia+Dental+Care",
+  googleReviewUrl: "https://share.google/C0tHVh549BwsrdBnI",
   googleRating: 4.9,
   googleReviewCount: "500+",
   servedLocalities: [
@@ -133,6 +134,7 @@ export const clinicInfo: ClinicInfo = {
     parkingInfo: "Dedicated basement parking available for clinic visitors in Shuvam Towers with direct elevator access to the 2nd Floor.",
     googleMapsEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6642138249086!2d85.8239003!3d20.2727144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7cbd0d8f07b%3A0x6b1070183427f71b!2sForest%20Park%2C%20Bhubaneswar%2C%20Odisha%20751009!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    googleMapsUrl: "https://share.google/C0tHVh549BwsrdBnI",
   },
   hours: {
     weekdays: "Monday - Saturday: 9:30 AM – 2:00 PM & 4:00 PM – 8:30 PM",

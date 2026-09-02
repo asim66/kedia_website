@@ -305,15 +305,24 @@ export default function BestDentalClinicBhubaneswarPage() {
                 </div>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center shrink-0">
+                  <a
+                    href={clinicInfo.address.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 group p-2 -m-2 rounded-xl hover:bg-slate-800/60 transition-colors"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-slate-800 group-hover:bg-purple-900/60 flex items-center justify-center shrink-0 transition-colors">
                       <MapPin className="w-6 h-6 text-brand-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg">Clinic Address</h4>
-                      <p className="text-slate-400 mt-1">{clinicInfo.address.full}</p>
+                      <h4 className="font-bold text-lg text-white flex items-center gap-1.5">
+                        Clinic Address
+                        <ExternalLink className="w-4 h-4 text-purple-300 opacity-70 group-hover:opacity-100 transition-opacity" />
+                      </h4>
+                      <p className="text-slate-400 group-hover:text-purple-200 mt-1 transition-colors">{clinicInfo.address.full}</p>
+                      <span className="text-xs text-brand-primary font-bold inline-block mt-1">Open in Google Maps &rarr;</span>
                     </div>
-                  </div>
+                  </a>
                   
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center shrink-0">

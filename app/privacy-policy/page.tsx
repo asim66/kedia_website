@@ -81,7 +81,16 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="pt-2 font-medium text-slate-900 space-y-1">
               <p>{clinicInfo.name}</p>
-              <p>{clinicInfo.address.full}</p>
+              <p>
+                <a
+                  href={clinicInfo.address.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-primary underline transition-colors"
+                >
+                  {clinicInfo.address.full}
+                </a>
+              </p>
               <p>Phone: {clinicInfo.phone}</p>
               <p>Email: {clinicInfo.email}</p>
             </div>

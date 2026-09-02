@@ -13,7 +13,7 @@ export default function JsonLd() {
         "url": "https://kediadentalcare.com",
         "logo": "https://kediadentalcare.com/images/clinic_hero.webp",
         "image": "https://kediadentalcare.com/images/clinic_hero.webp",
-        "hasMap": "https://www.google.com/maps?cid=7714856428789524251",
+        "hasMap": clinicInfo.address.googleMapsUrl,
         "telephone": clinicInfo.phone,
         "email": clinicInfo.email,
         "priceRange": "₹₹",

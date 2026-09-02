@@ -89,7 +89,7 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-brand-primary shrink-0 mt-0.5" />
                 <a
-                  href="https://www.google.com/maps?cid=7714856428789524251"
+                  href={clinicInfo.address.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-brand-primary transition-colors text-slate-700 font-medium flex items-center gap-1 group"

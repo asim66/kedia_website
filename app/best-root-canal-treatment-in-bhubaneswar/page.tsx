@@ -677,14 +677,23 @@ export default function RootCanalTreatmentBhubaneswarPage() {
                 </div>
                 
                 <div className="space-y-6 text-sm">
-                  <div className="flex items-start gap-4">
+                  <a 
+                    href={clinicInfo.address.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 group p-2 -m-2 rounded-xl hover:bg-slate-800/60 transition-colors"
+                  >
                     <MapPin className="w-6 h-6 text-brand-primary shrink-0 mt-1" />
                     <div>
-                      <p className="font-bold text-white">Address</p>
-                      <p className="text-slate-300">{clinicInfo.address.full}</p>
+                      <p className="font-bold text-white flex items-center gap-1.5">
+                        Address
+                        <ExternalLink className="w-3.5 h-3.5 text-purple-300 opacity-70 group-hover:opacity-100 transition-opacity" />
+                      </p>
+                      <p className="text-slate-300 group-hover:text-purple-200 transition-colors">{clinicInfo.address.full}</p>
                       <p className="text-xs text-purple-300 mt-1">🚗 {clinicInfo.address.parkingInfo}</p>
+                      <span className="text-xs text-brand-primary font-bold inline-block mt-1">Open in Google Maps &rarr;</span>
                     </div>
-                  </div>
+                  </a>
                   
                   <div className="flex items-start gap-4">
                     <Phone className="w-6 h-6 text-brand-primary shrink-0 mt-1" />

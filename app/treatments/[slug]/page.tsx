@@ -87,15 +87,15 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
       </div>
 
       {/* Hero Header */}
-      <section className="pt-12 pb-16 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60">
+      <section className="pt-8 pb-10 sm:pt-12 sm:pb-16 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
             <span className="inline-block text-xs font-bold px-3 py-1 bg-purple-100 text-brand-primary border border-purple-200 rounded-full uppercase tracking-wider">
               Specialist Treatment
             </span>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-slate-900">{treatment.title}</h1>
-            <p className="text-xl text-brand-primary font-semibold">{treatment.subtitle}</p>
-            <p className="text-slate-600 text-lg leading-relaxed pt-2">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900">{treatment.title}</h1>
+            <p className="text-base sm:text-xl text-brand-primary font-semibold">{treatment.subtitle}</p>
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed pt-1">
               {treatment.fullDescription}
             </p>
 

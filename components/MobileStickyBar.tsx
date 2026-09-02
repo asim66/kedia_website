@@ -9,7 +9,7 @@ export default function MobileStickyBar() {
   )}`;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl p-2.5 px-4">
+    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl p-2.5 px-4 pb-[calc(0.625rem+env(safe-area-inset-bottom))]">
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         {/* Direct Phone Call */}
         <a

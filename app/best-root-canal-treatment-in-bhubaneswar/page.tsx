@@ -106,16 +106,16 @@ export default function RootCanalTreatmentBhubaneswarPage() {
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-purple-50/90 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
-              <Zap className="w-4 h-4 fill-brand-primary" /> #1 Painless Single-Visit RCT in Bhubaneswar
+      <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/90 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-xs sm:text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
+              <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-brand-primary" /> #1 Painless Single-Visit RCT in Bhubaneswar
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
               Painless <span className="text-brand-primary">Root Canal Treatment</span> in Bhubaneswar
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Save your natural tooth in just <strong>1 sitting</strong>. Led by MDS Endodontist <strong>Dr. Shiv Dayal Kedia</strong> (22+ Yrs Experience) using computerized rotary tools and laser pulp sterilization.
             </p>
             

@@ -116,7 +116,7 @@ export default function RootLayout({
           />
         </noscript>
         <Navbar />
-        <main className="min-h-screen flex flex-col pt-24 md:pt-32 pb-20 md:pb-0">
+        <main className="min-h-screen flex flex-col pt-16 sm:pt-20 md:pt-28 pb-20 md:pb-0">
           {children}
         </main>
         <Footer />

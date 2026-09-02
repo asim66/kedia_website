@@ -49,20 +49,20 @@ export default function ContactPage() {
       />
       
       {/* Header */}
-      <section className="pt-16 pb-12 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center max-w-3xl space-y-4">
+      <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 text-center space-y-3 sm:space-y-4">
           <span className="inline-block text-xs font-bold px-3.5 py-1 bg-purple-100 text-brand-primary border border-purple-200 rounded-full uppercase tracking-wider">
             Forest Park, Bhubaneswar
           </span>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-slate-900">Contact & Location</h1>
-          <p className="text-base md:text-lg text-slate-600">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900">Contact & Location</h1>
+          <p className="text-sm sm:text-base md:text-lg text-slate-600">
             Visit our new modern clinic location at Shuvam Towers with dedicated basement parking and elevator access.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             

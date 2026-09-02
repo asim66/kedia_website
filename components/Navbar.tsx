@@ -44,16 +44,20 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Global Move Alert Bar */}
-      <div className="bg-gradient-to-r from-brand-primaryDark via-brand-primary to-purple-900 text-white text-sm md:text-base py-2 px-4 shadow-md font-medium">
+      <div className="bg-gradient-to-r from-brand-primaryDark via-brand-primary to-purple-900 text-white text-xs sm:text-sm md:text-base py-1.5 sm:py-2 px-3 sm:px-4 shadow-md font-medium">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-left min-w-0">
-            <span className="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider shrink-0 flex items-center gap-1">
-              <Megaphone className="w-3.5 h-3.5" /> New
+          <Link 
+            href="/contact" 
+            className="flex items-center gap-2 text-left min-w-0 hover:underline decoration-white/60"
+            title="View clinic address & directions"
+          >
+            <span className="bg-amber-400 text-slate-900 font-extrabold px-2 py-0.5 rounded text-[11px] uppercase tracking-wider shrink-0 flex items-center gap-1 shadow-xs">
+              <Megaphone className="w-3 h-3" /> New
             </span>
-            <span className="truncate md:whitespace-normal font-medium block">
+            <span className="text-xs sm:text-sm font-medium leading-tight line-clamp-1 sm:line-clamp-2 md:line-clamp-none block">
               {clinicInfo.announcement}
             </span>
-          </div>
+          </Link>
           <a
             href={`tel:${clinicInfo.phoneRaw}`}
             className="hidden sm:inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white px-3.5 py-1 rounded-full text-xs sm:text-sm font-semibold shrink-0 transition-colors border border-white/20"

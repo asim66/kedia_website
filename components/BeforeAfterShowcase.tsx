@@ -15,7 +15,8 @@ import {
 import { clinicalCases, clinicInfo } from "@/data/clinicData";
 
 export default function BeforeAfterShowcase() {
-  const selectedCase = clinicalCases[0];
+  const [activeCaseIdx, setActiveCaseIdx] = useState<number>(0);
+  const selectedCase = clinicalCases[activeCaseIdx] || clinicalCases[0];
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [viewMode, setViewMode] = useState<"slider" | "side-by-side">("slider");
@@ -46,15 +47,36 @@ export default function BeforeAfterShowcase() {
       <div className="max-w-4xl mx-auto px-4 md:px-6 space-y-6">
         
         {/* Compact Section Header */}
-        <div className="text-center space-y-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3 h-3" /> Clinical Transformation
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900">
+        <div className="text-center space-y-2.5">
+          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3 h-3" /> Clinical Transformation Cases
+          </div>
+
+          {/* Case Selection Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+            {clinicalCases.map((c, idx) => (
+              <button
+                key={c.id}
+                onClick={() => {
+                  setActiveCaseIdx(idx);
+                  setSliderPosition(50);
+                }}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+                  activeCaseIdx === idx
+                    ? "bg-brand-primary text-white shadow-sm shadow-brand-primary/25 scale-105"
+                    : "bg-white text-slate-700 hover:bg-purple-50 border border-slate-200"
+                }`}
+              >
+                Case {idx + 1}: {c.treatmentName}
+              </button>
+            ))}
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900 pt-1">
             {selectedCase.title}
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
-            Actual patient result: Restoring missing teeth with a biocompatible, metal-free zirconia bridge.
+            {selectedCase.summary}
           </p>
 
           {/* Compact View Switcher */}
@@ -149,9 +171,9 @@ export default function BeforeAfterShowcase() {
 
               {/* Slider Helper / Slider Range */}
               <div className="flex items-center justify-between text-[11px] text-slate-600 px-1">
-                <span>← Missing Tooth Gap</span>
+                <span>← {activeCaseIdx === 0 ? "Missing Tooth Gap" : "Discolored Front Tooth"}</span>
                 <span className="font-semibold text-brand-primary">⇄ Drag slider to compare</span>
-                <span>Restored Bridge →</span>
+                <span>{activeCaseIdx === 0 ? "Restored Bridge →" : "Aesthetic Crown Restored →"}</span>
               </div>
             </div>
           ) : (
@@ -171,7 +193,9 @@ export default function BeforeAfterShowcase() {
                   </span>
                 </div>
                 <div className="p-2.5 bg-white text-center">
-                  <p className="text-[11px] font-semibold text-slate-700">Missing Tooth Space</p>
+                  <p className="text-[11px] font-semibold text-slate-700">
+                    {activeCaseIdx === 0 ? "Missing Tooth Space" : "Discolored Front Tooth"}
+                  </p>
                 </div>
               </div>
 
@@ -189,7 +213,9 @@ export default function BeforeAfterShowcase() {
                   </span>
                 </div>
                 <div className="p-2.5 bg-white text-center">
-                  <p className="text-[11px] font-semibold text-brand-primary">Metal-Free Bridge Restored</p>
+                  <p className="text-[11px] font-semibold text-brand-primary">
+                    {activeCaseIdx === 0 ? "Metal-Free Bridge Restored" : "Aesthetic Ceramic Crown"}
+                  </p>
                 </div>
               </div>
             </div>
@@ -198,18 +224,18 @@ export default function BeforeAfterShowcase() {
 
         {/* Concise Key Highlights & CTA Bar */}
         <div className="max-w-2xl mx-auto bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4 text-xs text-slate-600">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-slate-600">
             <span className="flex items-center gap-1 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-              100% Metal-Free
+              {activeCaseIdx === 0 ? "100% Metal-Free" : "All-Ceramic Aesthetic"}
             </span>
             <span className="flex items-center gap-1 font-medium">
               <Clock className="w-3.5 h-3.5 text-brand-primary shrink-0" />
-              2 Visits
+              {selectedCase.timeframe}
             </span>
             <span className="flex items-center gap-1 font-medium">
               <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-              Natural Shade Match
+              {selectedCase.badge}
             </span>
           </div>
 

@@ -782,5 +782,22 @@ export const clinicalCases: ClinicalCase[] = [
     altBefore: "Before treatment: Missing tooth space and prepared anchor teeth at Kedia Dental Care",
     altAfter: "After treatment: Tooth replacement with metal-free bridge at Kedia Dental Care",
   },
+  {
+    id: "anterior-aesthetic-crown-case-2",
+    title: "Discolored Front Tooth Aesthetic Restoration",
+    treatmentName: "Anterior All-Ceramic Aesthetic Crown",
+    category: "Cosmetic Dentistry & Smile Designing",
+    badge: "Natural Shade Match",
+    summary: "Complete aesthetic transformation of a severely discolored front tooth using a custom shade-matched, high-translucency ceramic crown.",
+    clinicalConcern: "Dark discoloration of the upper central incisor impacting smile aesthetics and personal confidence.",
+    treatmentProcedure: "Conservative tooth preparation, digital shade harmonization, 3D intraoral scanning, and custom CAD/CAM ceramic crown fabrication.",
+    clinicalOutcome: "Seamless shade blending with adjacent natural teeth, natural incisal translucency, and restored smile radiance.",
+    materialUsed: "High-Translucency Multi-Layered Aesthetic Ceramic",
+    timeframe: "Completed in 2 appointments",
+    beforeImage: "/images/treatment_anterior_crown_before.webp",
+    afterImage: "/images/treatment_anterior_crown_after.webp",
+    altBefore: "Before treatment: Discolored front tooth at Kedia Dental Care Bhubaneswar",
+    altAfter: "After treatment: Aesthetic shade-matched front tooth ceramic crown at Kedia Dental Care Bhubaneswar",
+  },
 ];
 

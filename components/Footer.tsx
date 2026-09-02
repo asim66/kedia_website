@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-slate-700 pt-16 pb-8 border-t border-slate-200">
+    <footer className="bg-white text-slate-700 pt-16 pb-24 md:pb-8 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         
         {/* Brand & Value Proposition Banner */}

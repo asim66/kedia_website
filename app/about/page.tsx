@@ -20,7 +20,6 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const founder = teamMembers[0];
-  const inHouseDoctors = teamMembers.slice(1); // Dr. Priyanka, Dr. Swetali Deo, Dr. Ayushi
 
   return (
     <>
@@ -96,61 +95,266 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet Our Experts Section (In-House Specialists & Visiting Consultants) */}
+      {/* Meet Our Experts Section (Multidisciplinary Clinical Department Showcase) */}
       <section className="py-20 bg-slate-50 border-t border-b border-slate-200/70">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary bg-purple-50 px-3 py-1 rounded-full border border-purple-100">
-              Multidisciplinary Expertise
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-16">
+          
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary bg-purple-100/70 px-4 py-1.5 rounded-full border border-purple-200">
+              Multidisciplinary Dental Board
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mt-3 mb-4">Meet Our Experts</h2>
-            <p className="text-slate-600 text-base">
-              Our team consists of dedicated in-house dental specialists and visiting senior consultants providing comprehensive care for all dental needs under one roof.
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-slate-900 leading-tight">
+              Meet Our Dental Specialists & Clinical Wings
+            </h2>
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+              At Kedia Dental Care, all treatments are executed under the leadership of Founder & Chief Dental Surgeon Dr. Shiv Dayal Kedia, supported by a multidisciplinary team of specialized dental surgeons and senior visiting consultants.
             </p>
           </div>
 
-          {/* In-House Dental Specialists (Only name on photo) */}
-          <div className="mb-16">
-            <h3 className="text-xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <UserCheck className="w-5 h-5 text-brand-primary" /> In-House Dental Specialists
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {inHouseDoctors.map((member, idx) => (
-                <div key={idx} className="bg-white rounded-3xl border border-slate-200/80 shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          {/* Master 4K Clinical Team Showcase Card */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+              
+              <div className="lg:col-span-7 relative h-[340px] sm:h-[420px] lg:h-[480px] w-full bg-slate-950 overflow-hidden">
+                <Image
+                  src="/images/clinic_team_seated.jpg"
+                  alt="Kedia Dental Care Full Clinical Team & Specialists at Shuvam Towers"
+                  fill
+                  unoptimized
+                  className="object-cover object-top"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent lg:hidden" />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3.5 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold border border-white/20">
+                    ★ In-House Clinical Faculty
+                  </span>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12 space-y-6">
+                <div className="space-y-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
+                    Since 2004 · Forest Park, Bhubaneswar
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900 leading-snug">
+                    Comprehensive Family & Micro-Precision Dental Care
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed pt-1">
+                    Every diagnosis and treatment plan is reviewed collaboratively. Whether you require a single conservative filling or a complex full-mouth implant restoration, you receive focused, gentle, and ethical care.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
+                  <div className="p-3.5 rounded-2xl bg-purple-50/70 border border-purple-100">
+                    <p className="text-xl font-bold font-heading text-brand-primary">22+ Years</p>
+                    <p className="text-xs text-slate-600 font-medium">Clinical Track Record</p>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-purple-50/70 border border-purple-100">
+                    <p className="text-xl font-bold font-heading text-brand-primary">18,000+</p>
+                    <p className="text-xs text-slate-600 font-medium">Patients Treated</p>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-purple-50/70 border border-purple-100">
+                    <p className="text-xl font-bold font-heading text-brand-primary">100%</p>
+                    <p className="text-xs text-slate-600 font-medium">Sterile Operatories</p>
+                  </div>
+                  <div className="p-3.5 rounded-2xl bg-purple-50/70 border border-purple-100">
+                    <p className="text-xl font-bold font-heading text-brand-primary">4.9★</p>
+                    <p className="text-xs text-slate-600 font-medium">Google Rating</p>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryDark text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-md shadow-brand-primary/25 hover:scale-[1.02]"
+                  >
+                    Schedule a Consultation <Phone className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* In-House Dental Surgeons */}
+          <div className="space-y-10">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-100/80 text-brand-primary text-xs font-bold uppercase tracking-wider border border-purple-200">
+                <Sparkles className="w-3.5 h-3.5" /> A New Chapter of Excellence
+              </span>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900">
+                In-House Dental Surgeons
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Meet our resident clinical team and new generation BDS clinicians — present daily to deliver comfortable, thoughtful, and patient-centred dental care with a shared focus on clinical excellence.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.slice(1).map((doc, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-brand-primary/30 transition-all duration-300 overflow-hidden flex flex-col"
+                >
+                  {/* Portrait */}
                   <div className="relative h-80 w-full overflow-hidden bg-slate-100">
-                    <Image 
-                      src={member.image}
-                      alt={member.name}
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    <Image
+                      src={doc.image}
+                      alt={doc.name}
+                      fill
+                      unoptimized
+                      className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                      style={{ objectPosition: doc.objectPosition ?? "top" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/10 to-transparent" />
+                    {/* Experience / Clinician badge */}
+                    {doc.experienceYears ? (
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-brand-primary text-xs font-bold border border-purple-100">
+                          {doc.experienceYears} Yrs Experience
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-brand-primary text-xs font-bold border border-purple-100">
+                          BDS Clinician
+                        </span>
+                      </div>
+                    )}
+                    {/* Name overlay */}
                     <div className="absolute bottom-4 left-5 right-5 text-white">
-                      <h4 className="font-bold text-xl font-heading">{member.name}</h4>
+                      <h4 className="font-bold text-xl font-heading leading-tight">{doc.name}</h4>
+                      <p className="text-purple-300 text-xs font-semibold mt-0.5">{doc.qualifications}</p>
                     </div>
                   </div>
 
-                  <div className="p-6 space-y-2">
-                    <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">{member.title}</p>
-                    <p className="text-xs font-semibold text-slate-800">{member.specialty} • {member.qualifications}</p>
-                    {member.registrationNumber && (
-                      <p className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100 inline-flex items-center gap-1">
-                        <ShieldCheck className="w-3 h-3 text-emerald-600" /> {member.registrationNumber}
-                      </p>
-                    )}
-                    <p className="text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">{member.bio}</p>
+                  {/* Info */}
+                  <div className="p-6 flex flex-col gap-4 flex-1">
+                    <div>
+                      <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">{doc.title}</p>
+                      <p className="text-xs font-semibold text-slate-500 mt-0.5">{doc.specialty}</p>
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed flex-1">{doc.bio}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Visiting Consultants */}
-          <div>
-            <h3 className="text-xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <Stethoscope className="w-5 h-5 text-brand-primary" /> Visiting Senior Consultants
+          {/* Specialized Clinical Department Wings */}
+          <div className="space-y-8">
+            <div className="text-center max-w-2xl mx-auto">
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900">
+                Specialized Clinical Departments
+              </h3>
+              <p className="text-slate-600 text-sm mt-1">
+                Advanced dental subspecialties operating under strict hospital-grade sterilization protocols.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Endodontics & Restorative Wing",
+                  subtitle: "Root Canal & Natural Tooth Preservation",
+                  doctorScope: "Micro-Endodontic Specialist Team",
+                  desc: "Preserving natural teeth using surgical magnification loupes, electronic apex locators, and painless single-sitting root canal protocols.",
+                  services: ["Single-Sitting RCT", "Laser Canal Disinfection", "Composite Tooth Restorations", "Re-RCT"],
+                  badge: "Tooth Preservation",
+                },
+                {
+                  title: "Implantology & Full-Mouth Rehab",
+                  subtitle: "Permanent Tooth Replacement",
+                  doctorScope: "Chief Surgeon & Implant Panel",
+                  desc: "Permanent tooth replacement using globally certified titanium implants (Osstem, Nobel Biocare) and custom CAD/CAM zirconia prosthetics.",
+                  services: ["Single & Multiple Implants", "All-on-4 / All-on-6", "Bone Grafting & Sinus Lift", "Zirconia Bridges"],
+                  badge: "Permanent Teeth",
+                },
+                {
+                  title: "Orthodontics & Clear Aligners",
+                  subtitle: "Bite Correction & Smile Alignment",
+                  doctorScope: "Visiting Consultant Orthodontist",
+                  desc: "Correcting misaligned teeth and bite discrepancies for teens and adults with digital clear aligners and ceramic/metal braces.",
+                  services: ["Invisible Clear Aligners", "Ceramic & Metal Braces", "Retainers & Habit Correction", "Bite Balancing"],
+                  badge: "Straight Teeth",
+                },
+                {
+                  title: "Laser Dentistry & Periodontics",
+                  subtitle: "Bloodless Gum Care & Contouring",
+                  doctorScope: "Periodontal & Laser Surgery Faculty",
+                  desc: "Painless diode laser gum therapy for deep pocket sterilization, gum depigmentation, and smile makeover contouring without scalpels.",
+                  services: ["Laser Gum Depigmentation", "Flapless Pocket Sterilization", "Gingival Contouring", "Deep Ultrasonic Scaling"],
+                  badge: "Painless & Bloodless",
+                },
+                {
+                  title: "Pediatric & Preventive Dentistry",
+                  subtitle: "Child-Friendly Dental Care",
+                  doctorScope: "Pediatric Dental Care Team",
+                  desc: "Compassionate, gentle dental care designed to keep children comfortable while safeguarding teeth with fluoride and sealants.",
+                  services: ["Fluoride Application", "Pit & Fissure Sealants", "Painless Milk Tooth Care", "Space Maintainers"],
+                  badge: "Anxiety-Free Kids",
+                },
+                {
+                  title: "Oral & Maxillofacial Surgery",
+                  subtitle: "Wisdom Tooth & Surgical Care",
+                  doctorScope: "Senior Oral & Maxillofacial Panel",
+                  desc: "Atraumatic surgical extraction of impacted wisdom teeth, cyst enucleation, and pre-prosthetic bone contouring with rapid recovery.",
+                  services: ["Impacted Wisdom Tooth Surgery", "Atraumatic Extractions", "Alveoloplasty", "Surgical Frenectomy"],
+                  badge: "Surgical Precision",
+                },
+              ].map((dept, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-md hover:shadow-xl hover:border-brand-primary/40 transition-all duration-300 flex flex-col justify-between space-y-6"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="px-3 py-1 rounded-full bg-purple-100 text-brand-primary text-xs font-bold">
+                        {dept.badge}
+                      </span>
+                      <span className="text-xs text-slate-400 font-mono font-semibold">0{idx + 1}</span>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-heading font-bold text-slate-900 leading-snug">
+                        {dept.title}
+                      </h4>
+                      <p className="text-xs font-bold text-brand-primary mt-0.5">
+                        {dept.subtitle}
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {dept.desc}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-4 border-t border-slate-100">
+                    <p className="text-[11px] font-bold text-slate-700 uppercase tracking-wider">
+                      Key Procedures:
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dept.services.map((svc, sIdx) => (
+                        <span
+                          key={sIdx}
+                          className="px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200 text-slate-700 text-[11px] font-medium"
+                        >
+                          {svc}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Visiting Senior Consultant Faculty */}
+          <div className="space-y-6">
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-slate-900 flex items-center gap-2">
+              <Stethoscope className="w-5 h-5 text-brand-primary" /> Visiting Senior Consultant Faculty
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {visitingConsultants.map((consultant, idx) => (

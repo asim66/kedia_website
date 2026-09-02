@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ArrowRight, Star, ShieldCheck, Clock, Award, Phone, CheckCircle2,
-  HeartPulse, Car, Accessibility, CreditCard, Coffee, Sparkles, UserCheck, AlertCircle, FileText,
-  Scan, Zap, Monitor, Armchair, Heart, Layers, Smile, Sun, Stethoscope, ExternalLink
+  ArrowRight, Star, ShieldCheck, Phone, CheckCircle2,
+  HeartPulse, Car, Accessibility, CreditCard, Coffee, Sparkles, UserCheck, FileText,
+  Scan, Zap, Monitor, Armchair, ExternalLink
 } from "lucide-react";
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
+import HeroSlider from "@/components/HeroSlider";
 
 export const metadata: Metadata = {
   title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
@@ -48,110 +49,13 @@ function GoogleGIcon({ className = "w-4 h-4" }: { className?: string }) {
 export default function Home() {
   const popularTreatments = treatmentsData.slice(0, 6);
   const founder = teamMembers[0];
-  const inHouseDoctors = teamMembers.slice(1); // Dr. Priyanka (Left), Dr. Swetali (Middle), Dr. Ayushi (Right)
 
   return (
     <>
       <JsonLd />
 
-      {/* Hero Section */}
-      <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 blur-[120px] rounded-full pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-          <div className="lg:col-span-7 space-y-8">
-            {/* Trust Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-sm md:text-base font-bold">
-              <Award className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Est. 2004 • 22+ Years of Clinical Excellence in Bhubaneswar</span>
-            </div>
-
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.15] sm:leading-[1.12] text-slate-900">
-              Best Dental Clinic in Bhubaneswar <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-purple-700 to-brand-primaryLight">
-                Serving Patients of All Ages
-              </span>
-            </h1>
-
-            {/* Brand Quote & Core Messaging */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed italic border-l-4 border-brand-primary pl-4 py-1 font-medium">
-              "{clinicInfo.brandMessage}"
-            </p>
-
-            <p className="text-base md:text-lg text-slate-600 max-w-2xl leading-relaxed">
-              Founded by <strong className="text-slate-900">Dr. Shiv Dayal Kedia</strong>, Kedia Dental Care combines gentle micro-dentistry, fully automated chairs, 3D intraoral scanners, and modern laser technology for completely stress-free and painless visits.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <Link
-                href="/contact"
-                className="bg-brand-primary hover:bg-brand-primaryDark text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold transition-all shadow-xl shadow-brand-primary/25 flex items-center justify-center gap-2 text-base md:text-lg hover:scale-[1.02] touch-manipulation min-h-[48px]"
-              >
-                <span>Contact Us</span>
-                <ArrowRight className="w-5 h-5 shrink-0" />
-              </Link>
-              <a
-                href={`tel:${clinicInfo.phoneRaw}`}
-                className="bg-purple-50 hover:bg-purple-100 text-brand-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold transition-all border border-purple-200 flex items-center justify-center gap-2 text-base md:text-lg touch-manipulation min-h-[48px]"
-              >
-                <Phone className="w-5 h-5 text-brand-primary shrink-0" />
-                <span>Call {clinicInfo.phone}</span>
-              </a>
-            </div>
-
-            {/* Trust Markers */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-slate-200/80">
-              <div className="bg-white/60 p-3 sm:p-0 rounded-xl sm:bg-transparent">
-                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">{clinicInfo.stats.yearsExperience}</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Clinical Experience</p>
-              </div>
-              <div className="bg-white/60 p-3 sm:p-0 rounded-xl sm:bg-transparent">
-                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">{clinicInfo.stats.happyPatients}</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Happy Smiles Restored</p>
-              </div>
-              <div className="bg-white/60 p-3 sm:p-0 rounded-xl sm:bg-transparent">
-                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">{clinicInfo.stats.successfulImplants}</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Implants Completed</p>
-              </div>
-              <div className="bg-white/60 p-3 sm:p-0 rounded-xl sm:bg-transparent">
-                <p className="text-2xl sm:text-3xl font-bold text-brand-primary font-heading">100%</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-0.5">Sterilized & Hygienic</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Image Container */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl shadow-purple-900/10 group">
-              <Image
-                src="/images/clinic_hero.webp"
-                alt="Kedia Dental Care Modern Clinic Interior in Bhubaneswar"
-                width={600}
-                height={600}
-                className="w-full h-[280px] sm:h-[380px] md:h-[460px] object-cover group-hover:scale-105 transition-transform duration-700"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-100 shadow-lg text-slate-900">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center shrink-0 shadow-md">
-                    <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-slate-900">Forest Park, Bhubaneswar</h4>
-                    <p className="text-[11px] sm:text-xs text-slate-600">2nd Floor, Shuvam Towers (Near Sishu Bhawan Road)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      {/* Hero Slider Section */}
+      <HeroSlider />
 
       {/* Precision Dentistry & Technology Section */}
       <section className="py-20 bg-white">
@@ -204,7 +108,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
                 <Image
-                  src="/images/clinic_team.webp"
+                  src="/images/clinic_team_seated.jpg"
                   alt="Dr. Shiv Dayal Kedia & In-House Dental Specialists at Kedia Dental Care Bhubaneswar"
                   width={1024}
                   height={688}
@@ -263,45 +167,66 @@ export default function Home() {
 
           </div>
 
-          {/* In-House Doctors Showcase (Only name on photo) */}
-          <div className="space-y-6">
-            <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold font-heading text-slate-900">In-House Dental Specialists</h3>
-              <p className="text-slate-600 text-sm mt-1">Dedicated specialists providing compassionate, gentle care.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {inHouseDoctors.map((doc, idx) => (
-                <div key={idx} className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-72 w-full overflow-hidden bg-slate-100">
-                    <Image
-                      src={doc.image}
-                      alt={doc.name}
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-5 right-5 text-white">
-                      <h4 className="font-bold text-xl font-heading">{doc.name}</h4>
-                    </div>
-                  </div>
-
-                  <div className="p-5 space-y-2">
-                    <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">{doc.title}</p>
-                    <p className="text-xs font-semibold text-slate-700">{doc.specialty} • {doc.qualifications}</p>
-                  </div>
+          {/* Master Clinical Team Showcase */}
+          <div className="bg-slate-50 rounded-3xl border border-slate-200 shadow-md p-8 sm:p-10 lg:p-12 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div className="lg:col-span-7 relative h-72 sm:h-96 w-full rounded-2xl overflow-hidden shadow-lg border border-white/50 bg-slate-950">
+                <Image
+                  src="/images/clinic_team_standing.jpg"
+                  alt="Kedia Dental Care Clinical Specialists & Surgical Staff at Shuvam Towers"
+                  fill
+                  unoptimized
+                  className="object-cover object-top"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-xs font-bold border border-white/20">
+                    ★ In-House Specialists & Surgeons
+                  </span>
                 </div>
-              ))}
-            </div>
+              </div>
 
-            <div className="text-center pt-4">
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryDark text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-md"
-              >
-                Meet All Doctors & Consultants <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="lg:col-span-5 space-y-5">
+                <div className="space-y-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-brand-primary bg-purple-100/70 px-3 py-1 rounded-full border border-purple-200">
+                    Multidisciplinary Care
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-heading font-bold text-slate-900 leading-snug">
+                    Dedicated Dental Specialists Under One Roof
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Led by Founder & Chief Dental Surgeon Dr. Shiv Dayal Kedia with 22+ years of clinical mastery, our multi-specialty team ensures comprehensive oral care with zero fear and complete transparency.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {[
+                    "Micro-Endodontics",
+                    "Dental Implants",
+                    "Clear Aligners",
+                    "Laser Dentistry",
+                    "Pediatric Care",
+                    "Oral Surgery",
+                  ].map((badge, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 rounded-full bg-white border border-purple-100 text-slate-700 text-xs font-semibold shadow-xs"
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primaryDark text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-md shadow-brand-primary/25 hover:scale-[1.02]"
+                  >
+                    Meet All Specialists & Wings <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
 

@@ -24,6 +24,7 @@ export interface Doctor {
   specialty: string;
   bio: string;
   image: string;
+  objectPosition?: string;
 }
 
 export interface ClinicInfo {
@@ -251,38 +252,133 @@ export const teamMembers: Doctor[] = [
     image: "/images/dr_kedia.webp",
   },
   {
-    name: "Dr. Priyanka",
-    title: "Associate Dental Surgeon",
+    name: "Dr. Swetali Deo",
+    title: "Senior Dental Surgeon",
     role: "in-house",
     qualifications: "BDS",
+    experienceYears: 9,
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
-    specialty: "Endodontics & Preventive Care",
-    bio: "Dr. Priyanka focuses on micro-endodontic treatments and oral hygiene education, helping patients maintain healthy natural teeth.",
-    image: "/images/dr_priyanka.webp",
-  },
-  {
-    name: "Dr. Swetali Deo",
-    title: "Senior Dental Surgeon & Specialist",
-    role: "in-house",
-    qualifications: "BDS, MDS",
-    registrationNumber: "Registered Dental Specialist (OSDC / DCI)",
-    specialty: "Cosmetic & Restorative Dentistry",
-    bio: "Dr. Swetali Deo brings extensive expertise in preventive and aesthetic dental procedures, focusing on conservative restoration and patient-centered gentle care.",
-    image: "/images/dr_swetali.webp",
+    specialty: "Pediatric Dentistry & Orthodontics",
+    bio: "With over nine years of distinguished clinical experience, Dr. Swetali Deo serves as the Senior Dental Surgeon at our practice. Renowned for her gentle approach to pediatric dentistry and advanced orthodontic treatments, she ensures patients of all ages achieve optimal alignment and lasting oral wellness.",
+    image: "/images/dr_swetali_hd.jpg",
+    objectPosition: "top",
   },
   {
     name: "Dr. Ayushi",
-    title: "Associate Dental Surgeon",
+    title: "Dental Surgeon",
+    role: "in-house",
+    qualifications: "BDS",
+    experienceYears: 6,
+    registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
+    specialty: "General & Restorative Dentistry",
+    bio: "Dr. Ayushi brings a refined approach to contemporary dental care, combining clinical precision with a deep commitment to preserving the natural beauty and function of every smile. With a special interest in restorative dentistry, her focus is on preserving what is natural, restoring what is lost, and creating dentistry that feels beautifully effortless.",
+    image: "/images/dr_ayushi_hd.jpg",
+    objectPosition: "top",
+  },
+  {
+    name: "Dr. Anwesha",
+    title: "Dental Surgeon",
+    role: "in-house",
+    qualifications: "BDS",
+    experienceYears: 3,
+    registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
+    specialty: "General & Endodontic Care",
+    bio: "Dr. Anwesha approaches dentistry with a blend of clinical insight, precision, and a gentle understanding of patient needs. With a particular affinity for endodontic treatment, she focuses on the delicate balance between preserving natural tooth structure and restoring lasting oral function — guided by careful planning and an uncompromising eye for detail.",
+    image: "/images/dr_anwesha_hd.jpg",
+    objectPosition: "top",
+  },
+  {
+    name: "Dr. Vandana Jaiswal",
+    title: "Dental Surgeon",
     role: "in-house",
     qualifications: "BDS",
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
-    specialty: "General & Pediatric Dentistry",
-    bio: "Dr. Ayushi specializes in child-friendly dentistry and general oral health maintenance, ensuring anxiety-free dental visits for patients of all ages.",
-    image: "/images/dr_ayushi.webp",
+    specialty: "General & Preventive Dentistry",
+    bio: "Bringing fresh expertise, compassionate care, and a commitment to continuous learning, Dr. Vandana Jaiswal is dedicated to delivering comfortable, thoughtful, and patient-centred dental care. With a strong focus on clinical excellence, she is committed to creating a reassuring and positive dental experience for every patient.",
+    image: "/images/dr_vandana_hd.jpg",
+    objectPosition: "top",
+  },
+  {
+    name: "Dr. Shibani Mishra",
+    title: "Dental Surgeon",
+    role: "in-house",
+    qualifications: "BDS",
+    registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
+    specialty: "General & Restorative Care",
+    bio: "Dr. Shibani Mishra combines modern clinical knowledge with genuine empathy and a gentle chairside manner. Committed to continuous learning and high-standard patient care, she focuses on delivering comfortable, thoughtful dental solutions tailored to the individual needs of every patient.",
+    image: "/images/dr_shibani_hd.jpg",
+    objectPosition: "top",
   },
 ];
 
 export const doctorProfile = teamMembers[0];
+
+export interface ClinicalDepartment {
+  id: string;
+  title: string;
+  subtitle: string;
+  specialists: string;
+  description: string;
+  treatmentsCovered: string[];
+  icon: string;
+}
+
+export const clinicalDepartments: ClinicalDepartment[] = [
+  {
+    id: "endodontics",
+    title: "Endodontics & Restorative Dentistry",
+    subtitle: "Micro-Precision Root Canal & Natural Tooth Preservation",
+    specialists: "Senior Endodontist & Micro-Dentistry Team",
+    description: "Specialized in saving natural teeth using surgical magnification loupes, rotary apex locators, and painless single-sitting root canal protocols.",
+    treatmentsCovered: ["Single-Sitting RCT", "Laser Disinfection", "Composite Tooth Fillings", "Micro-Endodontic Re-treatment"],
+    icon: "ShieldCheck",
+  },
+  {
+    id: "implantology",
+    title: "Implantology & Full-Mouth Rehabilitation",
+    subtitle: "Permanent Tooth Replacement with Global Implants",
+    specialists: "Chief Dental Surgeon & Maxillofacial Implant Panel",
+    description: "Restoring lost chewing efficiency and natural smile aesthetics with Osstem/Nobel Biocare titanium implants, crowns, and zirconia bridges.",
+    treatmentsCovered: ["Single & Multiple Implants", "All-on-4 / All-on-6", "Sinus Lift & Bone Grafting", "Zirconia Crowns & Bridges"],
+    icon: "Sparkles",
+  },
+  {
+    id: "orthodontics",
+    title: "Orthodontics & Clear Aligners",
+    subtitle: "Bite Correction & Digital Smile Alignment",
+    specialists: "Visiting Consultant Orthodontist Panel",
+    description: "Aligning crooked, crowded, or spaced teeth for teenagers and adults using discreet clear aligners, ceramic braces, and self-ligating brackets.",
+    treatmentsCovered: ["Invisible Clear Aligners", "Ceramic & Metal Braces", "Retainers & Habit Correction", "Bite & TMJ Alignment"],
+    icon: "Smile",
+  },
+  {
+    id: "laser-periodontics",
+    title: "Laser Dentistry & Periodontics",
+    subtitle: "Bloodless Gum Therapy & Aesthetic Contouring",
+    specialists: "Periodontist & Diode Laser Surgery Team",
+    description: "Treating bleeding gums, gingivitis, and dark gums with sterile diode lasers for accelerated healing without scalpels or sutures.",
+    treatmentsCovered: ["Laser Gum Depigmentation", "Flapless Pocket Sterilization", "Gingival Contouring", "Ultrasonic Deep Scaling"],
+    icon: "Zap",
+  },
+  {
+    id: "pediatric-preventive",
+    title: "Pediatric & Preventive Dentistry",
+    subtitle: "Gentle & Child-Friendly Dental Care",
+    specialists: "Pediatric Dental Care Team",
+    description: "Fostering positive dental habits from a young age with zero-fear cavity prevention, fluoride treatments, pit & fissure sealants, and space maintainers.",
+    treatmentsCovered: ["Cavity Prevention & Fluoride", "Pit & Fissure Sealants", "Painless Pulpectomy", "Habit Breaking Appliances"],
+    icon: "HeartHandshake",
+  },
+  {
+    id: "oral-surgery",
+    title: "Oral & Maxillofacial Surgery",
+    subtitle: "Wisdom Tooth & Surgical Care",
+    specialists: "Senior Oral & Maxillofacial Surgeon Panel",
+    description: "Atraumatic surgical extraction of impacted wisdom teeth, cyst enucleation, and pre-prosthetic bone contouring with hospital-grade sterility.",
+    treatmentsCovered: ["Impacted Wisdom Tooth Removal", "Atraumatic Extractions", "Alveoloplasty", "Surgical Frenectomy"],
+    icon: "Stethoscope",
+  },
+];
 
 export const visitingConsultants = [
   {

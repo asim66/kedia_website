@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Zap, Activity, Smile, Sparkles, Camera, Layers, HeartPulse, Stethoscope, Sun } from "lucide-react";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const metadata: Metadata = {
   title: "Specialized Dental Treatments in Bhubaneswar",
@@ -74,6 +75,9 @@ export default function TreatmentsPage() {
           </div>
         </div>
       </section>
+
+      {/* Real Clinical Transformations: Before & After Case Showcase */}
+      <BeforeAfterShowcase />
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-purple-50 text-slate-900 border-t border-purple-100">

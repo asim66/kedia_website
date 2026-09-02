@@ -745,3 +745,42 @@ export const faqsList = [
     answer: "We use computer-guided local anesthesia, soft-tissue dental lasers, and micro-rotary instruments that reduce tissue vibration and healing time, ensuring a comfortable experience.",
   },
 ];
+
+export interface ClinicalCase {
+  id: string;
+  title: string;
+  treatmentName: string;
+  category: string;
+  badge: string;
+  summary: string;
+  clinicalConcern: string;
+  treatmentProcedure: string;
+  clinicalOutcome: string;
+  materialUsed: string;
+  timeframe: string;
+  beforeImage: string;
+  afterImage: string;
+  altBefore: string;
+  altAfter: string;
+}
+
+export const clinicalCases: ClinicalCase[] = [
+  {
+    id: "metal-free-bridge-case-1",
+    title: "Tooth Replacement with Metal-Free Bridges",
+    treatmentName: "Metal-Free All-Ceramic Zirconia Bridge",
+    category: "Restorative Dentistry & Prosthodontics",
+    badge: "Restored Natural Smile",
+    summary: "Complete functional and aesthetic restoration of a missing tooth gap using a biocompatible, metal-free zirconia bridge.",
+    clinicalConcern: "Missing tooth space causing chewing imbalance, bite misalignment, and smile hesitation.",
+    treatmentProcedure: "Conservative preparation of adjacent anchor teeth, high-precision digital impression, and CAD/CAM fabrication of a custom shade-matched metal-free bridge.",
+    clinicalOutcome: "Restored natural bite anatomy, seamless tooth translucency, and elimination of dark metal lines at the gumline.",
+    materialUsed: "High-Translucency Metal-Free Monolithic Zirconia",
+    timeframe: "Completed in 2 appointments",
+    beforeImage: "/images/treatment_metal_free_bridge_before.webp",
+    afterImage: "/images/treatment_metal_free_bridge_after.webp",
+    altBefore: "Before treatment: Missing tooth space and prepared anchor teeth at Kedia Dental Care",
+    altAfter: "After treatment: Tooth replacement with metal-free bridge at Kedia Dental Care",
+  },
+];
+

@@ -69,7 +69,7 @@ const slides: Slide[] = [
   },
 ];
 
-const AUTOPLAY_DELAY = 5500;
+const AUTOPLAY_DELAY = 1500;
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -86,7 +86,7 @@ export default function HeroSlider() {
       setPrevIdx(current);
       setCurrent(index);
       setProgressKey((k) => k + 1);
-      setTimeout(() => setPrevIdx(null), 900);
+      setTimeout(() => setPrevIdx(null), 500);
     },
     [current]
   );
@@ -300,7 +300,7 @@ export default function HeroSlider() {
           to   { transform: scale(1.065) translateZ(0); }
         }
         .hero-ken-burns {
-          animation: kenBurns 6300ms ease-out forwards;
+          animation: kenBurns 1800ms ease-out forwards;
           will-change: transform;
         }
         @keyframes slideIn {
@@ -308,7 +308,7 @@ export default function HeroSlider() {
           to   { opacity: 1; transform: scale(1); }
         }
         .hero-slide-in {
-          animation: slideIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: slideIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           will-change: opacity, transform;
         }
         @keyframes slideOut {
@@ -316,7 +316,7 @@ export default function HeroSlider() {
           to   { opacity: 0; }
         }
         .hero-slide-out {
-          animation: slideOut 0.65s ease forwards;
+          animation: slideOut 0.35s ease forwards;
           will-change: opacity;
         }
         @keyframes shimmerLine {
@@ -355,11 +355,11 @@ export default function HeroSlider() {
           from { transform: scaleX(0); }
           to   { transform: scaleX(1); }
         }
-        .hero-anim-tag { animation: heroAnimTag 0.5s cubic-bezier(0.22, 1, 0.36, 1) both 0.25s; }
-        .hero-anim-hl  { animation: heroAnimHl  0.55s cubic-bezier(0.22, 1, 0.36, 1) both 0.38s; }
-        .hero-anim-sub { animation: heroAnimSub 0.5s cubic-bezier(0.22, 1, 0.36, 1) both 0.50s; }
-        .hero-anim-cta { animation: heroAnimCta 0.5s cubic-bezier(0.22, 1, 0.36, 1) both 0.60s; }
-        .hero-progress-bar { animation: heroProgress 5500ms linear both; }
+        .hero-anim-tag { animation: heroAnimTag 0.25s cubic-bezier(0.22, 1, 0.36, 1) both 0.05s; }
+        .hero-anim-hl  { animation: heroAnimHl  0.3s cubic-bezier(0.22, 1, 0.36, 1) both 0.08s; }
+        .hero-anim-sub { animation: heroAnimSub 0.25s cubic-bezier(0.22, 1, 0.36, 1) both 0.12s; }
+        .hero-anim-cta { animation: heroAnimCta 0.25s cubic-bezier(0.22, 1, 0.36, 1) both 0.15s; }
+        .hero-progress-bar { animation: heroProgress 1500ms linear both; }
       `}</style>
     </section>
   );

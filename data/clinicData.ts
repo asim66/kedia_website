@@ -176,32 +176,32 @@ export const clinicInfo: ClinicInfo = {
   amenities: [
     {
       title: "Elevator & Wheelchair Access",
-      description: "Full elevator access in Shuvam Towers and step-free clinic access for elderly patients and wheelchair users.",
+      description: "Step-free entry with full elevator access for all patients.",
       icon: "Accessibility",
     },
     {
       title: "Parking Assistance",
-      description: "In case of special circumstances or emergencies, on-premise parking assistance is available, subject to space availability.",
+      description: "On-premise parking help available for emergencies.",
       icon: "Car",
     },
     {
-      title: "Transparent & Honest Pricing",
-      description: "Clear written cost estimates provided upfront before starting any dental procedure with no hidden charges.",
+      title: "Transparent Pricing",
+      description: "Upfront cost estimates with no hidden charges.",
       icon: "ShieldCheck",
     },
     {
-      title: "Quiet & Anxiety-Free Lounge",
-      description: "A calming waiting area equipped with ambient lighting, Wi-Fi, and soothing music to ease dental anxiety.",
+      title: "Anxiety-Free Lounge",
+      description: "Calm waiting area with ambient lighting and Wi-Fi.",
       icon: "Coffee",
     },
     {
-      title: "Same-Day Emergency Service",
-      description: "Priority walk-in appointments reserved daily for acute tooth pain, trauma, or broken teeth.",
+      title: "Same-Day Emergency Care",
+      description: "Walk-in priority for acute pain and dental trauma.",
       icon: "HeartPulse",
     },
     {
-      title: "Transparent Digital Estimates",
-      description: "No hidden charges. Detailed written treatment plans with complete cost clarity before treatment starts.",
+      title: "Digital Treatment Plans",
+      description: "Detailed written plans with complete cost clarity.",
       icon: "FileText",
     },
   ],

@@ -86,7 +86,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-6">
               <li>
                 <Link
@@ -199,7 +199,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-slate-700 hover:text-brand-primary min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg active:bg-slate-100 transition-colors touch-manipulation"
+            className="lg:hidden p-2 text-slate-700 hover:text-brand-primary min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg active:bg-slate-100 transition-colors touch-manipulation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -215,7 +215,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-xl p-4 md:hidden flex flex-col gap-3 max-h-[85vh] overflow-y-auto"
+            className="absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-xl p-4 lg:hidden flex flex-col gap-3 max-h-[85vh] overflow-y-auto"
           >
             <ul className="flex flex-col gap-1">
               <li>

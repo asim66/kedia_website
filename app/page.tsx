@@ -10,6 +10,7 @@ import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/cl
 import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
 import HeroSlider from "@/components/HeroSlider";
+import DoctorTeamGrid from "@/components/DoctorTeamGrid";
 
 export const metadata: Metadata = {
   title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
@@ -49,6 +50,7 @@ function GoogleGIcon({ className = "w-4 h-4" }: { className?: string }) {
 export default function Home() {
   const popularTreatments = treatmentsData.slice(0, 6);
   const founder = teamMembers[0];
+  const otherDoctors = teamMembers.slice(1);
 
   return (
     <>
@@ -100,47 +102,60 @@ export default function Home() {
       {/* Authentic Clinic Gallery & Virtual Tour */}
       <ClinicGallery />
 
-      {/* Meet Founder & Specialists Feature */}
+      {/* Dr. Shiv Dayal Kedia - Spotlight Feature */}
       <section className="py-12 sm:py-16 md:py-20 bg-slate-50 border-t border-b border-slate-200/70">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-            {/* Visual Team Photo */}
-            <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 group">
-                <Image
-                  src="/images/clinic_team_seated.webp"
-                  alt="Dr. Shiv Dayal Kedia & Clinical Specialists at Kedia Dental Care Bhubaneswar"
-                  width={1024}
-                  height={688}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-slate-950/85 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-slate-800 text-white">
-                  <div className="flex items-center justify-between gap-2">
-                    <div>
-                      <h3 className="font-bold text-sm sm:text-base font-heading">{founder.name}</h3>
-                      <p className="text-[11px] sm:text-xs text-purple-200">Founder & Chief Dental Surgeon · 22+ Yrs Exp</p>
-                    </div>
-                    <span className="px-2.5 py-1 rounded-full bg-brand-primary text-white text-[10px] font-bold shrink-0">
-                      Forest Park
+            {/* Dr. Kedia Visual Portrait Card */}
+            <div className="lg:col-span-5 xl:col-span-5">
+              <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200/90 bg-white group max-w-md mx-auto lg:max-w-none">
+                {/* Photo Area - Clean & unblocked */}
+                <div className="relative h-[340px] sm:h-[400px] md:h-[430px] w-full overflow-hidden bg-slate-100">
+                  <Image
+                    src={founder.image}
+                    alt={`${founder.name} - ${founder.title}`}
+                    fill
+                    unoptimized
+                    priority
+                    className="object-cover group-hover:scale-102 transition-transform duration-700"
+                    style={{ objectPosition: "center 42%" }}
+                  />
+
+                  {/* Floating Experience Badge in top corner */}
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-brand-primary text-xs font-bold border border-purple-100 shadow-md">
+                      ★ 22+ Years Clinical Mastery
                     </span>
                   </div>
+                </div>
+
+                {/* Clean Details Bar Below Photo - No text covering the doctor's face */}
+                <div className="p-4 sm:p-5 bg-white border-t border-slate-100 flex items-center justify-between gap-3">
+                  <div>
+                    <h3 className="font-bold text-base sm:text-lg font-heading text-slate-900">{founder.name}</h3>
+                    <p className="text-xs text-brand-primary font-bold">{founder.title} • {founder.qualifications}</p>
+                    <p className="text-[11px] text-slate-500 mt-0.5 font-medium">Specialist: {founder.specialty}</p>
+                  </div>
+                  <span className="px-2.5 py-1 rounded-full bg-purple-50 border border-purple-100 text-brand-primary text-xs font-bold shrink-0">
+                    Forest Park
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Concise Clinical Story */}
-            <div className="lg:col-span-6 space-y-4 sm:space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
-                <Award className="w-3.5 h-3.5" /> 22+ Years of Clinical Mastery
+            {/* Concise Clinical Story & Philosophy */}
+            <div className="lg:col-span-7 xl:col-span-7 space-y-4 sm:space-y-5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
+                <Award className="w-3.5 h-3.5" /> Founder & Chief Dental Surgeon
               </div>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-slate-900 leading-tight">
-                Gentle, Ethical & Human Dentistry
+                Gentle, Ethical & Precision Dentistry
               </h2>
 
               <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                Founded by Dr. Shiv Dayal Kedia in 2004, Kedia Dental Care is built on patient-first ethics, genuine empathy, and master-level dental expertise. Every procedure is explained with transparency before treatment begins.
+                Founded by Dr. Shiv Dayal Kedia in 2004, Kedia Dental Care is built on patient-first ethics, genuine empathy, and master-level dental expertise. With specialized focus in single-visit root canals, laser dentistry, and dental implants, Dr. Kedia believes treatment should always be gentle, transparent, and pain-free.
               </p>
 
               {/* 3 Crisp Value Cards */}
@@ -179,18 +194,18 @@ export default function Home() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <Link
-                  href="/about"
+                  href="/contact"
                   className="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md shadow-brand-primary/20 inline-flex items-center gap-1.5"
                 >
-                  <span>Meet Our Specialists</span>
+                  <span>Book Consultation with Dr. Kedia</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
-                <Link
-                  href="/contact"
+                <a
+                  href="#specialists"
                   className="bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all inline-flex items-center gap-1.5"
                 >
-                  <span>Book Consultation</span>
-                </Link>
+                  <span>Meet Our Specialists</span>
+                </a>
               </div>
 
             </div>
@@ -198,6 +213,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Meet All In-House Dental Specialists Section */}
+      <DoctorTeamGrid doctors={otherDoctors} />
 
       {/* Grid of Popular Core Treatments */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">

@@ -23,6 +23,7 @@ export interface Doctor {
   experienceYears?: number;
   specialty: string;
   bio: string;
+  shortBio?: string;
   image: string;
   objectPosition?: string;
 }
@@ -251,6 +252,7 @@ export const teamMembers: Doctor[] = [
     experienceYears: 22,
     specialty: "Endodontics, Implants & Laser Dentistry",
     bio: "Back in 2004, Dr. Shiv Dayal Kedia founded Kedia Dental Care on a simple, radical philosophy—dentistry should be ethical, incredibly gentle, and fundamentally human. Over the past two decades, Dr. Kedia has built a reputation across Odisha not just for his steady hands, but for the immense time he takes to actually listen to his patients. Whether he is carefully saving a tooth with a root canal, placing a permanent dental implant to help you eat your favorite food again, or completely redesigning a smile from scratch using digital mapping, he brings over twenty years of master-level clinical expertise to the chair. But more importantly, he treats every person sitting in that chair like family.",
+    shortBio: "With 22+ years of clinical excellence, Dr. Kedia combines patient-first ethics, gentle micro-dentistry, and advanced implantology to deliver pain-free, lasting smiles.",
     image: "/images/dr_kedia.webp",
   },
   {
@@ -262,6 +264,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "Pediatric Dentistry & Orthodontics",
     bio: "With over nine years of distinguished clinical experience, Dr. Swetali Deo serves as the Senior Dental Surgeon at our practice. Renowned for her gentle approach to pediatric dentistry and advanced orthodontic treatments, she ensures patients of all ages achieve optimal alignment and lasting oral wellness.",
+    shortBio: "Specializing in gentle pediatric care and modern orthodontics with 9+ years of experience, creating healthy alignments and comfortable dental visits.",
     image: "/images/dr_swetali_hd.webp",
     objectPosition: "top",
   },
@@ -274,6 +277,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Restorative Dentistry",
     bio: "Dr. Ayushi brings a refined approach to contemporary dental care, combining clinical precision with a deep commitment to preserving the natural beauty and function of every smile. With a special interest in restorative dentistry, her focus is on preserving what is natural, restoring what is lost, and creating dentistry that feels beautifully effortless.",
+    shortBio: "Blending clinical precision with aesthetic dentistry, Dr. Ayushi focuses on conservative restorative care that preserves natural tooth structure.",
     image: "/images/dr_ayushi_hd.webp",
     objectPosition: "top",
   },
@@ -286,6 +290,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Endodontic Care",
     bio: "Dr. Anwesha approaches dentistry with a blend of clinical insight, precision, and a gentle understanding of patient needs. With a particular affinity for endodontic treatment, she focuses on the delicate balance between preserving natural tooth structure and restoring lasting oral function — guided by careful planning and an uncompromising eye for detail.",
+    shortBio: "Focused on precise endodontic therapy and gentle restorative care, combining clinical accuracy with patient comfort to save natural teeth.",
     image: "/images/dr_anwesha_hd.webp",
     objectPosition: "top",
   },
@@ -297,6 +302,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Preventive Dentistry",
     bio: "Bringing fresh expertise, compassionate care, and a commitment to continuous learning, Dr. Vandana Jaiswal is dedicated to delivering comfortable, thoughtful, and patient-centred dental care. With a strong focus on clinical excellence, she is committed to creating a reassuring and positive dental experience for every patient.",
+    shortBio: "Dedicated to comprehensive preventive dentistry and patient comfort, ensuring every visit is stress-free, thoughtful, and reassuring.",
     image: "/images/dr_vandana_hd.webp",
     objectPosition: "top",
   },
@@ -308,6 +314,7 @@ export const teamMembers: Doctor[] = [
     registrationNumber: "Registered Dental Surgeon (OSDC / DCI)",
     specialty: "General & Restorative Care",
     bio: "Dr. Shibani Mishra combines modern clinical knowledge with genuine empathy and a gentle chairside manner. Committed to continuous learning and high-standard patient care, she focuses on delivering comfortable, thoughtful dental solutions tailored to the individual needs of every patient.",
+    shortBio: "Combining contemporary restorative techniques with empathetic chairside care to deliver gentle, personalized oral healthcare.",
     image: "/images/dr_shibani_hd.webp",
     objectPosition: "top",
   },

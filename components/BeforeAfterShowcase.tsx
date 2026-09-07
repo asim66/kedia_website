@@ -13,7 +13,11 @@ import {
 } from "lucide-react";
 import { clinicalCases, clinicInfo } from "@/data/clinicData";
 
-export default function BeforeAfterShowcase() {
+interface BeforeAfterShowcaseProps {
+  className?: string;
+}
+
+export default function BeforeAfterShowcase({ className }: BeforeAfterShowcaseProps = {}) {
   const [activeCaseIdx, setActiveCaseIdx] = useState<number>(0);
   const selectedCase = clinicalCases[activeCaseIdx] || clinicalCases[0];
   const [sliderPosition, setSliderPosition] = useState<number>(50);
@@ -42,7 +46,7 @@ export default function BeforeAfterShowcase() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50/80 border-t border-slate-200/80">
+    <section className={className || "py-12 md:py-16 bg-slate-50/80 border-t border-slate-200/80"}>
       <div className="max-w-4xl mx-auto px-4 md:px-6 space-y-6">
         
         {/* Compact Section Header */}

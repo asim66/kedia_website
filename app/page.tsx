@@ -11,6 +11,7 @@ import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
 import HeroSlider from "@/components/HeroSlider";
 import DoctorTeamGrid from "@/components/DoctorTeamGrid";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 
 export const metadata: Metadata = {
   title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
@@ -256,6 +257,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Real Clinical Transformations: Before & After Case Showcase */}
+      <BeforeAfterShowcase className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-purple-50/30 to-slate-50 border-t border-slate-200/80" />
 
       {/* Patient Comfort & Amenities */}
       <section className="py-10 sm:py-14 bg-slate-50 border-t border-slate-200/80">

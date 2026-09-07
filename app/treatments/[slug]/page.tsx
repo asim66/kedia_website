@@ -103,7 +103,7 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
             <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-purple-200/60 text-xs font-medium text-slate-600">
               <div className="flex items-center gap-2 bg-emerald-50 text-emerald-800 px-3 py-1.5 rounded-full border border-emerald-200">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Medically Reviewed by <strong className="font-bold text-emerald-950">Dr. Shiv Dayal Kedia (BDS, MDS)</strong></span>
+                <span>Medically Reviewed by <strong className="font-bold text-emerald-950">Dr. Shiv Dayal Kedia (BDS)</strong></span>
               </div>
               <div className="flex items-center gap-1.5 text-slate-500">
                 <Clock className="w-3.5 h-3.5 text-slate-400" />

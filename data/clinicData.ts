@@ -248,7 +248,7 @@ export const teamMembers: Doctor[] = [
     name: "Dr. Shiv Dayal Kedia",
     title: "Founder & Chief Dental Surgeon",
     role: "founder",
-    qualifications: "BDS, MDS (Specialist Dental Surgeon)",
+    qualifications: "BDS",
     experienceYears: 22,
     specialty: "Endodontics, Implants & Laser Dentistry",
     bio: "Back in 2004, Dr. Shiv Dayal Kedia founded Kedia Dental Care on a simple, radical philosophy—dentistry should be ethical, incredibly gentle, and fundamentally human. Over the past two decades, Dr. Kedia has built a reputation across Odisha not just for his steady hands, but for the immense time he takes to actually listen to his patients. Whether he is carefully saving a tooth with a root canal, placing a permanent dental implant to help you eat your favorite food again, or completely redesigning a smile from scratch using digital mapping, he brings over twenty years of master-level clinical expertise to the chair. But more importantly, he treats every person sitting in that chair like family.",

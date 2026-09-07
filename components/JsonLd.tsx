@@ -44,7 +44,7 @@ export default function JsonLd() {
           },
           "alumniOf": {
             "@type": "EducationalOrganization",
-            "name": "Dental Council of India / BDS & MDS"
+            "name": "Dental Council of India / BDS"
           }
         },
         "employee": teamMembers.map(member => ({

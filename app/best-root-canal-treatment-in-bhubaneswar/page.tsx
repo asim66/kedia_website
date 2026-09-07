@@ -26,7 +26,7 @@ import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Root Canal Specialist in Bhubaneswar | Micro-Endodontics & Laser RCT",
-  description: "Consult MDS Endodontic Specialist Dr. Shiv Dayal Kedia for painless laser root canal therapy, rotary endodontics, and single-visit RCT in Forest Park, Bhubaneswar.",
+  description: "Consult Chief Dental Surgeon Dr. Shiv Dayal Kedia for painless laser root canal therapy, rotary endodontics, and single-visit RCT in Forest Park, Bhubaneswar.",
   keywords: "root canal specialist bhubaneswar, endodontic specialist bhubaneswar, laser rct bhubaneswar, dr kedia root canal, micro endodontics bhubaneswar",
   alternates: {
     canonical: "https://kediadentalcare.com/best-root-canal-treatment-in-bhubaneswar",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootCanalTreatmentBhubaneswarPage() {
-  const founder = teamMembers[0]; // Dr. Shiv Dayal Kedia (MDS - Endodontics)
+  const founder = teamMembers[0]; // Dr. Shiv Dayal Kedia (Founder & Chief Dental Surgeon)
 
   const rctFaqs = [
     {
@@ -116,7 +116,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               Painless <span className="text-brand-primary">Root Canal Treatment</span> in Bhubaneswar
             </h1>
             <p className="text-sm sm:text-base md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Save your natural tooth in just <strong>1 sitting</strong>. Led by MDS Endodontist <strong>Dr. Shiv Dayal Kedia</strong> (22+ Yrs Experience) using computerized rotary tools and laser pulp sterilization.
+              Save your natural tooth in just <strong>1 sitting</strong>. Led by Chief Dental Surgeon <strong>Dr. Shiv Dayal Kedia</strong> (22+ Yrs Experience) using computerized rotary tools and laser pulp sterilization.
             </p>
             
             {/* Quick Feature Badges */}
@@ -189,7 +189,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-lg text-slate-900">
                 <p className="text-xs font-bold text-brand-primary uppercase tracking-wider">Expert Endodontist Care</p>
                 <p className="text-sm font-semibold text-slate-800">"We save your natural teeth with minimal discomfort, restoring full chewing power fast."</p>
-                <p className="text-xs text-slate-500 font-medium mt-1">— Dr. Shiv Dayal Kedia (MDS)</p>
+                <p className="text-xs text-slate-500 font-medium mt-1">— Dr. Shiv Dayal Kedia (BDS)</p>
               </div>
             </div>
             
@@ -302,9 +302,9 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
                 <Stethoscope className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold font-heading text-slate-900">MDS Specialist Endodontist</h3>
+              <h3 className="text-xl font-bold font-heading text-slate-900">Expert Endodontic Care</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Performed by Founder <strong>Dr. Shiv Dayal Kedia</strong> (BDS, MDS) with over 22 years of clinical experience in complex endodontics and re-RCT cases.
+                Performed by Founder <strong>Dr. Shiv Dayal Kedia</strong> (BDS) with over 22 years of clinical experience in complex endodontics and re-RCT cases.
               </p>
             </div>
 

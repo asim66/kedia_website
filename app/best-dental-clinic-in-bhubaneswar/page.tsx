@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { clinicInfo, teamMembers, treatmentsData, testimonials, faqsList } from "@/data/clinicData";
-import { CheckCircle2, MapPin, Phone, Star, Award, ShieldCheck, Clock, CalendarDays, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Star, ShieldCheck, Clock, ExternalLink } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -58,8 +58,8 @@ export default function BestDentalClinicBhubaneswarPage() {
       <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/80 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-xs sm:text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
-              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> Rated #1 Dental Clinic
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-xs sm:text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
+              Rated #1 Dental Clinic
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
               The <span className="text-brand-primary">Best Dental Clinic</span> in Bhubaneswar
@@ -136,16 +136,16 @@ export default function BestDentalClinicBhubaneswarPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "22+ Years Experience", desc: "Dr. Kedia brings over two decades of clinical expertise, handling complex cases with precision.", icon: Award },
-              { title: "Painless Micro-Dentistry", desc: "Advanced techniques and equipment ensure your treatment is minimally invasive and virtually painless.", icon: CheckCircle2 },
-              { title: "100% Sterilization", desc: "We follow strict hospital-grade sterilization protocols to ensure a safe, infection-free environment.", icon: ShieldCheck },
-              { title: "Advanced Technology", desc: "Equipped with state-of-the-art tools like intraoral cameras, digital X-rays, and lasers.", icon: Star },
-              { title: "All Specialists Under One Roof", desc: "From orthodontists to oral surgeons, our team of specialists provides comprehensive care.", icon: CheckCircle2 },
-              { title: "Prime Location", desc: "Conveniently located in Forest Park, easily accessible from all parts of Bhubaneswar.", icon: MapPin },
+              { title: "22+ Years Experience", desc: "Dr. Kedia brings over two decades of clinical expertise, handling complex cases with precision." },
+              { title: "Painless Micro-Dentistry", desc: "Advanced techniques and equipment ensure your treatment is minimally invasive and virtually painless." },
+              { title: "100% Sterilization", desc: "We follow strict hospital-grade sterilization protocols to ensure a safe, infection-free environment." },
+              { title: "Advanced Technology", desc: "Equipped with state-of-the-art tools like intraoral cameras, digital X-rays, and lasers." },
+              { title: "All Specialists Under One Roof", desc: "From orthodontists to oral surgeons, our team of specialists provides comprehensive care." },
+              { title: "Prime Location", desc: "Conveniently located in Forest Park, easily accessible from all parts of Bhubaneswar." },
             ].map((feature, idx) => (
               <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-brand-primary mb-6">
-                  <feature.icon className="w-7 h-7" />
+                <div className="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center text-brand-primary font-heading font-bold text-base mb-6">
+                  {String(idx + 1).padStart(2, '0')}
                 </div>
                 <h3 className="text-xl font-bold font-heading text-slate-900 mb-3">{feature.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{feature.desc}</p>

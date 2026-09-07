@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { CheckCircle2, ChevronRight, Clock, HelpCircle, Activity, ShieldCheck, CreditCard, AlertCircle, Phone } from "lucide-react";
+import { CheckCircle2, ChevronRight, Clock, HelpCircle, ShieldCheck, CreditCard, AlertCircle, Phone } from "lucide-react";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
@@ -209,7 +209,7 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                     
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-xl bg-purple-100 text-brand-primary flex items-center justify-center shrink-0">
-                        <Activity className="w-5 h-5" />
+                        <CheckCircle2 className="w-5 h-5" />
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 font-medium">Expected Recovery</p>

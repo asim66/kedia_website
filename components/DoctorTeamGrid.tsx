@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles, ShieldCheck, Stethoscope } from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 import { Doctor } from "@/data/clinicData";
 
 interface DoctorTeamGridProps {
@@ -14,8 +14,7 @@ export default function DoctorTeamGrid({ doctors }: DoctorTeamGridProps) {
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2 sm:space-y-3">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-50 text-brand-primary border border-purple-100 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-brand-primary" />
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-purple-50 text-brand-primary border border-purple-100 text-xs font-bold uppercase tracking-wider">
             In-House Clinical Specialists
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-slate-900">
@@ -88,7 +87,7 @@ export default function DoctorTeamGrid({ doctors }: DoctorTeamGridProps) {
         <div className="mt-8 sm:mt-10 bg-slate-50 rounded-2xl sm:rounded-3xl border border-slate-200/80 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5 text-center sm:text-left">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-100 text-brand-primary flex items-center justify-center shrink-0">
-              <Stethoscope className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Award className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
               <h4 className="font-bold text-slate-900 text-xs sm:text-sm md:text-base">

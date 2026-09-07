@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Calendar, Mail, Megaphone, ChevronDown, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, X, Phone, Calendar, Mail, Megaphone, ChevronDown, ArrowRight } from "lucide-react";
 import { clinicInfo, treatmentsData } from "@/data/clinicData";
 
 export default function Navbar() {
@@ -140,7 +140,6 @@ export default function Navbar() {
                     >
                       <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
                         <div className="flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-brand-primary" />
                           <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">Our 10 Specialized Treatments</span>
                         </div>
                         <Link

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Zap, Activity, Smile, Sparkles, Camera, Layers, HeartPulse, Stethoscope, Sun } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
@@ -46,17 +46,8 @@ export default function TreatmentsPage() {
                 className="group flex flex-col justify-between rounded-3xl bg-slate-50 border border-slate-200/80 overflow-hidden hover:shadow-2xl hover:shadow-brand-primary/10 transition-all duration-300 hover:border-brand-primary"
               >
                 <div className="p-5 sm:p-8">
-                  <div className="w-12 h-12 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm">
-                    {idx === 0 && <Zap className="w-6 h-6" />}
-                    {idx === 1 && <Activity className="w-6 h-6" />}
-                    {idx === 2 && <Smile className="w-6 h-6" />}
-                    {idx === 3 && <ShieldCheck className="w-6 h-6" />}
-                    {idx === 4 && <Sparkles className="w-6 h-6" />}
-                    {idx === 5 && <Camera className="w-6 h-6" />}
-                    {idx === 6 && <Layers className="w-6 h-6" />}
-                    {idx === 7 && <HeartPulse className="w-6 h-6" />}
-                    {idx === 8 && <Stethoscope className="w-6 h-6" />}
-                    {idx === 9 && <Sun className="w-6 h-6" />}
+                  <div className="w-12 h-12 bg-purple-100 text-brand-primary font-heading font-bold text-base rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                    {String(idx + 1).padStart(2, '0')}
                   </div>
                   
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 font-heading">{treatment.title}</h3>

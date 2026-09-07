@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { teamMembers, visitingConsultants, clinicInfo } from "@/data/clinicData";
-import { Award, CheckCircle2, HeartPulse, ShieldCheck, Sparkles, UserCheck, Phone, Stethoscope } from "lucide-react";
+import { Award, ShieldCheck, Phone } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
 import ClinicGallery from "@/components/ClinicGallery";
 
@@ -81,8 +81,7 @@ export default function AboutPage() {
               </p>
               
               <div className="p-4 sm:p-6 rounded-2xl bg-purple-50/60 border border-purple-100">
-                <h4 className="font-bold text-brand-primary mb-1.5 flex items-center gap-2 text-sm sm:text-base">
-                  <Sparkles className="w-4 h-4 text-brand-primary" />
+                <h4 className="font-bold text-brand-primary mb-1.5 text-sm sm:text-base">
                   Painless Micro-Dentistry Focus
                 </h4>
                 <p className="text-slate-700 text-xs sm:text-sm md:text-base leading-relaxed">
@@ -181,8 +180,8 @@ export default function AboutPage() {
           {/* In-House Dental Surgeons */}
           <div className="space-y-6 sm:space-y-10">
             <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-100/80 text-brand-primary text-xs font-bold uppercase tracking-wider border border-purple-200">
-                <Sparkles className="w-3.5 h-3.5" /> A New Chapter of Excellence
+              <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-purple-100/80 text-brand-primary text-xs font-bold uppercase tracking-wider border border-purple-200">
+                A New Chapter of Excellence
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-slate-900">
                 In-House Dental Surgeons
@@ -345,8 +344,8 @@ export default function AboutPage() {
 
           {/* Visiting Senior Consultant Faculty */}
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-xl sm:text-2xl font-heading font-bold text-slate-900 flex items-center gap-2">
-              <Stethoscope className="w-5 h-5 text-brand-primary" /> Visiting Senior Consultant Faculty
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-slate-900">
+              Visiting Senior Consultant Faculty
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {visitingConsultants.map((consultant, idx) => (

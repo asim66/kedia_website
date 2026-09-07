@@ -4,7 +4,6 @@ import { useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Sparkles, 
   ShieldCheck, 
   Clock, 
   ArrowRight, 
@@ -48,8 +47,8 @@ export default function BeforeAfterShowcase() {
         
         {/* Compact Section Header */}
         <div className="text-center space-y-2.5">
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3 h-3" /> Clinical Transformation Cases
+          <div className="inline-flex items-center px-3 py-0.5 rounded-full bg-purple-100 text-brand-primary text-xs font-bold uppercase tracking-wider">
+            Clinical Transformation Cases
           </div>
 
           {/* Case Selection Pills */}
@@ -233,8 +232,8 @@ export default function BeforeAfterShowcase() {
               <Clock className="w-3.5 h-3.5 text-brand-primary shrink-0" />
               {selectedCase.timeframe}
             </span>
-            <span className="flex items-center gap-1 font-medium">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+            <span className="flex items-center gap-1.5 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
               {selectedCase.badge}
             </span>
           </div>

@@ -171,7 +171,7 @@ export const clinicInfo: ClinicInfo = {
       name: "Modern Laser Technology",
       description: "Minimally invasive diode laser technology for painless soft tissue procedures, gum contouring, and sterilizing infection.",
       benefit: "Zero bleeding, faster healing, and minimal post-op discomfort.",
-      icon: "Zap",
+      icon: "ShieldCheck",
     },
   ],
   amenities: [
@@ -198,7 +198,7 @@ export const clinicInfo: ClinicInfo = {
     {
       title: "Same-Day Emergency Care",
       description: "Walk-in priority for acute pain and dental trauma.",
-      icon: "HeartPulse",
+      icon: "Clock",
     },
     {
       title: "Digital Treatment Plans",

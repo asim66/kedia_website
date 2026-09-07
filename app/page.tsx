@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight, Star, ShieldCheck, Phone, CheckCircle2,
-  HeartPulse, Car, Accessibility, CreditCard, Coffee, Sparkles, UserCheck, FileText,
-  Scan, Zap, Monitor, Armchair, ExternalLink, Award
+  Car, Accessibility, CreditCard, Coffee, Clock, FileText,
+  Scan, Monitor, Armchair, ExternalLink, Award
 } from "lucide-react";
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
@@ -85,7 +85,7 @@ export default function Home() {
                     {idx === 0 && <Armchair className="w-5 h-5" />}
                     {idx === 1 && <Scan className="w-5 h-5" />}
                     {idx === 2 && <Monitor className="w-5 h-5" />}
-                    {idx === 3 && <Zap className="w-5 h-5" />}
+                    {idx === 3 && <ShieldCheck className="w-5 h-5" />}
                   </div>
                   <h3 className="font-bold text-base text-slate-900 mb-1.5">{tech.name}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed mb-3">{tech.description}</p>
@@ -273,7 +273,7 @@ export default function Home() {
                   {idx === 1 && <Car className="w-5 h-5" />}
                   {idx === 2 && <CreditCard className="w-5 h-5" />}
                   {idx === 3 && <Coffee className="w-5 h-5" />}
-                  {idx === 4 && <HeartPulse className="w-5 h-5" />}
+                  {idx === 4 && <Clock className="w-5 h-5" />}
                   {idx === 5 && <FileText className="w-5 h-5" />}
                 </div>
                 <div>

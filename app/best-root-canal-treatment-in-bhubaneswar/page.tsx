@@ -10,16 +10,10 @@ import {
   Award, 
   ShieldCheck, 
   Clock, 
-  CalendarDays, 
-  Zap, 
-  Activity, 
   Check, 
-  X, 
+  X,
   HelpCircle, 
-  Sparkles, 
-  AlertTriangle, 
   CreditCard, 
-  Stethoscope,
   ExternalLink
 } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
@@ -109,8 +103,8 @@ export default function RootCanalTreatmentBhubaneswarPage() {
       <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/90 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-xs sm:text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
-              <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-brand-primary" /> #1 Painless Single-Visit RCT in Bhubaneswar
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-purple-100 text-brand-primary border border-purple-200 text-xs sm:text-sm font-bold uppercase tracking-wider mx-auto lg:mx-0">
+              #1 Painless Single-Visit RCT in Bhubaneswar
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
               Painless <span className="text-brand-primary">Root Canal Treatment</span> in Bhubaneswar
@@ -212,7 +206,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-amber-900">
           <div className="flex items-center gap-3 text-center md:text-left">
             <div className="w-10 h-10 bg-amber-200 text-amber-900 rounded-xl flex items-center justify-center shrink-0">
-              <AlertTriangle className="w-5 h-5" />
+              <Clock className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-bold text-base md:text-lg">Suffering from Severe Toothache right now?</h3>
@@ -248,32 +242,28 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               {
                 title: "Throbbing Tooth Pain",
                 desc: "Sharp, throbbing, or continuous pain while biting, chewing, or lying down.",
-                icon: AlertTriangle,
                 badge: "High Urgency"
               },
               {
                 title: "Lingering Hot/Cold Sensitivity",
                 desc: "Pain or discomfort that persists for seconds or minutes after eating hot tea, coffee, or cold water.",
-                icon: FlameIcon,
                 badge: "Common Symptom"
               },
               {
                 title: "Gum Swelling or Gum Pimple",
                 desc: "Tenderness, swelling, or a small pus-filled pimple (abscess) on the gums near the painful tooth.",
-                icon: Activity,
                 badge: "Infection Sign"
               },
               {
                 title: "Discolored or Cracked Tooth",
                 desc: "A tooth turning dark, greyish, or chipped due to deep cavity decay or dental injury trauma.",
-                icon: ShieldCheck,
                 badge: "Structural Damage"
               }
             ].map((symptom, idx) => (
               <div key={idx} className="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 hover:border-brand-primary/40 hover:shadow-lg transition-all">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="w-12 h-12 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                    <symptom.icon className="w-6 h-6" />
+                <div className="flex justify-between items-center mb-4">
+                  <div className="w-10 h-10 bg-purple-100 text-brand-primary font-heading font-bold text-sm rounded-xl flex items-center justify-center">
+                    {String(idx + 1).padStart(2, '0')}
                   </div>
                   <span className="text-xs font-bold text-purple-700 bg-purple-100 px-2.5 py-1 rounded-full">{symptom.badge}</span>
                 </div>
@@ -300,7 +290,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <Stethoscope className="w-7 h-7" />
+                <Award className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold font-heading text-slate-900">Expert Endodontic Care</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -310,7 +300,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <Zap className="w-7 h-7" />
+                <Clock className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold font-heading text-slate-900">Single-Visit Painless Protocol</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -320,7 +310,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <Sparkles className="w-7 h-7" />
+                <ShieldCheck className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold font-heading text-slate-900">Diode Laser Disinfection</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -330,7 +320,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <ShieldCheck className="w-7 h-7" />
+                <CheckCircle2 className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold font-heading text-slate-900">Low-Radiation Digital RVG</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -350,7 +340,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
 
             <div className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4 hover:border-brand-primary/50 transition-colors">
               <div className="w-14 h-14 bg-purple-100 text-brand-primary rounded-2xl flex items-center justify-center">
-                <ShieldCheck className="w-7 h-7" />
+                <CreditCard className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold font-heading text-slate-900">Transparent Billing</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -745,20 +735,4 @@ export default function RootCanalTreatmentBhubaneswarPage() {
   );
 }
 
-// Simple Helper Icon component for Flame
-function FlameIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg 
-      {...props} 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-    >
-      <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
-    </svg>
-  );
-}
+

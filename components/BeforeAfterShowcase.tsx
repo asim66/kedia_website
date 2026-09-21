@@ -174,9 +174,9 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
 
               {/* Slider Helper / Slider Range */}
               <div className="flex items-center justify-between text-[11px] text-slate-600 px-1">
-                <span>← {activeCaseIdx === 0 ? "Missing Tooth Gap" : "Discolored Front Tooth"}</span>
+                <span>← {selectedCase.beforeLabel || "Before"}</span>
                 <span className="font-semibold text-brand-primary">⇄ Drag slider to compare</span>
-                <span>{activeCaseIdx === 0 ? "Restored Bridge →" : "Aesthetic Crown Restored →"}</span>
+                <span>{(selectedCase.afterLabel || "After")} →</span>
               </div>
             </div>
           ) : (
@@ -197,7 +197,7 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
                 </div>
                 <div className="p-2.5 bg-white text-center">
                   <p className="text-[11px] font-semibold text-slate-700">
-                    {activeCaseIdx === 0 ? "Missing Tooth Space" : "Discolored Front Tooth"}
+                    {selectedCase.beforeLabel || "Before Treatment"}
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
                 </div>
                 <div className="p-2.5 bg-white text-center">
                   <p className="text-[11px] font-semibold text-brand-primary">
-                    {activeCaseIdx === 0 ? "Metal-Free Bridge Restored" : "Aesthetic Ceramic Crown"}
+                    {selectedCase.afterLabel || "After Treatment"}
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-slate-600">
             <span className="flex items-center gap-1 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-              {activeCaseIdx === 0 ? "100% Metal-Free" : "All-Ceramic Aesthetic"}
+              {selectedCase.highlightBadge || selectedCase.materialUsed}
             </span>
             <span className="flex items-center gap-1 font-medium">
               <Clock className="w-3.5 h-3.5 text-brand-primary shrink-0" />

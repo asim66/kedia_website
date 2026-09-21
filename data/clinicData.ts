@@ -769,6 +769,9 @@ export interface ClinicalCase {
   afterImage: string;
   altBefore: string;
   altAfter: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+  highlightBadge?: string;
 }
 
 export const clinicalCases: ClinicalCase[] = [
@@ -788,6 +791,9 @@ export const clinicalCases: ClinicalCase[] = [
     afterImage: "/images/treatment_metal_free_bridge_after.webp",
     altBefore: "Before treatment: Missing tooth space and prepared anchor teeth at Kedia Dental Care",
     altAfter: "After treatment: Tooth replacement with metal-free bridge at Kedia Dental Care",
+    beforeLabel: "Missing Tooth Space",
+    afterLabel: "Metal-Free Bridge Restored",
+    highlightBadge: "100% Metal-Free",
   },
   {
     id: "anterior-aesthetic-crown-case-2",
@@ -805,6 +811,49 @@ export const clinicalCases: ClinicalCase[] = [
     afterImage: "/images/treatment_anterior_crown_after.webp",
     altBefore: "Before treatment: Discolored front tooth at Kedia Dental Care Bhubaneswar",
     altAfter: "After treatment: Aesthetic shade-matched front tooth ceramic crown at Kedia Dental Care Bhubaneswar",
+    beforeLabel: "Discolored Front Tooth",
+    afterLabel: "Aesthetic Ceramic Crown",
+    highlightBadge: "All-Ceramic Aesthetic",
+  },
+  {
+    id: "advance-teeth-whitening-case-3",
+    title: "Smile Brightening with Advance Teeth Whitening",
+    treatmentName: "Advance Teeth Whitening",
+    category: "Cosmetic Dentistry & Smile Brightening",
+    badge: "Instant Shade Lift",
+    summary: "Significant in-office enamel brightening eliminating stubborn stains and yellowish discoloration in a single comfortable session.",
+    clinicalConcern: "Deep yellowish enamel discoloration and stubborn stains affecting smile brightness and confidence.",
+    treatmentProcedure: "Plaque prophylaxis, protective gingival barrier isolation, and high-efficiency light-activated enamel-safe whitening application.",
+    clinicalOutcome: "Dramatically brighter, radiant tooth shade with natural luster and restored smile radiance without enamel damage.",
+    materialUsed: "Advanced Light-Activated In-Office Whitening System",
+    timeframe: "Single in-office session (45-60 mins)",
+    beforeImage: "/images/treatment_teeth_whitening_before.webp",
+    afterImage: "/images/treatment_teeth_whitening_after.webp",
+    altBefore: "Before treatment: Yellowish discolored teeth prior to advance teeth whitening at Kedia Dental Care Bhubaneswar",
+    altAfter: "After treatment: Radiant white teeth following advance teeth whitening at Kedia Dental Care Bhubaneswar",
+    beforeLabel: "Yellowish Stained Enamel",
+    afterLabel: "Radiant Brightened Smile",
+    highlightBadge: "Enamel-Safe & Painless",
+  },
+  {
+    id: "periodontal-clp-case-4",
+    title: "Gummy Smile Correction with Crown Lengthening (CLP)",
+    treatmentName: "Periodontal & Gum Care (CLP)",
+    category: "Periodontal Care & Gum Architecture",
+    badge: "Balanced Smile Line",
+    summary: "CLP reshapes excess gum and bone to reveal more tooth, fixing a gummy smile for a balanced look.",
+    clinicalConcern: "Excessive gingival display (gummy smile) causing teeth to appear short and visually imbalanced.",
+    treatmentProcedure: "Aesthetic crown lengthening procedure (CLP) precisely recontouring excess gum tissue and crestal bone to expose natural tooth crowns.",
+    clinicalOutcome: "Harmonious gum margins, proportionate tooth display, and a symmetrically balanced, radiant smile.",
+    materialUsed: "Microsurgical Periodontal & Laser Contouring",
+    timeframe: "Single in-clinic session",
+    beforeImage: "/images/treatment_crown_lengthening_before.webp",
+    afterImage: "/images/treatment_crown_lengthening_after.webp",
+    altBefore: "Before treatment: Excessive gum display and gummy smile prior to CLP at Kedia Dental Care Bhubaneswar",
+    altAfter: "After treatment: Balanced gumline and revealed tooth length following CLP at Kedia Dental Care Bhubaneswar",
+    beforeLabel: "Excess Gum / Short Teeth",
+    afterLabel: "Revealed Tooth & Balanced Gumline",
+    highlightBadge: "Micro-Precision Contouring",
   },
 ];
 

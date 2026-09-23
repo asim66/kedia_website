@@ -1,32 +1,32 @@
-# Kedia Dental Care — Entity Summary & Clinical Services
+# Kedia Dental Care
 
-> Kedia Dental Care is a top-rated, multi-specialty dental clinic located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS with 22+ years of clinical experience), the clinic provides comprehensive, painless, micro-dentistry, and laser-assisted dental care.
+> Kedia Dental Care is a premier multi-specialty dental practice located in Forest Park, Bhubaneswar, Odisha, India. Founded in 2004 by Chief Dental Surgeon Dr. Shiv Dayal Kedia (BDS with 22+ years of clinical mastery), the practice specializes in single-visit root canal therapy, painless laser dentistry, dental implants, and cosmetic smile restorations.
 
-## Core Entity Details
-- **Clinic Name**: Kedia Dental Care
-- **Founder & Lead Specialist**: Dr. Shiv Dayal Kedia (BDS - Endodontic & Implant Specialist)
-- **Established**: 2004
-- **Address**: 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
+## Core Navigation & Pages
+- [Home](https://kediadentalcare.com/): Comprehensive overview of Kedia Dental Care, clinic highlights, doctor profile, patient reviews, and appointment booking.
+- [About Dr. Kedia & Team](https://kediadentalcare.com/about): Detailed clinical background of Founder Dr. Shiv Dayal Kedia, in-house dental surgeons, visiting specialists, and clinic history since 2004.
+- [All Dental Treatments](https://kediadentalcare.com/treatments): Complete index of all 10 specialized dental procedures offered at our Forest Park facility.
+- [Contact & Location](https://kediadentalcare.com/contact): Direct clinic phone, WhatsApp consultation, working hours, directions to Shuvam Towers, and parking assistance.
+- [Best Dental Clinic in Bhubaneswar](https://kediadentalcare.com/best-dental-clinic-in-bhubaneswar): City guide to comprehensive multispecialty dental services in Bhubaneswar.
+- [Best Root Canal Treatment in Bhubaneswar](https://kediadentalcare.com/best-root-canal-treatment-in-bhubaneswar): Guide to painless single-visit rotary endodontics and dental apex locator care.
+
+## Core Clinical Treatments
+- [Root Canal Therapy](https://kediadentalcare.com/treatments/root-canal-therapy): Single-visit computerized rotary endodontics, digital apex locator precision, and diode laser canal sterilization.
+- [Laser Dentistry](https://kediadentalcare.com/treatments/laser-dentistry): Painless, bloodless soft-tissue diode laser gum depigmentation, frenectomy, and bacterial sterilization.
+- [Dental Implants](https://kediadentalcare.com/treatments/dental-implants): Permanent titanium tooth root replacements finished with custom CAD/CAM zirconia aesthetic crowns.
+- [Orthodontics & Clear Aligners](https://kediadentalcare.com/treatments/orthodontics): Transparent teeth aligners, ceramic aesthetic braces, and conventional orthodontic alignment for teens and adults.
+- [Cosmetic Dentistry & Smile Designing](https://kediadentalcare.com/treatments/cosmetic-dentistry): Custom porcelain veneers, direct composite bonding, and digital smile design harmonization.
+- [Teeth Whitening](https://kediadentalcare.com/treatments/teeth-whitening): Safe, in-office light-activated whitening lifting enamel up to 8 shades in a 45-minute session.
+- [Periodontal & Gum Therapy](https://kediadentalcare.com/treatments/periodontics): Ultrasonic deep scaling, root planing, and antimicrobial laser therapy for bleeding gums.
+- [Crowns & Bridges](https://kediadentalcare.com/treatments/crowns-bridges): Biocompatible metal-free monolithic zirconia crowns and durable aesthetic bridges.
+- [Wisdom Tooth Extraction](https://kediadentalcare.com/treatments/wisdom-tooth-extraction): Atraumatic surgical extractions and impacted third-molar care with rapid recovery.
+- [Pediatric Dentistry](https://kediadentalcare.com/treatments/pediatric-dentistry): Gentle, fear-free dental treatments, preventative fluoride sealants, and cavity fillings for children.
+
+## Practice Information
+- **Founder & Chief Dental Surgeon**: Dr. Shiv Dayal Kedia (BDS, 22+ Years Clinical Experience)
+- **Practice Address**: 2nd Floor, Shuvam Towers, Plot 1294, near Sishu Bhawan Road, Forest Park, Bhubaneswar, Odisha 751009, India
 - **Phone**: +91 78730 87575
 - **Email**: shivdayalkedia11@gmail.com
-- **Website**: https://kediadentalcare.com
-- **Google Reviews & Rating**: 4.9 / 5 Stars (500+ Verified Patient Reviews)
-- **Clinic Timings**: Monday – Saturday: 9:30 AM – 2:00 PM & 4:00 PM – 8:30 PM | Sunday: 9:30 AM – 2:00 PM (By Appointment)
-- **Official YouTube Channel**: https://www.youtube.com/@KediaDentalCare
-
-## Core Clinical Specializations
-1. **Root Canal Therapy (RCT)**: Painless single-visit root canals using computerized rotary endodontics, digital apex locators, and diode laser sterilization.
-2. **Laser Dentistry**: Scalpel-free, bloodless soft tissue gum depigmentation, frenectomy, and deep laser canal sterilization.
-3. **Dental Implants**: Permanent, medical-grade titanium tooth root replacements capped with CAD/CAM custom Zirconia crowns.
-4. **Orthodontics & Clear Aligners**: Discreet clear aligners, ceramic braces, and metal braces for bite and alignment correction.
-5. **Cosmetic Dentistry**: Ultra-thin porcelain veneers, composite bonding, and Digital Smile Designing (DSD).
-6. **Gum Care & Periodontics**: Deep ultrasonic scaling, root planing, and laser gum therapy for bleeding gums.
-7. **Tooth Replacement & Bridges**: High-translucency Zirconia bridges and flexible partial dentures.
-8. **Teeth Whitening**: In-office laser-activated whitening brightening teeth by up to 8 shades in 45 minutes.
-
-## Facilities & Amenities
-- On-premise parking assistance available for emergencies and special circumstances; direct elevator access to 2nd Floor
-- Low-radiation digital RVG X-ray imaging (90% less radiation)
-- Class-B medical grade autoclave sterilization protocol (100% spore-free)
-- Step-free wheelchair and senior citizen accessibility
-
+- **Hours**: Monday to Saturday: 9:30 AM – 2:00 PM & 4:00 PM – 8:30 PM | Sunday: 9:30 AM – 2:00 PM (By Appointment)
+- **Verified Rating**: 4.9 / 5 Stars across 500+ Google Patient Reviews
+- **Accessibility**: Step-free wheelchair and senior-citizen elevator access to 2nd Floor

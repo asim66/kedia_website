@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone, Clock, Car, CreditCard, Accessibility, AlertCircle, ShieldCheck, Compass, Navigation, MessageCircle, ExternalLink } from "lucide-react";
 import { clinicInfo, faqsList } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
+import GoogleMapFacade from "@/components/GoogleMapFacade";
 
 export const metadata: Metadata = {
   title: "Contact & Clinic Location in Forest Park",
@@ -150,6 +151,9 @@ export default function ContactPage() {
                 <img 
                   src="/images/clinic_reception.webp" 
                   alt="Kedia Dental Care Reception Counter at Shuvam Towers, Forest Park" 
+                  width={600}
+                  height={220}
+                  loading="lazy"
                   className="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4 text-white">
@@ -160,19 +164,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Google Maps Embed */}
-              <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-[240px]">
-                <iframe 
-                  src={clinicInfo.address.googleMapsEmbedUrl} 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Kedia Dental Care Location Map at Shuvam Towers, Forest Park"
-                ></iframe>
-              </div>
+              {/* Google Maps Facade (Deferred Load) */}
+              <GoogleMapFacade 
+                embedUrl={clinicInfo.address.googleMapsEmbedUrl} 
+                title="Kedia Dental Care Location Map at Shuvam Towers, Forest Park" 
+              />
             </div>
 
             {/* Direct Connect & Action Cards (Form replaced with direct channels) */}

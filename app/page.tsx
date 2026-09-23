@@ -6,12 +6,19 @@ import {
   Car, Accessibility, CreditCard, Coffee, Clock, FileText,
   Scan, Monitor, Armchair, ExternalLink, Award
 } from "lucide-react";
+import dynamic from "next/dynamic";
 import { clinicInfo, treatmentsData, testimonials, teamMembers } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
-import ClinicGallery from "@/components/ClinicGallery";
 import HeroSlider from "@/components/HeroSlider";
 import DoctorTeamGrid from "@/components/DoctorTeamGrid";
-import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+
+const ClinicGallery = dynamic(() => import("@/components/ClinicGallery"), {
+  ssr: true,
+});
+
+const BeforeAfterShowcase = dynamic(() => import("@/components/BeforeAfterShowcase"), {
+  ssr: true,
+});
 
 export const metadata: Metadata = {
   title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
@@ -117,8 +124,7 @@ export default function Home() {
                     src={founder.image}
                     alt={`${founder.name} - ${founder.title}`}
                     fill
-                    unoptimized
-                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 450px"
                     className="object-cover group-hover:scale-102 transition-transform duration-700"
                     style={{ objectPosition: "center 42%" }}
                   />

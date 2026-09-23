@@ -10,6 +10,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -73,10 +74,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to 3rd-party origins */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" crossOrigin="anonymous" />
+
+        {/* Preload LCP Hero Candidate Image */}
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href="/images/clinic_team_seated.avif"
+          fetchPriority="high"
+          media="(min-width: 641px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href="/images/clinic_team_seated_mobile.avif"
+          fetchPriority="high"
+          media="(max-width: 640px)"
+        />
+
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -89,12 +113,12 @@ export default function RootLayout({
         />
         {/* Google Analytics (gtag.js) */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-G22H2EFY3K"
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

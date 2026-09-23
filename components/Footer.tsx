@@ -58,23 +58,23 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-slate-900 font-heading font-bold text-base md:text-lg mb-4">Navigation</h3>
-            <ul className="space-y-2.5 text-sm font-medium">
-              <li><Link href="/" className="hover:text-brand-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-brand-primary transition-colors">About Dr. Kedia & Team</Link></li>
-              <li><Link href="/treatments" className="hover:text-brand-primary transition-colors">All 10 Core Services</Link></li>
-              <li><Link href="/best-dental-clinic-in-bhubaneswar" className="hover:text-brand-primary transition-colors">Best Dental Clinic in Bhubaneswar</Link></li>
-              <li><Link href="/best-root-canal-treatment-in-bhubaneswar" className="hover:text-brand-primary transition-colors">Root Canal Treatment in Bhubaneswar</Link></li>
-              <li><Link href="/contact" className="hover:text-brand-primary transition-colors">Contact & Location</Link></li>
+            <ul className="space-y-1.5 text-sm font-medium">
+              <li><Link href="/" className="hover:text-brand-primary transition-colors py-1 inline-block">Home</Link></li>
+              <li><Link href="/about" className="hover:text-brand-primary transition-colors py-1 inline-block">About Dr. Kedia & Team</Link></li>
+              <li><Link href="/treatments" className="hover:text-brand-primary transition-colors py-1 inline-block">All 10 Core Services</Link></li>
+              <li><Link href="/best-dental-clinic-in-bhubaneswar" className="hover:text-brand-primary transition-colors py-1 inline-block">Best Dental Clinic in Bhubaneswar</Link></li>
+              <li><Link href="/best-root-canal-treatment-in-bhubaneswar" className="hover:text-brand-primary transition-colors py-1 inline-block">Root Canal Treatment in Bhubaneswar</Link></li>
+              <li><Link href="/contact" className="hover:text-brand-primary transition-colors py-1 inline-block">Contact & Location</Link></li>
             </ul>
           </div>
 
           {/* Core Services (10 Key Treatments) */}
           <div>
             <h3 className="text-slate-900 font-heading font-bold text-base md:text-lg mb-4">Key Treatments</h3>
-            <ul className="grid grid-cols-1 gap-2 text-sm font-medium">
+            <ul className="grid grid-cols-1 gap-1 text-sm font-medium">
               {treatmentsData.map(treatment => (
                 <li key={treatment.id}>
-                  <Link href={`/treatments/${treatment.slug}`} className="hover:text-brand-primary transition-colors">
+                  <Link href={`/treatments/${treatment.slug}`} className="hover:text-brand-primary transition-colors py-1 inline-block">
                     {treatment.title}
                   </Link>
                 </li>
@@ -92,7 +92,7 @@ export default function Footer() {
                   href={clinicInfo.address.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-brand-primary transition-colors text-slate-700 font-medium flex items-center gap-1 group"
+                  className="hover:text-brand-primary transition-colors text-slate-700 font-medium flex items-center gap-1 group py-0.5"
                 >
                   <span>{clinicInfo.address.full}</span>
                   <ExternalLink className="w-3.5 h-3.5 text-brand-primary shrink-0 opacity-80 group-hover:opacity-100" />
@@ -100,13 +100,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-brand-primary shrink-0" />
-                <a href={`tel:${clinicInfo.phoneRaw}`} className="hover:text-brand-primary transition-colors font-bold text-slate-900">
+                <a href={`tel:${clinicInfo.phoneRaw}`} className="hover:text-brand-primary transition-colors font-bold text-slate-900 py-0.5">
                   {clinicInfo.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-primary shrink-0" />
-                <a href={`mailto:${clinicInfo.email}`} className="hover:text-brand-primary transition-colors truncate text-slate-700">
+                <a href={`mailto:${clinicInfo.email}`} className="hover:text-brand-primary transition-colors truncate text-slate-700 py-0.5">
                   {clinicInfo.email}
                 </a>
               </li>
@@ -123,7 +123,7 @@ export default function Footer() {
         </div>
 
         {/* Areas Served Footer Bar */}
-        <div className="py-6 border-t border-slate-200/80 text-xs text-slate-500">
+        <div className="py-6 border-t border-slate-200/80 text-xs text-slate-600">
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center max-w-5xl mx-auto">
             <span className="font-bold text-slate-800">Serving Patients Across Bhubaneswar:</span>
             <span>Forest Park</span> • 
@@ -140,7 +140,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright, Attribution & Links Row */}
-        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-600">
           <p className="text-center sm:text-left">
             &copy; {currentYear} {clinicInfo.name}. All rights reserved.
           </p>
@@ -149,7 +149,7 @@ export default function Footer() {
               href="https://sociodigit.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-slate-500 hover:text-brand-primary transition-colors group"
+              className="inline-flex items-center gap-1.5 text-slate-600 hover:text-brand-primary transition-colors group py-1"
               title="Sociodigit - Build, Scale & Grow Your Digital Products"
             >
               <span>Developed by</span>
@@ -163,7 +163,7 @@ export default function Footer() {
               <span className="font-bold text-slate-700 group-hover:text-brand-primary transition-colors duration-300 tracking-tight">Sociodigit</span>
             </a>
             <span className="hidden sm:inline text-slate-300">|</span>
-            <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors font-semibold">
+            <Link href="/privacy-policy" className="hover:text-brand-primary transition-colors font-semibold py-1">
               Privacy Policy
             </Link>
           </div>

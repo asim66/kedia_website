@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import dynamic from "next/dynamic";
 import { treatmentsData, clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
-import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+
+const BeforeAfterShowcase = dynamic(() => import("@/components/BeforeAfterShowcase"), {
+  ssr: true,
+});
 
 export const metadata: Metadata = {
   title: "Specialized Dental Treatments in Bhubaneswar",

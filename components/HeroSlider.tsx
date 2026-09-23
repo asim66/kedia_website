@@ -99,14 +99,13 @@ export default function HeroSlider() {
     goToSlide((current - 1 + slides.length) % slides.length);
   }, [current, goToSlide]);
 
+  // Preload only the next upcoming slide sequentially to avoid bandwidth contention on initial load
   useEffect(() => {
-    slides.forEach((s) => {
-      if (typeof window !== "undefined") {
-        const img = new window.Image();
-        img.src = s.image;
-      }
-    });
-  }, []);
+    if (typeof window === "undefined") return;
+    const nextIdx = (current + 1) % slides.length;
+    const img = new window.Image();
+    img.src = slides[nextIdx].image;
+  }, [current]);
 
   useEffect(() => {
     if (isPaused) return;
@@ -151,8 +150,11 @@ export default function HeroSlider() {
           <img
             src={prevSlide.image}
             alt={prevSlide.alt}
+            width={1400}
+            height={612}
             className="hero-img absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: prevSlide.objectPosition || "center center" }}
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
           <div className={`absolute inset-0 bg-gradient-to-r ${prevSlide.accentColor ?? "from-slate-950/60"} via-transparent to-transparent`} />
@@ -162,22 +164,56 @@ export default function HeroSlider() {
 
       {/* INCOMING SLIDE with Ken Burns */}
       <div key={`in-${current}`} className="absolute inset-0 hero-slide-in">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={slide.image}
-          alt={slide.alt}
-          className="hero-img hero-ken-burns absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: slide.objectPosition || "center center" }}
-          fetchPriority={current === 0 ? "high" : "auto"}
-        />
+        {current === 0 ? (
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              type="image/avif"
+              srcSet="/images/clinic_team_seated_mobile.avif"
+            />
+            <source
+              media="(max-width: 640px)"
+              type="image/webp"
+              srcSet="/images/clinic_team_seated_mobile.webp"
+            />
+            <source
+              type="image/avif"
+              srcSet="/images/clinic_team_seated.avif"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/clinic_team_seated.webp"
+              alt={slide.alt}
+              width={1400}
+              height={612}
+              className="hero-img hero-ken-burns absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: slide.objectPosition || "center center" }}
+              fetchPriority="high"
+            />
+          </picture>
+        ) : (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={slide.image}
+            alt={slide.alt}
+            width={1400}
+            height={612}
+            className="hero-img hero-ken-burns absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: slide.objectPosition || "center center" }}
+            loading="lazy"
+            fetchPriority="low"
+          />
+        )}
         {/* Bottom vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
         {/* Side accent tint */}
         <div className={`absolute inset-0 bg-gradient-to-r ${slide.accentColor ?? "from-slate-950/60"} via-transparent to-transparent`} />
         {/* Top darkening */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-transparent to-transparent" />
-        {/* Purple shimmer line */}
-        <div className="hero-shimmer-line absolute bottom-0 left-0 right-0 h-[2px] z-10" />
+        {/* Purple shimmer line container (composited) */}
+        <div className="hero-shimmer-container">
+          <div className="hero-shimmer-line" />
+        </div>
       </div>
 
       {/* BOTTOM TEXT */}
@@ -198,21 +234,21 @@ export default function HeroSlider() {
               {slide.headline}
             </h1>
             {slide.subline && (
-              <p key={`sub-${current}`} className="hero-anim-sub text-white/65 text-sm sm:text-base leading-snug max-w-lg">
+              <p key={`sub-${current}`} className="hero-anim-sub text-white/90 text-sm sm:text-base leading-snug max-w-lg">
                 {slide.subline}
               </p>
             )}
             <div className="flex flex-wrap items-center gap-2.5 pt-1 hero-anim-cta">
               <Link
                 href="/contact"
-                className="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-brand-primary/40 flex items-center gap-1.5 hover:scale-[1.03] active:scale-[0.97] touch-manipulation min-h-[42px]"
+                className="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-brand-primary/40 flex items-center gap-1.5 hover:scale-[1.03] active:scale-[0.97] touch-manipulation min-h-[44px]"
               >
                 Book Appointment
                 <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </Link>
               <a
                 href={`tel:${clinicInfo.phoneRaw}`}
-                className="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all border border-white/25 backdrop-blur-sm flex items-center gap-1.5 active:scale-[0.97] touch-manipulation min-h-[42px]"
+                className="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all border border-white/25 backdrop-blur-sm flex items-center gap-1.5 active:scale-[0.97] touch-manipulation min-h-[44px]"
               >
                 <Phone className="w-3.5 h-3.5 shrink-0" />
                 {clinicInfo.phone}
@@ -223,23 +259,23 @@ export default function HeroSlider() {
       </div>
 
       {/* STATS STRIP */}
-      <div className="absolute top-4 left-4 sm:left-6 md:left-8 lg:left-10 z-30 hidden md:flex items-center gap-0 px-1 py-2.5 rounded-xl bg-slate-950/50 backdrop-blur-md border border-white/10 text-white shadow-lg">
+      <div className="absolute top-4 left-4 sm:left-6 md:left-8 lg:left-10 z-30 hidden md:flex items-center gap-0 px-1 py-2.5 rounded-xl bg-slate-950/60 backdrop-blur-md border border-white/15 text-white shadow-lg">
         {[
           { value: clinicInfo.stats.yearsExperience, label: "Years" },
           { value: clinicInfo.stats.happyPatients, label: "Patients" },
           { value: "4.9★", label: "Google" },
         ].map((s, idx) => (
-          <div key={idx} className={`text-center px-3.5 ${idx < 2 ? "border-r border-white/10" : ""}`}>
+          <div key={idx} className={`text-center px-3.5 ${idx < 2 ? "border-r border-white/15" : ""}`}>
             <p className="text-sm font-bold font-heading leading-none">{s.value}</p>
-            <p className="text-[9px] text-slate-400 font-medium mt-0.5">{s.label}</p>
+            <p className="text-[10px] text-slate-200 font-medium mt-0.5">{s.label}</p>
           </div>
         ))}
       </div>
 
       {/* SLIDE COUNTER */}
-      <div className="absolute top-4 right-4 md:right-6 z-30 hidden md:flex items-center gap-1.5 text-white/50 text-xs font-mono font-bold">
+      <div className="absolute top-4 right-4 md:right-6 z-30 hidden md:flex items-center gap-1.5 text-white/75 text-xs font-mono font-bold">
         <span className="text-white text-sm">{String(current + 1).padStart(2, "0")}</span>
-        <span className="text-white/30">/</span>
+        <span className="text-white/50">/</span>
         <span>{String(slides.length).padStart(2, "0")}</span>
       </div>
 
@@ -247,32 +283,36 @@ export default function HeroSlider() {
       <button
         onClick={goPrev}
         aria-label="Previous slide"
-        className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-brand-primary border border-white/15 text-white items-center justify-center transition-all duration-200 backdrop-blur-sm hover:scale-110 hover:shadow-lg"
+        className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-slate-950/50 hover:bg-brand-primary border border-white/20 text-white items-center justify-center transition-all duration-200 backdrop-blur-sm hover:scale-110 hover:shadow-lg touch-manipulation"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={goNext}
         aria-label="Next slide"
-        className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-brand-primary border border-white/15 text-white items-center justify-center transition-all duration-200 backdrop-blur-sm hover:scale-110 hover:shadow-lg"
+        className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-slate-950/50 hover:bg-brand-primary border border-white/20 text-white items-center justify-center transition-all duration-200 backdrop-blur-sm hover:scale-110 hover:shadow-lg touch-manipulation"
       >
         <ChevronRight className="w-5 h-5" />
       </button>
 
-      {/* DOTS */}
-      <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
+      {/* DOTS (Expanded 44px tap target for mobile touch accessibility) */}
+      <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-0.5">
         {slides.map((s, i) => (
           <button
             key={s.id}
             onClick={() => goToSlide(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`relative rounded-full transition-all duration-300 overflow-hidden ${
-              i === current ? "w-8 h-1.5 bg-white/25" : "w-1.5 h-1.5 bg-white/35 hover:bg-white/65"
-            }`}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 group touch-manipulation focus:outline-none"
           >
-            {i === current && !isPaused && (
-              <span key={progressKey} className="absolute inset-0 origin-left bg-white rounded-full hero-progress-bar" />
-            )}
+            <span
+              className={`relative rounded-full transition-all duration-300 overflow-hidden block ${
+                i === current ? "w-8 h-1.5 bg-white/30" : "w-2 h-1.5 bg-white/40 group-hover:bg-white/70"
+              }`}
+            >
+              {i === current && !isPaused && (
+                <span key={progressKey} className="absolute inset-0 origin-left bg-white rounded-full hero-progress-bar" />
+              )}
+            </span>
           </button>
         ))}
       </div>
@@ -320,10 +360,23 @@ export default function HeroSlider() {
           will-change: opacity;
         }
         @keyframes shimmerLine {
-          0%   { background-position: -200% center; }
-          100% { background-position: 200% center; }
+          0%   { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+        .hero-shimmer-container {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          overflow: hidden;
+          z-index: 10;
         }
         .hero-shimmer-line {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
           background: linear-gradient(
             90deg,
             transparent 0%,
@@ -332,8 +385,8 @@ export default function HeroSlider() {
             rgba(139,92,246,0.5) 65%,
             transparent 100%
           );
-          background-size: 200% 100%;
           animation: shimmerLine 3.5s linear infinite;
+          will-change: transform;
         }
         @keyframes heroAnimTag {
           from { opacity: 0; transform: translateY(-10px); }
@@ -345,7 +398,7 @@ export default function HeroSlider() {
         }
         @keyframes heroAnimSub {
           from { opacity: 0; transform: translateY(8px); }
-          to   { opacity: 0.65; transform: translateY(0); }
+          to   { opacity: 0.9; transform: translateY(0); }
         }
         @keyframes heroAnimCta {
           from { opacity: 0; transform: translateY(14px); }
@@ -359,7 +412,7 @@ export default function HeroSlider() {
         .hero-anim-hl  { animation: heroAnimHl  0.3s cubic-bezier(0.22, 1, 0.36, 1) both 0.08s; }
         .hero-anim-sub { animation: heroAnimSub 0.25s cubic-bezier(0.22, 1, 0.36, 1) both 0.12s; }
         .hero-anim-cta { animation: heroAnimCta 0.25s cubic-bezier(0.22, 1, 0.36, 1) both 0.15s; }
-        .hero-progress-bar { animation: heroProgress 1500ms linear both; }
+        .hero-progress-bar { animation: heroProgress 1500ms linear both; will-change: transform; }
       `}</style>
     </section>
   );

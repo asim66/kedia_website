@@ -273,7 +273,7 @@ export default function BestDentalClinicBhubaneswarPage() {
                     <span className="font-bold text-slate-900">{review.name}</span>
                     <span className="text-xs text-slate-500">{review.treatment}</span>
                   </div>
-                  <span className="text-[11px] font-medium text-slate-500 px-2 py-0.5 bg-slate-100 rounded-md">Google Review</span>
+                  <span className="text-[11px] font-bold text-slate-700 px-2 py-0.5 bg-slate-100 rounded-md">Google Review</span>
                 </div>
               </div>
             ))}
@@ -315,10 +315,10 @@ export default function BestDentalClinicBhubaneswarPage() {
                       <MapPin className="w-6 h-6 text-brand-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-white flex items-center gap-1.5">
+                      <h3 className="font-bold text-lg text-white flex items-center gap-1.5">
                         Clinic Address
                         <ExternalLink className="w-4 h-4 text-purple-300 opacity-70 group-hover:opacity-100 transition-opacity" />
-                      </h4>
+                      </h3>
                       <p className="text-slate-400 group-hover:text-purple-200 mt-1 transition-colors">{clinicInfo.address.full}</p>
                       <span className="text-xs text-brand-primary font-bold inline-block mt-1">Open in Google Maps &rarr;</span>
                     </div>
@@ -329,7 +329,7 @@ export default function BestDentalClinicBhubaneswarPage() {
                       <Clock className="w-6 h-6 text-brand-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg">Working Hours</h4>
+                      <h3 className="font-bold text-lg">Working Hours</h3>
                       <div className="text-slate-400 mt-1 space-y-1">
                         <p>{clinicInfo.hours.weekdays}</p>
                         <p>{clinicInfo.hours.sunday}</p>

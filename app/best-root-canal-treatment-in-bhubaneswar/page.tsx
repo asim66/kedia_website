@@ -209,7 +209,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               <Clock className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-bold text-base md:text-lg">Suffering from Severe Toothache right now?</h3>
+              <p className="font-bold text-base md:text-lg">Suffering from Severe Toothache right now?</p>
               <p className="text-xs md:text-sm text-amber-800">We reserve daily priority emergency slots for acute tooth pain & single-sitting root canals.</p>
             </div>
           </div>
@@ -718,6 +718,7 @@ export default function RootCanalTreatmentBhubaneswarPage() {
               <div className="relative min-h-[350px] lg:min-h-full">
                 <iframe
                   src={clinicInfo.address.googleMapsEmbedUrl}
+                  title="Kedia Dental Care Location Map"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

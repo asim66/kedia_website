@@ -69,6 +69,9 @@ export default function ContactPage() {
             
             {/* Contact Details Column */}
             <div className="lg:col-span-6 space-y-8">
+              <h2 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 mb-6">
+                Clinic Information & Timings
+              </h2>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <a
@@ -133,10 +136,10 @@ export default function ContactPage() {
 
               {/* Parking & Elevator Info */}
               <div className="p-6 rounded-3xl bg-purple-50/80 border border-purple-100 space-y-3">
-                <h4 className="font-bold text-slate-900 text-sm md:text-base flex items-center gap-2">
+                <h3 className="font-bold text-slate-900 text-sm md:text-base flex items-center gap-2">
                   <Car className="w-5 h-5 text-brand-primary" />
                   Parking & Elevator Access Instructions
-                </h4>
+                </h3>
                 <p className="text-slate-700 text-xs md:text-sm leading-relaxed">
                   {clinicInfo.address.parkingInfo}
                 </p>
@@ -159,7 +162,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4 text-white">
                   <div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-950/80 px-2 py-0.5 rounded border border-purple-800">Clinic Front Desk</span>
-                    <h4 className="font-bold text-sm text-white mt-1">Visit us on 2nd Floor, Shuvam Towers</h4>
+                    <p className="font-bold text-sm text-white mt-1">Visit us on 2nd Floor, Shuvam Towers</p>
                   </div>
                 </div>
               </div>
@@ -209,18 +212,18 @@ export default function ContactPage() {
                     href={`https://wa.me/917873087575?text=Hello%20Kedia%20Dental%20Care%2C%20I%20would%20like%20to%20inquire%20about%20dental%20care%20services.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-lg shadow-emerald-600/30 group"
+                    className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white transition-all shadow-lg shadow-emerald-700/30 group"
                   >
                     <div className="flex items-center gap-3.5">
                       <div className="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
                         <MessageCircle className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <p className="text-xs text-emerald-100 font-medium">Instant WhatsApp Message</p>
-                        <p className="font-bold text-base sm:text-lg">+91 78730 87575</p>
+                        <p className="text-xs text-white font-semibold">Instant WhatsApp Message</p>
+                        <p className="font-bold text-base sm:text-lg text-white">+91 78730 87575</p>
                       </div>
                     </div>
-                    <span className="text-xs font-bold bg-white text-emerald-950 px-3.5 py-2 rounded-xl group-hover:scale-105 transition-transform shrink-0 flex items-center gap-1">
+                    <span className="text-xs font-bold bg-white text-emerald-900 px-3.5 py-2 rounded-xl group-hover:scale-105 transition-transform shrink-0 flex items-center gap-1">
                       Chat Now <ExternalLink className="w-3 h-3 inline" />
                     </span>
                   </a>

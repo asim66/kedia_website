@@ -64,7 +64,7 @@ export default function AboutPage() {
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent text-white">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-heading">{founder.name}</h3>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold font-heading">{founder.name}</p>
                 </div>
               </div>
             </div>
@@ -81,9 +81,9 @@ export default function AboutPage() {
               </p>
               
               <div className="p-4 sm:p-6 rounded-2xl bg-purple-50/60 border border-purple-100">
-                <h4 className="font-bold text-brand-primary mb-1.5 text-sm sm:text-base">
+                <h3 className="font-bold text-brand-primary mb-1.5 text-sm sm:text-base">
                   Painless Micro-Dentistry Focus
-                </h4>
+                </h3>
                 <p className="text-slate-700 text-xs sm:text-sm md:text-base leading-relaxed">
                   Dr. Kedia believes that fear of pain should never keep anyone from seeking timely dental treatment. By combining digital 3D intraoral scanners with diode lasers and micro-rotary instruments, procedures are made painless and highly conservative.
                 </p>
@@ -315,7 +315,7 @@ export default function AboutPage() {
                       <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-purple-100 text-brand-primary text-[11px] sm:text-xs font-bold">
                         {dept.badge}
                       </span>
-                      <span className="text-xs text-slate-400 font-mono font-semibold whitespace-nowrap shrink-0">0{idx + 1}</span>
+                      <span className="text-xs text-slate-600 font-mono font-bold whitespace-nowrap shrink-0">0{idx + 1}</span>
                     </div>
 
                     <div>
@@ -391,7 +391,7 @@ export default function AboutPage() {
               </p>
               
               <div className="p-4 sm:p-6 rounded-2xl bg-slate-950 text-white space-y-2 sm:space-y-3">
-                <h4 className="font-bold text-base sm:text-lg text-purple-300">Sterilization Assurance</h4>
+                <h3 className="font-bold text-base sm:text-lg text-purple-300">Sterilization Assurance</h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
                   Every instrument set is sealed in medical-grade pouches and opened directly in front of you prior to treatment.
                 </p>

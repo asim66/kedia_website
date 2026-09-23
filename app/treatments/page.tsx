@@ -54,7 +54,7 @@ export default function TreatmentsPage() {
                     {String(idx + 1).padStart(2, '0')}
                   </div>
                   
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 font-heading">{treatment.title}</h3>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 font-heading">{treatment.title}</h2>
                   <p className="text-sm font-bold text-brand-primary mb-3">{treatment.subtitle}</p>
                   <p className="text-base text-slate-600 leading-relaxed mb-6">
                     {treatment.shortDescription}

@@ -53,7 +53,6 @@ export default function GoogleMapFacade({
                 type="button"
                 onClick={() => setIsLoaded(true)}
                 className="bg-brand-primary hover:bg-brand-primaryDark text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md shadow-brand-primary/30 flex items-center gap-1.5 active:scale-95 touch-manipulation min-h-[38px]"
-                aria-label="Load interactive Google Map"
               >
                 <Navigation className="w-3.5 h-3.5" />
                 Load Interactive Map

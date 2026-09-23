@@ -15,7 +15,7 @@ export default function MobileStickyBar() {
         <a
           href={`tel:${clinicInfo.phoneRaw}`}
           className="flex-1 bg-brand-primary hover:bg-brand-primaryDark text-white py-2.5 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-colors shadow-md active:scale-95 touch-manipulation min-h-[48px]"
-          aria-label="Call Clinic"
+          aria-label="Call Now - Kedia Dental Care"
         >
           <Phone className="w-4 h-4 shrink-0 text-white" />
           <span>Call Now</span>
@@ -26,8 +26,8 @@ export default function MobileStickyBar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-colors shadow-md active:scale-95 touch-manipulation min-h-[48px]"
-          aria-label="WhatsApp Us"
+          className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white py-2.5 px-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-colors shadow-md active:scale-95 touch-manipulation min-h-[48px]"
+          aria-label="WhatsApp - Kedia Dental Care"
         >
           <MessageCircle className="w-4 h-4 shrink-0 text-white" />
           <span>WhatsApp</span>

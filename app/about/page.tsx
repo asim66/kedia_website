@@ -191,43 +191,53 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5">
               {teamMembers.slice(1).map((doc, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-col last:col-span-2 sm:last:col-span-1 max-w-[280px] mx-auto w-full sm:max-w-none"
+                  className="group bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-row sm:flex-col p-3 sm:p-0 gap-3 sm:gap-0 items-center sm:items-stretch"
                 >
                   {/* Portrait */}
-                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
+                  <div className="relative w-20 xs:w-24 sm:w-full aspect-[3/4] rounded-xl sm:rounded-none overflow-hidden bg-slate-100 shrink-0 shadow-2xs sm:shadow-none">
                     <Image
                       src={doc.image}
                       alt={doc.name}
                       fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                      sizes="(max-width: 640px) 96px, (max-width: 1024px) 33vw, 20vw"
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
                       style={{ objectPosition: doc.objectPosition ?? "top center" }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
-                    {/* Experience / Clinician badge */}
-                    <div className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5">
+                    <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+                    {/* Experience / Clinician badge (Desktop) */}
+                    <div className="hidden sm:block absolute top-2 right-2 sm:top-2.5 sm:right-2.5">
                       <span className="px-2 py-0.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-primary text-[9px] sm:text-[10px] font-bold border border-purple-100 shadow-xs whitespace-nowrap">
-                        {doc.experienceYears ? `${doc.experienceYears} Yrs Exp` : "BDS Clinician"}
+                        {doc.experienceYears ? `${doc.experienceYears}+ Yrs Exp` : "BDS Clinician"}
                       </span>
                     </div>
-                    {/* Name overlay */}
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3.5 sm:right-3.5 text-white">
+                    {/* Name overlay (Desktop) */}
+                    <div className="hidden sm:block absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3.5 sm:right-3.5 text-white">
                       <h4 className="font-bold text-xs sm:text-base font-heading leading-tight line-clamp-1">{doc.name}</h4>
                       <p className="text-purple-300 text-[10px] sm:text-[11px] font-semibold whitespace-nowrap overflow-hidden text-ellipsis">{doc.qualifications}</p>
                     </div>
                   </div>
 
                   {/* Info */}
-                  <div className="p-3 sm:p-4 flex flex-col gap-1.5 sm:gap-2.5 flex-1">
-                    <div>
-                      <p className="text-[10px] sm:text-[11px] font-bold text-brand-primary uppercase tracking-wider line-clamp-1">{doc.title}</p>
-                      <p className="text-[11px] sm:text-xs font-semibold text-slate-700 mt-0.5 line-clamp-1">{doc.specialty}</p>
+                  <div className="p-0 sm:p-4 flex flex-col gap-1.5 sm:gap-2 flex-1 min-w-0 sm:w-full">
+                    <div className="flex items-start justify-between gap-1.5">
+                      <div className="min-w-0">
+                        {/* Mobile name */}
+                        <h4 className="sm:hidden font-bold text-sm font-heading text-slate-900 leading-tight truncate">{doc.name}</h4>
+                        <p className="text-[10px] sm:text-[11px] font-bold text-brand-primary uppercase tracking-wider line-clamp-1">
+                          {doc.title} <span className="sm:hidden text-slate-500 font-normal">• {doc.qualifications}</span>
+                        </p>
+                      </div>
+                      {/* Mobile Experience badge */}
+                      <span className="sm:hidden px-2 py-0.5 rounded-full bg-purple-50 text-brand-primary text-[9px] font-bold border border-purple-100 shrink-0">
+                        {doc.experienceYears ? `${doc.experienceYears}+ Yrs` : "BDS"}
+                      </span>
                     </div>
-                    <p className="text-slate-600 text-[11px] sm:text-xs leading-relaxed flex-1 line-clamp-3 sm:line-clamp-none">{doc.bio}</p>
+                    <p className="text-[10px] sm:text-xs font-semibold text-slate-700 line-clamp-1">{doc.specialty}</p>
+                    <p className="text-slate-600 text-[11px] sm:text-xs leading-relaxed flex-1 line-clamp-2 sm:line-clamp-none">{doc.bio}</p>
                   </div>
                 </div>
               ))}

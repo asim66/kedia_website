@@ -25,26 +25,26 @@ export default function DoctorTeamGrid({ doctors }: DoctorTeamGridProps) {
           </p>
         </div>
 
-        {/* 5-Doctor Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+        {/* Responsive Doctor Cards: Minimalist horizontal list on mobile, 5-column grid on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
           {doctors.map((doc, idx) => (
             <div
               key={idx}
-              className="group bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden"
+              className="group bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-2xs hover:shadow-xl hover:border-brand-primary/40 hover:-translate-y-0.5 sm:hover:-translate-y-1 transition-all duration-300 flex flex-row sm:flex-col overflow-hidden p-3 sm:p-0 gap-3.5 sm:gap-0 items-center sm:items-stretch"
             >
-              {/* Doctor Portrait - Full upper body, crossed arms and scrubs visible with calibrated eye-line alignment */}
-              <div className="relative aspect-[3/4] w-full bg-slate-100 overflow-hidden shrink-0">
+              {/* Doctor Portrait - Compact thumbnail on mobile (w-20/24), full 3:4 portrait on desktop */}
+              <div className="relative w-20 xs:w-24 sm:w-full aspect-[3/4] rounded-xl sm:rounded-none bg-slate-100 overflow-hidden shrink-0 shadow-2xs sm:shadow-none">
                 <Image
                   src={doc.image}
                   alt={`${doc.name} - ${doc.title} at Kedia Dental Care`}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                  sizes="(max-width: 640px) 96px, (max-width: 1024px) 33vw, 20vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   style={{ objectPosition: doc.objectPosition || "top center" }}
                 />
 
-                {/* Experience / Qualification Tag safely placed in corner */}
-                <div className="absolute top-2.5 right-2.5">
+                {/* Experience / Qualification Tag (Desktop top-right corner) */}
+                <div className="hidden sm:block absolute top-2.5 right-2.5">
                   <span className="px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-sm text-brand-primary text-[10px] font-bold border border-purple-100 shadow-xs whitespace-nowrap">
                     {doc.experienceYears ? `${doc.experienceYears}+ Yrs Exp` : "BDS Clinician"}
                   </span>
@@ -52,28 +52,37 @@ export default function DoctorTeamGrid({ doctors }: DoctorTeamGridProps) {
               </div>
 
               {/* Card Body with Name, Qualifications, Specialty & Condensed Bio */}
-              <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-1 gap-2.5">
-                <div className="space-y-1.5">
-                  <div>
-                    <h3 className="font-bold text-sm sm:text-base font-heading text-slate-900 leading-tight">
-                      {doc.name}
-                    </h3>
-                    <p className="text-[11px] text-brand-primary font-bold">
-                      {doc.title} • {doc.qualifications}
-                    </p>
+              <div className="p-0 sm:p-4 flex flex-col justify-between flex-1 min-w-0 gap-1.5 sm:gap-2.5 sm:w-full">
+                <div className="space-y-1 sm:space-y-1.5">
+                  <div className="flex items-start justify-between gap-1.5">
+                    <div className="min-w-0">
+                      <h3 className="font-bold text-sm sm:text-base font-heading text-slate-900 leading-tight truncate sm:whitespace-normal">
+                        {doc.name}
+                      </h3>
+                      <p className="text-[11px] text-brand-primary font-bold truncate sm:whitespace-normal">
+                        {doc.title} • {doc.qualifications}
+                      </p>
+                    </div>
+
+                    {/* Mobile Experience Badge */}
+                    <span className="sm:hidden px-2 py-0.5 rounded-full bg-purple-50 text-brand-primary text-[9px] font-bold border border-purple-100 shrink-0 whitespace-nowrap">
+                      {doc.experienceYears ? `${doc.experienceYears}+ Yrs` : "BDS"}
+                    </span>
                   </div>
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60 line-clamp-1">
+
+                  <span className="inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200/60 truncate max-w-full">
                     {doc.specialty}
                   </span>
-                  <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed line-clamp-4">
+
+                  <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed line-clamp-2 sm:line-clamp-4">
                     {doc.shortBio || doc.bio}
                   </p>
                 </div>
 
                 {/* Bottom Role & Consultation Indicator */}
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] sm:text-[11px] font-semibold text-slate-500 group-hover:text-brand-primary transition-colors">
+                <div className="pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] sm:text-[11px] font-semibold text-slate-500 group-hover:text-brand-primary transition-colors">
                   <span>Resident Faculty</span>
-                  <span className="inline-flex items-center gap-0.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-brand-primary">
+                  <span className="inline-flex items-center gap-0.5 opacity-90 sm:opacity-0 -translate-x-0 sm:-translate-x-1 sm:group-hover:opacity-100 sm:group-hover:translate-x-0 transition-all text-brand-primary font-bold">
                     <span>Care</span>
                     <ArrowRight className="w-3 h-3" />
                   </span>

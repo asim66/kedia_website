@@ -32,15 +32,15 @@ export default function DoctorTeamGrid({ doctors }: DoctorTeamGridProps) {
               key={idx}
               className="group bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden"
             >
-              {/* Doctor Portrait - 100% visible, zero text overlay over face */}
-              <div className="relative h-60 sm:h-64 lg:h-64 w-full bg-slate-100 overflow-hidden shrink-0">
+              {/* Doctor Portrait - Full upper body, crossed arms and scrubs visible with calibrated eye-line alignment */}
+              <div className="relative aspect-[3/4] w-full bg-slate-100 overflow-hidden shrink-0">
                 <Image
                   src={doc.image}
                   alt={`${doc.name} - ${doc.title} at Kedia Dental Care`}
                   fill
-                  unoptimized
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  style={{ objectPosition: doc.objectPosition || "top" }}
+                  style={{ objectPosition: doc.objectPosition || "top center" }}
                 />
 
                 {/* Experience / Qualification Tag safely placed in corner */}

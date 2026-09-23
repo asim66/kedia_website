@@ -198,14 +198,14 @@ export default function AboutPage() {
                   className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-col last:col-span-2 sm:last:col-span-1 max-w-[280px] mx-auto w-full sm:max-w-none"
                 >
                   {/* Portrait */}
-                  <div className="relative h-40 sm:h-48 lg:h-56 w-full overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
                     <Image
                       src={doc.image}
                       alt={doc.name}
                       fill
-                      unoptimized
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                      style={{ objectPosition: doc.objectPosition ?? "top" }}
+                      style={{ objectPosition: doc.objectPosition ?? "top center" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
                     {/* Experience / Clinician badge */}

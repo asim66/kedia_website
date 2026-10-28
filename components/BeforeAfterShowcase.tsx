@@ -55,8 +55,8 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
             Clinical Transformation Cases
           </div>
 
-          {/* Case Selection Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+          {/* Case Selection Pills - Horizontally scrollable on mobile */}
+          <div className="flex items-center sm:justify-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1 px-4 sm:px-0 -mx-4 sm:mx-0 pt-1">
             {clinicalCases.map((c, idx) => (
               <button
                 key={c.id}
@@ -64,7 +64,7 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
                   setActiveCaseIdx(idx);
                   setSliderPosition(50);
                 }}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all ${
+                className={`px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full text-xs font-bold transition-all shrink-0 whitespace-nowrap ${
                   activeCaseIdx === idx
                     ? "bg-brand-primary text-white shadow-sm shadow-brand-primary/25 scale-105"
                     : "bg-white text-slate-700 hover:bg-purple-50 border border-slate-200"
@@ -181,7 +181,7 @@ export default function BeforeAfterShowcase({ className }: BeforeAfterShowcasePr
             </div>
           ) : (
             /* Compact Side-by-Side Dual View */
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-950 relative shadow-xs">
                 <div className="relative aspect-[4/3] w-full">
                   <Image

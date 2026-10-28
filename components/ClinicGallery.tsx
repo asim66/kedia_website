@@ -96,8 +96,8 @@ export default function ClinicGallery() {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3">
+        {/* Filter Buttons - Horizontally scrollable on mobile */}
+        <div className="flex items-center sm:justify-center gap-1.5 sm:gap-3 overflow-x-auto no-scrollbar py-1 px-4 sm:px-0 -mx-4 sm:mx-0">
           {[
             { id: "all", label: "All Premises" },
             { id: "reception", label: "Reception & Lounge" },
@@ -107,7 +107,7 @@ export default function ClinicGallery() {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+              className={`px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shrink-0 whitespace-nowrap ${
                 activeFilter === filter.id
                   ? "bg-brand-primary text-white shadow-md shadow-brand-primary/25 scale-105"
                   : "bg-white text-slate-700 hover:bg-purple-50 border border-slate-200"
@@ -176,22 +176,22 @@ export default function ClinicGallery() {
         {/* Modal Lightbox */}
         {selectedImage && (
           <div
-            className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8 animate-fadeIn"
+            className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 md:p-8 animate-fadeIn overflow-y-auto"
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl border border-white/20 relative"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl border border-white/20 relative max-h-[92vh] flex flex-col my-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 bg-slate-900/80 hover:bg-slate-950 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors shadow-md"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 bg-slate-900/80 hover:bg-slate-950 text-white min-w-[44px] min-h-[44px] w-11 h-11 rounded-full flex items-center justify-center font-bold text-lg transition-colors shadow-md touch-manipulation"
                 aria-label="Close Preview"
               >
                 ✕
               </button>
 
-              <div className="relative h-[320px] sm:h-[450px] md:h-[520px] w-full bg-slate-950">
+              <div className="relative h-[240px] sm:h-[400px] md:h-[500px] w-full bg-slate-950 shrink-0">
                 <Image
                   src={selectedImage.image}
                   alt={selectedImage.title}
@@ -200,7 +200,7 @@ export default function ClinicGallery() {
                 />
               </div>
 
-              <div className="p-6 md:p-8 bg-slate-900 text-white space-y-2">
+              <div className="p-4 sm:p-6 md:p-8 bg-slate-900 text-white space-y-2 overflow-y-auto">
                 <div className="flex items-center justify-between gap-4">
                   <span className="px-3 py-1 bg-brand-primary text-white rounded-full text-xs font-bold">
                     {selectedImage.badge}
@@ -209,10 +209,10 @@ export default function ClinicGallery() {
                     <MapPin className="w-3.5 h-3.5 text-purple-400" /> {selectedImage.location}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold font-heading text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold font-heading text-white">
                   {selectedImage.title}
                 </h3>
-                <p className="text-slate-300 text-sm leading-relaxed">
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                   {selectedImage.description}
                 </p>
               </div>

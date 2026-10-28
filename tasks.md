@@ -18,3 +18,11 @@
 - [x] **Phase 4: Optimization & Verification**
   - [x] Test production build (`npm run build`)
   - [x] Verify SEO metadata, accessibility, and visual polish
+
+- [x] **Phase 5: Galaxy Fold & Foldable Viewport Optimization**
+  - [x] Optimize `HeroSlider.tsx` for narrow cover display (344px) and clear inner display navigation arrows
+  - [x] Fix fixed navbar height padding in `app/layout.tsx` to eliminate top clipping
+  - [x] Add tablet/foldable Call CTA in `Navbar.tsx` next to hamburger toggle
+  - [x] Balance 5-doctor team cards on tablet/inner displays (`DoctorTeamGrid.tsx` & `app/about/page.tsx`)
+  - [x] Add smooth horizontal swipe for case pills and gallery filters with responsive modals
+

@@ -191,11 +191,13 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5">
               {teamMembers.slice(1).map((doc, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-row sm:flex-col p-3 sm:p-0 gap-3 sm:gap-0 items-center sm:items-stretch"
+                  className={`group bg-white rounded-2xl border border-slate-200/90 shadow-2xs hover:shadow-lg hover:border-brand-primary/40 transition-all duration-300 overflow-hidden flex flex-row sm:flex-col p-3 sm:p-0 gap-3 sm:gap-0 items-center sm:items-stretch ${
+                    idx < 3 ? "md:col-span-2 lg:col-span-1" : "md:col-span-3 lg:col-span-1"
+                  }`}
                 >
                   {/* Portrait */}
                   <div className="relative w-20 xs:w-24 sm:w-full aspect-[3/4] rounded-xl sm:rounded-none overflow-hidden bg-slate-100 shrink-0 shadow-2xs sm:shadow-none">
@@ -203,6 +205,7 @@ export default function AboutPage() {
                       src={doc.image}
                       alt={doc.name}
                       fill
+                      unoptimized
                       sizes="(max-width: 640px) 96px, (max-width: 1024px) 33vw, 20vw"
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
                       style={{ objectPosition: doc.objectPosition ?? "top center" }}

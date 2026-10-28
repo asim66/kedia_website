@@ -218,40 +218,40 @@ export default function HeroSlider() {
 
       {/* BOTTOM TEXT */}
       <div className="absolute inset-x-0 bottom-0 z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 pb-14 sm:pb-16 md:pb-14">
-          <div className="max-w-2xl space-y-2.5 sm:space-y-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-14">
+          <div className="max-w-2xl space-y-2 sm:space-y-3">
             <span
               key={`tag-${current}`}
-              className="hero-anim-tag inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold tracking-wide shadow-md"
+              className="hero-anim-tag inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] sm:text-xs font-semibold tracking-wide shadow-md"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse shrink-0" />
               {slide.tag}
             </span>
             <h1
               key={`hl-${current}`}
-              className="hero-anim-hl text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight tracking-tight drop-shadow-xl"
+              className="hero-anim-hl text-xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight tracking-tight drop-shadow-xl"
             >
               {slide.headline}
             </h1>
             {slide.subline && (
-              <p key={`sub-${current}`} className="hero-anim-sub text-white/90 text-sm sm:text-base leading-snug max-w-lg">
+              <p key={`sub-${current}`} className="hero-anim-sub text-white/90 text-xs sm:text-sm md:text-base leading-snug max-w-lg">
                 {slide.subline}
               </p>
             )}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1 hero-anim-cta">
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 pt-1 hero-anim-cta">
               <Link
                 href="/contact"
-                className="bg-brand-primary hover:bg-brand-primaryDark text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-brand-primary/40 flex items-center gap-1.5 hover:scale-[1.03] active:scale-[0.97] touch-manipulation min-h-[44px]"
+                className="flex-1 sm:flex-none justify-center bg-brand-primary hover:bg-brand-primaryDark text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all shadow-lg shadow-brand-primary/40 flex items-center gap-1.5 hover:scale-[1.03] active:scale-[0.97] touch-manipulation min-h-[44px]"
               >
-                Book Appointment
+                <span>Book Appointment</span>
                 <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </Link>
               <a
                 href={`tel:${clinicInfo.phoneRaw}`}
-                className="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all border border-white/25 backdrop-blur-sm flex items-center gap-1.5 active:scale-[0.97] touch-manipulation min-h-[44px]"
+                className="flex-1 sm:flex-none justify-center bg-white/10 hover:bg-white/20 text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all border border-white/25 backdrop-blur-sm flex items-center gap-1.5 active:scale-[0.97] touch-manipulation min-h-[44px] whitespace-nowrap"
               >
                 <Phone className="w-3.5 h-3.5 shrink-0" />
-                {clinicInfo.phone}
+                <span>{clinicInfo.phone}</span>
               </a>
             </div>
           </div>
@@ -320,14 +320,14 @@ export default function HeroSlider() {
       <style>{`
         .hero-slider {
           aspect-ratio: 16 / 7;
-          min-height: 380px;
+          min-height: 400px;
           max-height: 620px;
         }
         @media (max-width: 639px) {
-          .hero-slider { aspect-ratio: 4 / 3; min-height: 320px; max-height: 500px; }
+          .hero-slider { aspect-ratio: 4 / 5; min-height: 440px; max-height: 560px; }
         }
         @media (min-width: 640px) and (max-width: 1023px) {
-          .hero-slider { aspect-ratio: 16 / 8; min-height: 360px; max-height: 540px; }
+          .hero-slider { aspect-ratio: 16 / 9; min-height: 420px; max-height: 560px; }
         }
         .hero-img {
           image-rendering: -webkit-optimize-contrast;

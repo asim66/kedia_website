@@ -196,14 +196,24 @@ export default function Navbar() {
             </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 text-slate-700 hover:text-brand-primary min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg active:bg-slate-100 transition-colors touch-manipulation"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu Toggle & Fold/Tablet Call CTA */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={`tel:${clinicInfo.phoneRaw}`}
+              className="hidden sm:inline-flex items-center gap-1.5 bg-brand-primary hover:bg-brand-primaryDark text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-xs transition-colors shrink-0"
+              aria-label="Call Kedia Dental Care"
+            >
+              <Phone className="w-3.5 h-3.5 text-white" />
+              <span>Call Clinic</span>
+            </a>
+            <button
+              className="p-2 text-slate-700 hover:text-brand-primary min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg active:bg-slate-100 transition-colors touch-manipulation"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 

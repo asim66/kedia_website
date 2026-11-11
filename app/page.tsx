@@ -22,9 +22,31 @@ const BeforeAfterShowcase = dynamic(() => import("@/components/BeforeAfterShowca
 
 export const metadata: Metadata = {
   title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
-  description: "22+ Years of Clinical Excellence in Forest Park, Bhubaneswar. Comprehensive dental treatments including Single-Visit RCT, Dental Implants, Braces, and Laser Dentistry.",
+  description: "Trusted dental clinic in Forest Park, Bhubaneswar since 2004. Single-visit root canal, dental implants, braces & laser dentistry by Dr. Shiv Dayal Kedia.",
   alternates: {
     canonical: "https://kediadentalcare.com/",
+  },
+  openGraph: {
+    title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
+    description: "Trusted dental clinic in Forest Park, Bhubaneswar since 2004. Single-visit root canal, dental implants, braces & laser dentistry by Dr. Shiv Dayal Kedia.",
+    url: "https://kediadentalcare.com/",
+    siteName: clinicInfo.name,
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_team_seated.webp",
+        width: 1400,
+        height: 933,
+        alt: "Dr. Shiv Dayal Kedia and Dental Specialists at Kedia Dental Care, Forest Park, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kedia Dental Care | Best Dental Clinic in Bhubaneswar",
+    description: "Trusted dental clinic in Forest Park, Bhubaneswar since 2004. Single-visit root canal, dental implants, braces & laser dentistry by Dr. Shiv Dayal Kedia.",
+    images: ["https://kediadentalcare.com/images/clinic_team_seated.webp"],
   },
   robots: {
     index: true,
@@ -62,7 +84,7 @@ export default function Home() {
 
   return (
     <>
-      <JsonLd />
+      <JsonLd includeHomeBreadcrumb includeHomeFaq />
 
       {/* Hero Slider Section */}
       <HeroSlider />

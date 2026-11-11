@@ -15,6 +15,28 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     alternates: {
       canonical: `https://kediadentalcare.com/treatments/${treatment.slug}`,
     },
+    openGraph: {
+      title: `${treatment.title} in Bhubaneswar | Kedia Dental Care`,
+      description: `${treatment.shortDescription} Available at Kedia Dental Care, Forest Park, Bhubaneswar.`,
+      url: `https://kediadentalcare.com/treatments/${treatment.slug}`,
+      siteName: clinicInfo.name,
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: "https://kediadentalcare.com/images/clinic_treatment.webp",
+          width: 1200,
+          height: 800,
+          alt: `${treatment.title} at Kedia Dental Care, Forest Park, Bhubaneswar`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${treatment.title} in Bhubaneswar | Kedia Dental Care`,
+      description: `${treatment.shortDescription} Forest Park, Bhubaneswar.`,
+      images: ["https://kediadentalcare.com/images/clinic_treatment.webp"],
+    },
     robots: {
       index: true,
       follow: true,
@@ -93,7 +115,9 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
             <span className="inline-block text-xs font-bold px-3 py-1 bg-purple-100 text-brand-primary border border-purple-200 rounded-full uppercase tracking-wider">
               Specialist Treatment
             </span>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900">{treatment.title}</h1>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900">
+              {treatment.title} <span className="text-brand-primary">in Bhubaneswar</span>
+            </h1>
             <p className="text-base sm:text-xl text-brand-primary font-semibold">{treatment.subtitle}</p>
             <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed pt-1">
               {treatment.fullDescription}
@@ -149,7 +173,7 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                         {i + 1}
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-900 text-base mb-1">{step.title}</h4>
+                        <h3 className="font-bold text-slate-900 text-base mb-1">{step.title}</h3>
                         <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
                       </div>
                     </div>
@@ -159,13 +183,20 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
 
               {/* Post-Op & Recovery Guidance */}
               <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
-                <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 text-brand-primary" />
                   Post-Treatment Patient Care Guidance
-                </h3>
+                </h2>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   After your session, our team provides clear verbal and written care instructions tailored to your specific case. We also follow up with a courtesy check-in call to ensure your recovery is smooth and comfortable.
                 </p>
+                {treatment.slug === "root-canal-therapy" && (
+                  <p className="text-sm font-semibold text-brand-primary">
+                    <Link href="/best-root-canal-treatment-in-bhubaneswar" className="hover:underline">
+                      Explore our dedicated Bhubaneswar Root Canal Specialist guide (Rotary vs. Conventional RCT &amp; FAQs) &rarr;
+                    </Link>
+                  </p>
+                )}
               </div>
 
               {/* FAQs */}
@@ -177,7 +208,7 @@ export default function TreatmentDetail({ params }: { params: { slug: string } }
                 <div className="space-y-4">
                   {treatment.faq.map((q, i) => (
                     <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
-                      <h4 className="font-bold text-slate-900 mb-2 text-base">{q.question}</h4>
+                      <h3 className="font-bold text-slate-900 mb-2 text-base">{q.question}</h3>
                       <p className="text-slate-600 text-sm leading-relaxed">{q.answer}</p>
                     </div>
                   ))}

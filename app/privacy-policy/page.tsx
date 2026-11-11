@@ -4,8 +4,8 @@ import { clinicInfo } from "@/data/clinicData";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Kedia Dental Care",
-  description: "Privacy Policy for Kedia Dental Care. Read how we protect patient personal and health data in compliance with relevant data protection guidelines.",
+  title: "Privacy Policy",
+  description: "Privacy Policy for Kedia Dental Care, Forest Park, Bhubaneswar. Read how we protect patient personal and health data.",
   alternates: {
     canonical: "https://kediadentalcare.com/privacy-policy",
   },
@@ -16,9 +16,22 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
+  const privacySchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+      { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://kediadentalcare.com/privacy-policy" },
+    ],
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
+      />
       
       <section className="pt-16 pb-12 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60">
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center space-y-4">

@@ -10,10 +10,32 @@ const BeforeAfterShowcase = dynamic(() => import("@/components/BeforeAfterShowca
 });
 
 export const metadata: Metadata = {
-  title: "Specialized Dental Treatments in Bhubaneswar",
-  description: "Explore our 10 core specialized dental treatments including Laser Dentistry, Single-Visit RCT, Dental Implants, Braces, and Smile Designing in Bhubaneswar.",
+  title: "Dental Treatments in Bhubaneswar",
+  description: "Explore 10 specialized dental treatments at Kedia Dental Care, Forest Park, Bhubaneswar: Laser Dentistry, Single-Visit RCT, Dental Implants, Braces & Smile Design.",
   alternates: {
     canonical: "https://kediadentalcare.com/treatments",
+  },
+  openGraph: {
+    title: "Dental Treatments in Bhubaneswar | Kedia Dental Care",
+    description: "Explore 10 specialized dental treatments at Kedia Dental Care, Forest Park, Bhubaneswar: Laser Dentistry, Single-Visit RCT, Dental Implants, Braces & Smile Design.",
+    url: "https://kediadentalcare.com/treatments",
+    siteName: "Kedia Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_treatment.webp",
+        width: 1200,
+        height: 800,
+        alt: "Specialized Dental Treatments at Kedia Dental Care in Forest Park, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dental Treatments in Bhubaneswar | Kedia Dental Care",
+    description: "Explore 10 specialized dental treatments at Kedia Dental Care, Forest Park, Bhubaneswar.",
+    images: ["https://kediadentalcare.com/images/clinic_treatment.webp"],
   },
   robots: {
     index: true,
@@ -22,9 +44,22 @@ export const metadata: Metadata = {
 };
 
 export default function TreatmentsPage() {
+  const treatmentsBreadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+      { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://kediadentalcare.com/treatments" },
+    ],
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(treatmentsBreadcrumbSchema) }}
+      />
       
       {/* Header */}
       <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">

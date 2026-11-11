@@ -6,11 +6,33 @@ import { MapPin, Phone, Star, ShieldCheck, Clock, ExternalLink } from "lucide-re
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Top-Rated Dental Clinic in Bhubaneswar | Patient Reviews & Clinic Ratings",
-  description: "Discover why patients rank Kedia Dental Care as a top-rated dental clinic in Bhubaneswar. 22+ years of clinical excellence, 500+ 5-star Google reviews, and advanced laser dentistry in Forest Park.",
-  keywords: "top rated dental clinic bhubaneswar, dental clinic reviews bhubaneswar, best dental care forest park, kedia dental care ratings",
+  title: "Top-Rated Dental Clinic in Bhubaneswar",
+  description: "Discover why patients rank Kedia Dental Care in Forest Park as a top-rated dental clinic in Bhubaneswar. 22+ years of clinical excellence and laser dentistry.",
+  keywords: "top rated dental clinic bhubaneswar, dental clinic forest park bhubaneswar, best dentist forest park, kedia dental care bhubaneswar",
   alternates: {
     canonical: "https://kediadentalcare.com/best-dental-clinic-in-bhubaneswar",
+  },
+  openGraph: {
+    title: "Top-Rated Dental Clinic in Bhubaneswar | Kedia Dental Care",
+    description: "22+ years of clinical excellence at Shuvam Towers, Forest Park, Bhubaneswar. Laser dentistry, single-visit RCT, implants & clear aligners.",
+    url: "https://kediadentalcare.com/best-dental-clinic-in-bhubaneswar",
+    siteName: "Kedia Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_reception.webp",
+        width: 1200,
+        height: 900,
+        alt: "Kedia Dental Care Reception at Forest Park, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Top-Rated Dental Clinic in Bhubaneswar | Kedia Dental Care",
+    description: "22+ years of clinical excellence at Shuvam Towers, Forest Park, Bhubaneswar.",
+    images: ["https://kediadentalcare.com/images/clinic_reception.webp"],
   },
   robots: {
     index: true,

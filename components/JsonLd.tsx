@@ -1,7 +1,15 @@
 import React from "react";
 import { clinicInfo, teamMembers, treatmentsData, faqsList } from "@/data/clinicData";
 
-export default function JsonLd() {
+interface JsonLdProps {
+  includeHomeBreadcrumb?: boolean;
+  includeHomeFaq?: boolean;
+}
+
+export default function JsonLd({
+  includeHomeBreadcrumb = false,
+  includeHomeFaq = false,
+}: JsonLdProps) {
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -9,20 +17,23 @@ export default function JsonLd() {
         "@type": ["Dentist", "MedicalClinic", "LocalBusiness"],
         "@id": "https://kediadentalcare.com/#clinic",
         "name": clinicInfo.name,
-        "alternateName": "Kedia Dental Care Bhubaneswar",
+        "alternateName": ["Kedia Dental Care Bhubaneswar", "Kedia Dental Care Forest Park"],
         "url": "https://kediadentalcare.com",
-        "logo": "https://kediadentalcare.com/images/clinic_hero.webp",
-        "image": "https://kediadentalcare.com/images/clinic_hero.webp",
+        "logo": "https://kediadentalcare.com/images/logo.webp",
+        "image": [
+          "https://kediadentalcare.com/images/clinic_building.webp",
+          "https://kediadentalcare.com/images/clinic_team_seated.webp"
+        ],
         "hasMap": clinicInfo.address.googleMapsUrl,
         "telephone": clinicInfo.phone,
         "email": clinicInfo.email,
         "priceRange": "₹₹",
         "sameAs": clinicInfo.sameAs,
-        "description": `${clinicInfo.tagline}. ${clinicInfo.brandMessage}. Established in ${clinicInfo.establishedYear} by ${teamMembers[0].name} with 22+ years of clinical experience. Located in Forest Park, Bhubaneswar.`,
+        "description": `${clinicInfo.tagline}. ${clinicInfo.brandMessage}. Established in ${clinicInfo.establishedYear} by ${teamMembers[0].name} with 22+ years of clinical experience at Shuvam Towers, Forest Park (near Sishu Bhawan Road), Bhubaneswar.`,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": clinicInfo.address.street,
-          "addressLocality": clinicInfo.address.locality,
+          "streetAddress": `${clinicInfo.address.street}, ${clinicInfo.address.landmark}`,
+          "addressLocality": `${clinicInfo.address.locality}, ${clinicInfo.address.city}`,
           "addressRegion": clinicInfo.address.state,
           "postalCode": clinicInfo.address.pincode,
           "addressCountry": "IN",
@@ -118,30 +129,38 @@ export default function JsonLd() {
           { "@type": "State", "name": "Odisha" }
         ],
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://kediadentalcare.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://kediadentalcare.com"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://kediadentalcare.com/#faq",
-        "mainEntity": faqsList.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer,
-          },
-        })),
-      },
+      ...(includeHomeBreadcrumb
+        ? [
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://kediadentalcare.com/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://kediadentalcare.com",
+                },
+              ],
+            },
+          ]
+        : []),
+      ...(includeHomeFaq
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": "https://kediadentalcare.com/#faq",
+              "mainEntity": faqsList.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
+            },
+          ]
+        : []),
       {
         "@type": "WebSite",
         "@id": "https://kediadentalcare.com/#website",

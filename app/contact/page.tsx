@@ -6,9 +6,31 @@ import GoogleMapFacade from "@/components/GoogleMapFacade";
 
 export const metadata: Metadata = {
   title: "Contact & Clinic Location in Forest Park",
-  description: "Contact Kedia Dental Care in Forest Park, Bhubaneswar. Phone: +91 78730 87575 | Email: shivdayalkedia11@gmail.com | 2nd Floor, Shuvam Towers.",
+  description: "Visit Kedia Dental Care at 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar. Call +91 78730 87575 for dental appointments.",
   alternates: {
     canonical: "https://kediadentalcare.com/contact",
+  },
+  openGraph: {
+    title: "Contact & Clinic Location in Forest Park | Kedia Dental Care",
+    description: "Visit Kedia Dental Care at 2nd Floor, Shuvam Towers, near Sishu Bhawan Road, Forest Park, Bhubaneswar. Call +91 78730 87575.",
+    url: "https://kediadentalcare.com/contact",
+    siteName: "Kedia Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_building.webp",
+        width: 1200,
+        height: 823,
+        alt: "Kedia Dental Care at Shuvam Towers, Forest Park, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact & Clinic Location in Forest Park | Kedia Dental Care",
+    description: "Visit Kedia Dental Care at 2nd Floor, Shuvam Towers, Forest Park, Bhubaneswar. Call +91 78730 87575.",
+    images: ["https://kediadentalcare.com/images/clinic_building.webp"],
   },
   robots: {
     index: true,

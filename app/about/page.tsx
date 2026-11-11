@@ -8,9 +8,31 @@ import ClinicGallery from "@/components/ClinicGallery";
 
 export const metadata: Metadata = {
   title: "About Us | Dr. Shiv Dayal Kedia & Team",
-  description: "Learn about Kedia Dental Care's 22+ years of clinical excellence, Founder Dr. Shiv Dayal Kedia, in-house specialists, and visiting consultants in Bhubaneswar.",
+  description: "Meet Dr. Shiv Dayal Kedia (22+ years experience) and our dental specialists at Kedia Dental Care, Shuvam Towers, Forest Park, Bhubaneswar.",
   alternates: {
     canonical: "https://kediadentalcare.com/about",
+  },
+  openGraph: {
+    title: "About Us | Dr. Shiv Dayal Kedia & Team | Kedia Dental Care",
+    description: "Meet Dr. Shiv Dayal Kedia (22+ years experience) and our dental specialists at Kedia Dental Care, Shuvam Towers, Forest Park, Bhubaneswar.",
+    url: "https://kediadentalcare.com/about",
+    siteName: "Kedia Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_team_seated.webp",
+        width: 1400,
+        height: 933,
+        alt: "Dr. Shiv Dayal Kedia and Team at Kedia Dental Care, Forest Park, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Dr. Shiv Dayal Kedia & Team | Kedia Dental Care",
+    description: "Meet Dr. Shiv Dayal Kedia (22+ years experience) and our dental specialists at Kedia Dental Care, Forest Park, Bhubaneswar.",
+    images: ["https://kediadentalcare.com/images/clinic_team_seated.webp"],
   },
   robots: {
     index: true,
@@ -21,9 +43,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const founder = teamMembers[0];
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://kediadentalcare.com/about" },
+    ],
+  };
+
   return (
     <>
       <JsonLd />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       
       {/* Page Header */}
       <section className="pt-10 pb-12 sm:pt-14 sm:pb-16 bg-gradient-to-b from-purple-50/60 via-white to-white text-slate-900 border-b border-purple-100/60 relative overflow-hidden">

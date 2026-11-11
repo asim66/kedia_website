@@ -19,11 +19,33 @@ import {
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Root Canal Specialist in Bhubaneswar | Micro-Endodontics & Laser RCT",
-  description: "Consult Chief Dental Surgeon Dr. Shiv Dayal Kedia for painless laser root canal therapy, rotary endodontics, and single-visit RCT in Forest Park, Bhubaneswar.",
-  keywords: "root canal specialist bhubaneswar, endodontic specialist bhubaneswar, laser rct bhubaneswar, dr kedia root canal, micro endodontics bhubaneswar",
+  title: "Root Canal Specialist in Bhubaneswar",
+  description: "Consult Dr. Shiv Dayal Kedia for painless single-visit laser root canal treatment (RCT) and rotary endodontics in Forest Park, Bhubaneswar.",
+  keywords: "root canal specialist bhubaneswar, root canal treatment bhubaneswar, single sitting rct bhubaneswar, laser rct forest park, dr kedia root canal",
   alternates: {
     canonical: "https://kediadentalcare.com/best-root-canal-treatment-in-bhubaneswar",
+  },
+  openGraph: {
+    title: "Root Canal Specialist in Bhubaneswar | Kedia Dental Care",
+    description: "Painless single-visit laser root canal treatment (RCT) by Dr. Shiv Dayal Kedia at Shuvam Towers, Forest Park, Bhubaneswar.",
+    url: "https://kediadentalcare.com/best-root-canal-treatment-in-bhubaneswar",
+    siteName: "Kedia Dental Care",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://kediadentalcare.com/images/clinic_treatment.webp",
+        width: 1200,
+        height: 800,
+        alt: "Single-Visit Root Canal Treatment at Kedia Dental Care, Bhubaneswar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Root Canal Specialist in Bhubaneswar | Kedia Dental Care",
+    description: "Painless single-visit laser root canal treatment (RCT) in Forest Park, Bhubaneswar.",
+    images: ["https://kediadentalcare.com/images/clinic_treatment.webp"],
   },
   robots: {
     index: true,
@@ -64,6 +86,13 @@ export default function RootCanalTreatmentBhubaneswarPage() {
   const rctSchema = {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kediadentalcare.com" },
+          { "@type": "ListItem", "position": 2, "name": "Root Canal Treatment in Bhubaneswar", "item": "https://kediadentalcare.com/best-root-canal-treatment-in-bhubaneswar" }
+        ]
+      },
       {
         "@type": "MedicalProcedure",
         "name": "Root Canal Treatment (RCT)",
@@ -650,6 +679,15 @@ export default function RootCanalTreatmentBhubaneswarPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/treatments/root-canal-therapy"
+              className="inline-flex items-center gap-2 text-sm font-bold text-brand-primary hover:underline"
+            >
+              <span>View Step-by-Step Root Canal Procedure &amp; Recovery Guide</span>
+            </Link>
           </div>
         </div>
       </section>

@@ -492,6 +492,7 @@ export const treatmentsData: Treatment[] = [
     faq: [
       { question: "How long must I wear clear aligners daily?", answer: "Aligners should be worn for 20 to 22 hours per day, removing them only for eating and cleaning." },
       { question: "Am I too old for braces or aligners?", answer: "No! Orthodontic treatment is effective at any age as long as your gums and teeth are healthy." },
+      { question: "How do I know whether braces or clear aligners suit me best?", answer: "During your consultation at our Forest Park, Bhubaneswar clinic, we take a 3D intraoral scan and evaluate bite complexity to recommend the most predictable option and give a transparent treatment estimate." },
     ],
   },
   {
@@ -521,6 +522,7 @@ export const treatmentsData: Treatment[] = [
     faq: [
       { question: "Are dental implants permanent?", answer: "Yes, dental implants have a success rate over 98% and are designed to last a lifetime." },
       { question: "Is implant surgery painful?", answer: "The procedure is performed under local anesthesia. Most patients report less discomfort than a tooth extraction." },
+      { question: "Which dental implant brands do you offer in Bhubaneswar?", answer: "We offer globally recognized systems including Osstem, Adin, Straumann, and Neodent, matched to your jawbone quality and clinical needs with a written treatment plan beforehand." },
     ],
   },
   {
@@ -575,6 +577,8 @@ export const treatmentsData: Treatment[] = [
     recovery: "Depends on combined treatments",
     faq: [
       { question: "What is the main advantage of DSD?", answer: "It eliminates guesswork. You get to preview, test, and approve your new smile beforehand." },
+      { question: "What treatments can Digital Smile Designing include?", answer: "Depending on your goals, a DSD plan may coordinate teeth whitening, porcelain veneers, composite bonding, laser gum contouring, or clear aligners." },
+      { question: "How many visits are needed for a smile makeover in Bhubaneswar?", answer: "Digital photography and 3D smile planning typically begin in a single consultation at our Forest Park clinic, followed by a trial mockup and customized restoration visits." },
     ],
   },
   {
@@ -601,6 +605,8 @@ export const treatmentsData: Treatment[] = [
     recovery: "Immediate",
     faq: [
       { question: "What is the difference between a bridge and an implant?", answer: "A bridge uses adjacent teeth as support anchors, while an implant is an independent artificial tooth root placed in the jawbone." },
+      { question: "How long does a fixed dental bridge or denture take?", answer: "With digital 3D intraoral scanning and CAD/CAM fabrication, custom ceramic bridges and precision dentures are typically completed across two clinic visits." },
+      { question: "Which material is best for a dental bridge?", answer: "Metal-free Zirconia and E-Max ceramic bridges provide superior natural translucency, gum biocompatibility, and strength compared to older metal-backed prosthetics." },
     ],
   },
   {
@@ -627,6 +633,8 @@ export const treatmentsData: Treatment[] = [
     recovery: "Immediate to 24 Hours",
     faq: [
       { question: "Why do my gums bleed when brushing?", answer: "Bleeding gums are an early sign of gingivitis (gum inflammation) caused by plaque buildup, which requires professional scaling." },
+      { question: "Is laser gum depigmentation painful?", answer: "No, diode laser gum treatment requires minimal anesthesia, involves virtually no bleeding or sutures, and heals rapidly." },
+      { question: "How often should I get ultrasonic scaling done?", answer: "Most patients benefit from a routine dental checkup and ultrasonic scaling every 6 months to prevent tartar buildup and bone loss." },
     ],
   },
   {
@@ -653,6 +661,8 @@ export const treatmentsData: Treatment[] = [
     recovery: "3 - 5 Days",
     faq: [
       { question: "When should wisdom teeth be removed?", answer: "Wisdom teeth should be extracted if they are impacted, causing pain, crowding adjacent teeth, or forming cysts." },
+      { question: "Is wisdom tooth extraction painful?", answer: "We use targeted local anesthesia and atraumatic surgical techniques so you feel only light pressure during the procedure, followed by clear recovery guidance." },
+      { question: "How long is recovery after a wisdom tooth surgery?", answer: "Most patients return to normal light routines within 24 to 48 hours, with initial soft-tissue healing completing over 3 to 5 days." },
     ],
   },
   {
@@ -679,6 +689,8 @@ export const treatmentsData: Treatment[] = [
     recovery: "Immediate",
     faq: [
       { question: "Does professional whitening damage tooth enamel?", answer: "No, professional whitening gel is pH-balanced and safe when administered by a dentist." },
+      { question: "How long does in-office teeth whitening take?", answer: "Our laser-activated in-office teeth whitening session typically takes about 45 minutes in a single visit at our Forest Park clinic." },
+      { question: "Will teeth whitening change the color of existing crowns or fillings?", answer: "No, whitening works on natural tooth enamel only. If you have visible front fillings or crowns, we plan shade matching accordingly during consultation." },
     ],
   },
 ];
